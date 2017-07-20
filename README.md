@@ -260,6 +260,8 @@ Customer Call Centers
   - d) Route support requests to agents that already solved similar problems by detecting natural language similarities between new customer tickets and resolved ones.
 - Services used: natural language (text) classification, keyword extraction, entity extraction, and sentiment/tone analysis
 
+(ivp: https://www.ibm.com/blogs/watson/2016/02/go-moment-is-enhancing-your-hotel-experience/ )
+
 Physicians
 - Expert Advisor:
  - Example: Watson Discovery Advisor
@@ -285,6 +287,8 @@ Social Media
 #### 1.5.3. Accuracy:
 - Accuracy is the fraction of documents relevant to a query that were successfully retrieved.
 - Formula: (True Positives + True Negatives)/Total Document Count
+
+(ivp: https://nlp.stanford.edu/IR-book/pdf/08eval.pdf)
 
 #### 1.5.4. Diagrams like this are often useful in capturing the True/False
 Positive/Negatives described above:

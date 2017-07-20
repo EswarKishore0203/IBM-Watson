@@ -151,6 +151,8 @@ Video:
 [![Neural Networks Demystified - Part 3: Gradient Descent](https://i.ytimg.com/vi/5u0jaA3qAGk/maxresdefault.jpg)](https://www.youtube.com/watch?v=5u0jaA3qAGk?v=VID)
 [Neural Networks Demystified - Part 3: Gradient Descent](https://www.youtube.com/watch?v=5u0jaA3qAGk?v=VID)
 
+(ivp: see also stochastic vs mini-batches, epoch)
+
 ### 1.3 Explain machine learning technologies 
 (supervised, unsupervised, reinforcement learning approaches).
 
@@ -203,11 +205,11 @@ Many of these capabilities require specialized infrastructure that leverages hig
 
 ##### 1.3.2.2.1.Artificial neural network
 
-- An Artificial Neural Network (ANN) is an information processing paradigm that is inspired by the way biological nervous systems, such as the brain, process information. 
+- An Artificial Neural Network (ANN) is an information processing paradigm that is inspired by the way biological nervous systems, such as the brain, process information. (ivp: for example autoencoder)
 
 ##### 1.3.2.2.2.Association rule learning
 
-- Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness. <AI@edx.org>
+- Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness. (ivp: see AI@edX)
 
 ##### 1.3.2.2.3.Hierarchical clustering
 

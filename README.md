@@ -217,6 +217,8 @@ Many of these capabilities require specialized infrastructure that leverages hig
 
  - Agglomerative: This is a "bottom up" approach: each observation starts in its own cluster, and pairs of clusters are merged as one moves up the hierarchy.
  - Divisive: This is a "top down" approach: all observations start in one cluster, and splits are performed recursively as one moves down the hierarchy.
+ 
+ [![Clustered Iris dataset](https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Iris_dendrogram.png/800px-Iris_dendrogram.png)]
 
 ##### 1.3.2.2.4.Cluster analysis
 

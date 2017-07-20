@@ -209,7 +209,10 @@ Many of these capabilities require specialized infrastructure that leverages hig
 
 ##### 1.3.2.2.2.Association rule learning
 
-- Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness. (ivp: see AI@edX)
+- Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness. 
+(ivp: see AI@edX
+https://www.youtube.com/watch?v=MZtHAy3mpnk
+https://www.youtube.com/watch?v=wdaGeXRJpeQ)
 
 ##### 1.3.2.2.3.Hierarchical clustering
 
@@ -238,6 +241,9 @@ https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm#k-NN_outlier)
 ##### 1.3.2.3. Reinforcement learning
 
 - These algorithms choose an action, based on each data point and later learn how good the decision was. Over time, the algorithm changes its strategy to learn better and achieve the best reward. Thus, reinforcement learning is particularly well-suited to problems which include a long-term versus short-term reward trade-off. 
+
+(ivp: see AI@edX)
+
 
 ### 1.4. Define a common set of use cases for cognitive systems.
 

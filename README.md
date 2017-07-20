@@ -207,7 +207,7 @@ Many of these capabilities require specialized infrastructure that leverages hig
 
 ##### 1.3.2.2.2.Association rule learning
 
-- Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness.
+- Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness. <AI@edx.org>
 
 ##### 1.3.2.2.3.Hierarchical clustering
 

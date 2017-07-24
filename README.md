@@ -296,6 +296,8 @@ Positive/Negatives described above:
 
 ### 1.6. Explain the importance of separating training, validation and test data.
 
+#### 1.6.1. One school of thoughts: partition the data into above three
+
 Normally to perform supervised learning you need two types of data sets:
  1. In one dataset (your "gold standard") you have the input data together with correct/expected output, This dataset is usually duly prepared either by humans or by collecting some data in semi-automated way. But it is important that you have the expected output for every data row here, because you need for supervised learning.
  2. The data you are going to apply your model to. In many cases this is the data where you are interested for the output of your model and thus you don't have any "expected" output here yet.
@@ -313,6 +315,28 @@ The validation phase is often split into two parts:
 Hence the separation to 50/25/25.
 
 In case if you don't need to choose an appropriate model from several rivaling approaches, you can just re-partition your set that you basically have only training set and test set, without performing the validation of your trained model. I personally partition them 70/30 then.
+
+#### 1.6.2 Another: Usinh Bootstrap method vs Cross Validation
+1.6.2.1. the bootstrap method allows us to simulate the process of obtaining new data sets, so that we can estimate the error/ variability of our estimate without generating additional samples
+
+(ivp:
+resampling methods: cross-validation and the bootstrap. These methods refit a model of interest to samples formed
+from the training set, in order to obtain additional
+information about the fitted model.
+
+Сross validation is a technique for validating the model performance, and it’s done by split the training data into k parts. We take k-1 parts as our training set and use the “held out” part as our test set. We repeat that k times differently (we hold out different part every time). Finally we take the average of the k scores as our performance estimation.
+
+Cross validation can suffer bias or variance. if we increase the number of splits (k), the variance will increase and bias will decrease. On contrast, if we decrease (k), the bias will increase and variance will decrease. Generally 10-fold CV is used but of course it depends on the size of the training data.
+----
+Bootstrapping is a technique that helps in many situations like validation of a predictive model performance, ensemble methods, estimation of bias and variance of the model.
+
+It works by sampling with replacement from the original data, and take the “not chosen” data points as test cases (or use the whole original dataset as test set (ivp)). We can make this several times and calculate the average score as estimation of our model performance.
+
+-----
+1. ‘simple’ bootstrap. This involves creating resamples with replacement from the original data, of the same size; applying the modelling strategy to the resample; using the model to predict the values of the full set of original data and calculating a goodness of fit statistic (eg either R-squared or root mean squared error) comparing the predicted value to the actual value. Note - Following Efron, Harrell calls this the “simple bootstrap”, but other authors and the useful caret package use “simple bootstrap” to mean the resample model is used to predict the out-of-bag values at each resample point, rather than the full original sample.
+2. ‘enhanced’ bootstrap. This is a little more involved and is basically a method of estimating the ‘optimism’ of the goodness of fit statistic. There’s a nice step by step explanation by thestatsgeek which I won’t try to improve on.
+3. repeated 10-fold cross-validation. 10-fold cross-validation involves dividing your data into ten parts, then taking turns to fit the model on 90% of the data and using that model to predict the remaining 10%. The average of the 10 goodness of fit statistics becomes your estimate of the actual goodness of fit. One of the problems with k-fold cross-validation is that it has a high variance ie doing it different times you get different results based on the luck of you k-way split; so repeated k-fold cross-validation addresses this by performing the whole process a number of times and taking the average.
+)
 
 ### 1.7. Measure accuracy of service.
 

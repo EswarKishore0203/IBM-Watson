@@ -338,6 +338,37 @@ It works by sampling with replacement from the original data, and take the “no
 3. repeated 10-fold cross-validation. 10-fold cross-validation involves dividing your data into ten parts, then taking turns to fit the model on 90% of the data and using that model to predict the remaining 10%. The average of the 10 goodness of fit statistics becomes your estimate of the actual goodness of fit. One of the problems with k-fold cross-validation is that it has a high variance ie doing it different times you get different results based on the luck of you k-way split; so repeated k-fold cross-validation addresses this by performing the whole process a number of times and taking the average.
 )
 
+### 1.6.3. Training Process: 
+
+1.6.3.1. Data = Training Data + Cross-Validation Data + Test Data 
+
+(ivp: 
+
+Well, most ML models are described by two sets of parameters. The 1st set consists in “regular” parameters that are “learned” through training. The other parameters, called hyperparameters or meta-parameters are parameters which values are set before the learning starts (think, for example, the learning rate, the regularisation parameter, the number of layers or neurons in a layer for ANN etc.)
+
+Obviously, different values for those parameters may lead to different (sometimes by a lot) generalisation performance for our Machine Learning model therefore we need to identify a set of optimal values for them and this is done by training multiple models with different values for the hyperparameters (how to chose those values falls under the name of hyperparameter optimisation - Hyperparameter optimization - Wikipedia)
+
+Now, imagine you have you data and you need to run a supervised ML algorithm on it. You split the data into:
+
+training - this is the data for which your algorithm knows the “labels” and which you will feed it to the training process to build your model.
+test - this is a portion of the data that you keep hidden from your algorithm and only use it after the training takes places to compute some metrics that can give you a hint on how your algorithm behaves. For each item in you test dataset you predict its “value” using the built model and compare against the real “value”
+Now, back to the context of hyperparameter optimisation. If you run the same algorithm (train on training, evaluate on test) for multiple sets of hyperparameters and chose the model with the best “performance” on the test set you risk overfitting this test set. To avoid this problem of overfitting the test data, the training set is split once more into:
+
+actual training - a subset of the training set that is used to optimise the model
+validation - another subset of the training set that is used to evaluate the model performance for each run / set of hyperparameter values.
+Multiple training sessions are run on the actual training set, for various hyperparameter values and the models are evaluated agains the validation dataset. The model with the best performance is then chosen - remember that so far the algorithm has not yet seen the test data therefore there is no suspicion of overfitting it.
+
+After choosing the best model (and implicitly the values for the hyperparameters) this model is evaluated agains the test dataset and the performance is reported.
+
+Long story short: split your data into 3 subsets: training, validation, test. Train multiple variations of your model on the training dataset, chose the one with the best performance on the validation set and report how it generalise to the test set (important - the test set is kept hidden throughout the training process).)
+
+1.6.3.1.1. Data = Inputs + Outputs 
+1.6.3.1.2. Input + Output Sets  a set of functions that map input to output 
+1.6.3.2. We train these functions using the training data 
+1.6.3.3. We select which function gives less errors or better classification or prediction by feeding them each the validation data / blind (cross-validate)  
+1.6.3.4. We select the best outcome 
+1.6.3.5. We test the best outcome (function / neural net (weights,etc)) with the test data 
+ 
 ### 1.7. Measure accuracy of service.
 
 The goal of the ML model is to learn patterns that generalize well for unseen data instead of just memorizing the data that it was shown during training. Once you have a model, it is important to check if your model is performing well on unseen examples that you have not used for training the model. To do this, you use the model to predict the answer on the evaluation dataset (held out data) and then compare the predicted target to the actual answer (ground truth).

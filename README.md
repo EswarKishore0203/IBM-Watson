@@ -375,6 +375,39 @@ The goal of the ML model is to learn patterns that generalize well for unseen da
 
 A number of metrics are used in ML to measure the predictive accuracy of a model. The choice of accuracy metric depends on the ML task. It is important to review these metrics to decide if your model is performing well.
 
+1.7.2.1  Sample size of training set data, dangers of over fitting, curated content 
+
+(ivp: Small Data problems
+Problems of small-data are numerous, but mainly revolve around high variance:
+Over-fitting becomes much harder to avoid
+You don’t only over-fit to your training data, but sometimes you over-fit to your validation set as well.
+Outliers become much more dangerous.
+Noise in general becomes a real issue, be it in your target variable or in some of the features.)
+
+1.7.3. Explain factors that affect accuracy of unsupervised learning 
+1.7.3.1. Sample size, curse of dimensionality, over/under fitting 
+(ivp: Curse of dimentionality: With a fixed number of training samples, the predictive power reduces as the dimensionality increases, and this is known as Hughes phenomenon)
+1.7.4. Running a Blind set test 
+(ivp: 
+
+Training Set: Data used to train the ML algorithm. The developer may
+also look at this data to help design the system. This is usually the
+largest subset.
+Tuning Set: Data set aside to assess how well the program performs on
+unseen data and/or to set parameters. Helps to minimize overfitting.
+Blind Test Set: Data set aside to perform a final evaluation of how well
+the program performs on new data. The developer should never look
+at these texts!
+
+https://www.ibm.com/watson/developercloud/doc/wks/improve-ml.html#wks_mamanagedata 
+
+Why do I need a blind set? 
+Because you use test data to assess accuracy in detail, you get to know the documents and their features after a while. For example, you start to know which entity types, relation types, and text types in the documents are best understood by the machine learning model, and which are not. This information is important because it helps you focus on making the right improvements - refining the type system, supplementing the training data to fill gaps, or adding dictionaries, for example. As the test documents get used iteratively to improve the model, they can start to influence the model training indirectly. That's why the "blind" set of documents is so important.
+)
+
+1.7.5. Importance of iterative training using feedback that has diminished costs derivative  
+(ivp: TODO)
+
 ### 1.8. Perform Domain Adaption using Watson Knowledge Studio (WKS).
 
 There is a great YouTube video series for Watson Knowledge Studio here:

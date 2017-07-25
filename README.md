@@ -477,27 +477,27 @@ To answer correctly, we need to understand the intent behind the question, in or
 #### 2.1.1. Agent-assist for email-based customer call center
  - Data: customer emails
  - Services: Q&A, Text classification, entity extraction and, keyword extraction
- - Watson-specific: NLC, R&R, Alchemy Language
+ - Watson-specific: NLC, R&R, ~~Alchemy Language~~ (ivp: Natural Language Unterstanding, Conversation, Discovery)
  
 #### 2.1.2. Agent-assist for phone-based customer call center
  - Data: customer voice recordings
  - Services: Q&A, Speech recognition, text-to-speech, text classification, entity extraction, keyword extraction
- - Watson-specific: NLC, R&R, Alchemy Language
+ - Watson-specific: NLC, R&R, ~~Alchemy Language~~, (ivp: Natural Language Unterstanding, Conversation, Text to Speech, Speech to Text, Discovery)
 
 #### 2.1.3. Expert advisor use case for physicians
  - Data: natural language intents
  - Services: Q&A, Text classification, entity extraction and keyword extraction
- - Watson-specific: NLC, R&R, Alchemy Language
+ - Watson-specific: NLC, R&R, ~~Alchemy Language~~, (ivp: Discovery)
  
 #### 2.1.4. Data insights for Instagram images
  - Data: images
- - Services: Image classification and natural OCR
- - Watson-specific: Visual Insights
+ - Services: Image classification and natural OCR(ivp: Optical character recognition)
+ - Watson-specific: ~~Visual Insights~~ (ivp: Visual Recognition)
 
 #### 2.1.5. Data insights for Twitter
  - Data: tweets
  - Services: Text classification, entity extraction, keyword extraction
- - Watson-specific: NLC and Alchemy Language
+ - Watson-specific: NLC and ~~Alchemy Language~~ (ivp: NLU/Discovery)
  
 ### 2.2. Explain the uses of the Watson services in the Application Starter Kits.
 ### 2.3. Describe the Watson Conversational Agent.

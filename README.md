@@ -919,11 +919,54 @@ IBM Watson™ Discovery brings together a functionally rich set of integrated, a
 - analyze
 
 2.5.2. Explain the components of the Discovery service
+- environment - think of an environment as the warehouse where you are storing all your boxes of documents
+- configuration - defines how to process & enrich the documents
+- collection - think of a collection as a box where you will store your documents in your environment
 
 2.5.3. Use the Discovery service via APIs or the Discovery Tooling
 2.5.3.1. Explain how to setup the environment
+The first time that you click this button, you need to choose an environment size from the list of options. Your Discovery service environment is where all your data that is stored will live. Think of an environment as the warehouse where you are storing all your boxes of documents. Make your selection and your environment will be created.
+Note: You have several environment sizes to choose from, see the Discovery catalog for details. If you find later that you need a larger environment, you can upgrade to a larger one then. (Your original source files will not count against your file size limit.)
+
+Example of environment metadata:
+{
+    "environment_id": "cc62bccd-4dd9-4e75-84dd-0a89f12c4f3f",
+    "name": "byod",
+    "description": "",
+    "created": "2017-07-18T14:33:04.326Z",
+    "updated": "2017-07-18T14:33:04.326Z",
+    "status": "active",
+    "read_only": false,
+    "size": 0,
+    "index_capacity": {
+        "disk_usage": {
+            "used_bytes": 54943860,
+            "total_bytes": 4294967296,
+            "used": "52.4 MB",
+            "total": "4 GB",
+            "percent_used": 1.28
+        },
+        "memory_usage": {
+            "used_bytes": 394587080,
+            "total_bytes": 1056309248,
+            "used": "376.31 MB",
+            "total": "1007.38 MB",
+            "percent_used": 37.36
+        }
+    }
+}
+
 2.5.3.2. Explain how to configure the Discovery service
+- create a service (choose plan) 
+- (optional) create configuration with description of documents transformations and enrichments (Note:  Before you start changing settings, you should upload the sample document that you identified at the start of this task)
+- create a collection
 2.5.3.3. Explain how to add content
+- via API: POST /v1/environments/{environment_id}/collections/{collection_id}/documents or with SDK
+- via Tooling: 
+  1. Click on the file  icon in the top left of your screen and select your collection.
+  2. Choose appropriate configuration
+  3. Go to Add data to this collection at the right of the screen and start uploading your documents.
+
 2.5.3.4. Explain how to build queries
 Reference:
 https://www.ibm.com/watson/developercloud/doc/discovery/index.html

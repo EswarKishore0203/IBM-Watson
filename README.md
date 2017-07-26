@@ -966,6 +966,7 @@ Example of environment metadata:
   1. Click on the file  icon in the top left of your screen and select your collection.
   2. Choose appropriate configuration
   3. Go to Add data to this collection at the right of the screen and start uploading your documents.
+- via Data Crawler (command line tool that will help you take your documents from the repositories where they reside (for example: file shares, databases, Microsoft SharePoint® ) and push them to the cloud, to be used by the Discovery Service)
 
 2.5.3.4. Explain how to build queries
 Reference:

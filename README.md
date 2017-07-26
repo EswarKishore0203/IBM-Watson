@@ -541,6 +541,7 @@ Services Used: Retrieve and Rank
 
 For section 2.2 and 2.3, we deep dive into the Watson services currently available and stated in the study guide. By understanding the services individually, it will help with knowing what services would work for different scenarios. 
 
+## (Unsorted)
 [You can view the list of Watson Starter Kits here](https://www.ibm.com/watson/developercloud/starter-kits.html)
 
 ### [Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/index.html)
@@ -592,7 +593,7 @@ There are size limitations to the training data:
 
 ##### Supported languages
 
-The classifier supports English (en), Arabic (ar), French (fr), German (de), Japanese (ja), Italian (it), Portuguese (pt), and Spanish (es). The language of the training data must match the language of the text that you intend to classify. Specify the language when you create the classifier.
+The classifier supports English (en), Arabic (ar), French (fr), German (de), Italian (it), Japanese (ja), Korean (ko), Portuguese (Brazilian) (pt), and Spanish (es). The language of the training data must match the language of the text that you intend to classify. Specify the language when you create the classifier.
 
 ##### Guidelines for good training
 The following guidelines are not enforced by the API. However, the classifier tends to perform better when the training data adheres to them:
@@ -671,8 +672,12 @@ The IBM Watson™ Tone Analyzer Service uses linguistic analysis to detect three
 ##### You input
 Any Text
 
+You submit JSON, plain text, or HTML input that contains your written content to the service. The service accepts up to 128 KB of text, which is about 1000 sentences. The service returns JSON results that report the tone of your input. You can use these results to improve the perception and effectiveness of your communications, ensuring that your writing conveys the tone and style that you want for your intended audience. The following diagram shows the basic flow of calls to the service.
+
 ##### Service output
 JSON that provides a hierarchical representation of the analysis of the terms in the input message
+
+TODO examle
 
 Mored detailed documentation for [Tone Analyzer](https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html)
 

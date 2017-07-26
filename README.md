@@ -506,6 +506,19 @@ Natural Language Classifier, Natural Language Understanding,
 Personality Insights and Watson Discovery
  
 ### 2.2. Explain the uses of the Watson services in the Application Starter Kits.
+
+#### Chatbot with Long Tail Search
+Use a conversational interface to answer both simple, common questions and complex, less common questions by adding search capability to a chatbot application.
+Services Used: Discovery, Conversation
+
+#### News Intelligence
+Build applications that uncover insights from pre-enriched news content. Use a dashboard to visualize the latest connections and trends for companies mentioned in the news.
+Services Used: Discovery
+
+#### Social Customer Care
+Social Customer Care monitors social media, understands brand customer needs or requests and responds proactively.
+Services Used: Personality Insights, Natural Language Classifier, Tone Analyzer
+
 ### 2.3. Describe the Watson Conversational Agent.
 
 For section 2.2 and 2.3, we deep dive into the Watson services currently available and stated in the study guide. By understanding the services individually, it will help with knowing what services would work for different scenarios. 

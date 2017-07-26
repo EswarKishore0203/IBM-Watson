@@ -519,6 +519,24 @@ Services Used: Discovery
 Social Customer Care monitors social media, understands brand customer needs or requests and responds proactively.
 Services Used: Personality Insights, Natural Language Classifier, Tone Analyzer
 
+#### Text Message Chatbot
+This starter kit uses Watson Conversation, Watson Natural Language Understanding, and the Weather API to demonstrate how to create an intuitive natural language conversation chatbot that connects to other services.
+Services Used: Conversation, Natural Language Understanding
+
+#### Voice of the Customer
+Analyze consumer reviews and extract valuable insights.
+Services Used: Discovery
+
+#### Knowledge Base Search
+Use cognitive search to uncover the best answers to natural language questions by taking advantage of the Discovery Service's embedded natural language processing and powerful query language.
+
+Services Used: Discovery
+
+#### Answer Retrieval
+Find and surface the most relevant responses to natural language queries from a large set of unstructured data.
+
+Services Used: Retrieve and Rank
+
 ### 2.3. Describe the Watson Conversational Agent.
 
 For section 2.2 and 2.3, we deep dive into the Watson services currently available and stated in the study guide. By understanding the services individually, it will help with knowing what services would work for different scenarios. 

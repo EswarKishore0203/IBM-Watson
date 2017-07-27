@@ -954,7 +954,8 @@ Example of environment metadata:
             "percent_used": 37.36
         }
     }
-}```
+}
+```
 
 2.5.3.2. Explain how to configure the Discovery service
 - create a service (choose plan) 

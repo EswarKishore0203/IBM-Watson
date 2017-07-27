@@ -1067,7 +1067,8 @@ Pre-trained Watson services:
 
 ### 3.3. Explain the Watson SDKs available as part of the services on Watson Developer Cloud.
 
-3.3.1 Identify the programming languages with SDKs available
+#### 3.3.1 Identify the programming languages with SDKs available
+
  - [Node SDK](https://www.npmjs.com/package/watson-developer-cloud)
  - [Java SDK](http://mvnrepository.com/artifact/com.ibm.watson.developer_cloud/java-sdk)
  - [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
@@ -1075,15 +1076,18 @@ Pre-trained Watson services:
  - [Python SDK](https://pypi.python.org/pypi/watson-developer-cloud)
  - [.NET Standard SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
 
-3.3.2 Describe the advantage and disadvantages of using an SDK
+#### 3.3.2 Describe the advantage and disadvantages of using an SDK
+
  advantages: easier to start; less coding; conventient interface
  disadvantage: additional libraries in your project; limited to API methods which currently implemented in SDK; a bit less control over communication; SDK must be up-to-date
-3.3.3 Find the Watson SDKs and other resources on the WDC GitHub
+ 
+#### 3.3.3 Find the Watson SDKs and other resources on the WDC GitHub
   - [Watson Developer Cloud Github](https://github.com/watson-developer-cloud/)
   
 ###  3.4. Explain the Watson REST APIs available as part of the services on Watson Developer Cloud.
 
-3.4.1 Identify the Language services on WDC 
+#### 3.4.1 Identify the Language services on WDC 
+
  - (Conversation)
  - Document Conversion 
  - (Discovery)
@@ -1092,13 +1096,19 @@ Pre-trained Watson services:
  - (Natural Language Understanding)
  - (Personality Insights) 
  - Retrieve and Rank 
- - (Tone Analyze)r
-3.4.2 Identify the Vision services on WDC
+ - (Tone Analyzer)
+ 
+#### 3.4.2 Identify the Vision services on WDC
+
  - Visual Recognition
-3.4.3 Identify the Speech services on WDC
+ 
+#### 3.4.3 Identify the Speech services on WDC
+
  - Speech to Text 
  - Text to Speech
-3.4.4 Identify the Data Insights services on WDC
+ 
+#### 3.4.4 Identify the Data Insights services on WDC
+
  - Discovery 
  - Personality Insight
  - Tone Analyzer
@@ -1107,17 +1117,26 @@ Pre-trained Watson services:
 
 3.5.1. The service enables developers without a background in machine learning
 or statistical algorithms to interpret the intent behind text.
+
 3.5.2. Configure:
+
 3.5.2.1. Gather sample text from real end users (fake initially if you have to
 but not much)
+
 3.5.2.2. Determine the users intents that capture the actions/needs
 expressed in the text
+
 3.5.2.3. Classify your user text into these user intents
+
 3.5.2.4. Separate your user text into train/test datasets
+
 3.5.2.5. Train an NLC classifier on your training dataset
+
 3.5.2.6. Pass the user input to an NLC classifier
+
 3.5.2.7. Determine the accuracy, precision, and recall of the NLC classifier
 using your test dataset
+
 3.5.2.8. Improve the confidence level iteratively through back propagation (ivp: WTF?!)
 or other means.
 (ivp: https://console.bluemix.net/docs/services/natural-language-classifier/using-your-data.html#using-your-own-data)

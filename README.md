@@ -1176,15 +1176,14 @@ The IBM Watson™ Personality Insights service provides an Application Programmi
 
 The service can automatically infer, from potentially noisy social media, portraits of individuals that reflect their personality characteristics. It can also determine individuals' consumption preferences, which indicate their likelihood to prefer various products, services, and activities.
 
-3.7.2. Describe the inputs and outputs of the Personality Insights service
-[Personality Insights](#personality-insights)
+#### 3.7.2. Describe the inputs and outputs of the Personality Insights service
+
+see [Personality Insights](#personality-insights)
 
 
-3.7.3. Describe the personality models of the Personality Insights service 
+#### 3.7.3. Describe the personality models of the Personality Insights service 
 
-- [Describe the intended use of the Personality Insights service](#personality-insights)
-- [Describe the inputs and outputs of the Personality Insights service](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/personality-insights.html)
-- [Describe the personality models of the Personality Insights service](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/personality-insights/basics.shtml)
+see [Personality Insights](#personality-insights)
 
 ###  3.8. Explain how Tone Analyzer service works.
 

@@ -1153,11 +1153,18 @@ https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 - Optical Character Recognition (OCR) is the electronic conversion of images of written or printed text into machine-encoded text
 - Natural scene character recognition is challenging due to the cluttered background, which is hard to separate from text
 
+as of 07/2017:
 The Visual Recognition service used to have a text recognition feature. It was available in the earlier beta version of the service, but has since been moved to closed beta according to the release notes:
 
 "Text recognition is now closed beta - We have gone back into a closed beta with the POST and GET /v3/recognize_text methods. We look forward to continuing to support BETA clients using the service, with no current plans for another open beta."
 
 3.6.5. Explain how collections are built and the use of similarity search
+1. Create a collection with `POST /v3/collections`
+2. Wait until status of collection changes to available
+3. Call the beta `POST /v3/collections/{collection_id}/images` method to upload the image to the collection (maximum image size is 2 MB):
+4. Call the beta `POST /v3/collections/{collection_id}/find_similar` method to upload the image file and search your collection to see if there are similar images.
+(example curl -X POST -F "image_file=@silver-dress2.jpg" "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/collections/{collection_id}/find_similar?api_key={api-key}&version=2016-05-20" )
+
 Reference:
 https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/
 

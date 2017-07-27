@@ -1054,52 +1054,54 @@ Pre-trained Watson services:
 
 ### 3.2. Provide examples of text classification using the NLC.
 
-Some examples are:
-- Sentiment analysis
-- Spam email detection
-- Customer message routing
-- Academic paper classification into technical fields of interest
-- Forum post classification to determine correct posting category
-- Patient reports for escalation and routing based on symptoms
-- News article analysis
-- Investment opportunity ranking
-- Web page topic analysis
+3.2.1. Sentiment analysis
+3.2.2. Spam email detection
+3.2.3. Customer message routing
+3.2.4. Academic paper classification into technical fields of interest
+3.2.5. Forum post classification to determine correct posting category
+3.2.6. Patient reports for escalation and routing based on symptoms
+3.2.7. News article analysis
+3.2.8. Investment opportunity ranking
+3.2.9. Web page topic analysis
+
 
 ### 3.3. Explain the Watson SDKs available as part of the services on Watson Developer Cloud.
 
-- Identify the programming languages with SDKs available
+3.3.1 Identify the programming languages with SDKs available
  - [Node SDK](https://www.npmjs.com/package/watson-developer-cloud)
  - [Java SDK](http://mvnrepository.com/artifact/com.ibm.watson.developer_cloud/java-sdk)
- - [iOS SDK](https://github.com/watson-developer-cloud/ios-sdk#installation)
+ - [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
  - [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk#installing-the-sdk-source-into-your-unity-project)
  - [Python SDK](https://pypi.python.org/pypi/watson-developer-cloud)
- - [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+ - [.NET Standard SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
 
-- Describe the advantage and disadvantages of using an SDK
-- Find the Watson SDKs and other resources on the WDC GitHub
+3.3.2 Describe the advantage and disadvantages of using an SDK
+ advantages: easier to start; less coding; conventient interface
+ disadvantage: additional libraries in your project; limited to API methods which currently implemented in SDK; a bit less control over communication; SDK must be up-to-date
+3.3.3 Find the Watson SDKs and other resources on the WDC GitHub
   - [Watson Developer Cloud Github](https://github.com/watson-developer-cloud/)
   
 ###  3.4. Explain the Watson REST APIs available as part of the services on Watson Developer Cloud.
 
-- Identify the Language services on WDC
- - AlchemyLanguage 
- - Conversation 
+3.4.1 Identify the Language services on WDC 
+ - (Conversation)
  - Document Conversion 
+ - (Discovery)
  - Language Translator 
  - Natural Language Classifier 
- - Natural Language Understanding 
- - Personality Insights 
+ - (Natural Language Understanding)
+ - (Personality Insights) 
  - Retrieve and Rank 
- - Tone Analyzer
-- Identify the Vision services on WDC
+ - (Tone Analyze)r
+3.4.2 Identify the Vision services on WDC
  - Visual Recognition
-- Identify the Speech services on WDC
+3.4.3 Identify the Speech services on WDC
  - Speech to Text 
  - Text to Speech
-- Identify the Data Insights services on WDC
- - AlchemyData News 
+3.4.4 Identify the Data Insights services on WDC
  - Discovery 
- - Tradeoff Analytics
+ - Personality Insight
+ - Tone Analyzer
  
 ###  3.5. Explain and configure Natural Language Classification.
 

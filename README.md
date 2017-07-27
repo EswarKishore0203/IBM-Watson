@@ -929,7 +929,7 @@ The first time that you click this button, you need to choose an environment siz
 Note: You have several environment sizes to choose from, see the Discovery catalog for details. If you find later that you need a larger environment, you can upgrade to a larger one then. (Your original source files will not count against your file size limit.)
 
 Example of environment metadata:
-`{
+```{
     "environment_id": "cc62bccd-4dd9-4e75-84dd-0a89f12c4f3f",
     "name": "byod",
     "description": "",
@@ -954,7 +954,7 @@ Example of environment metadata:
             "percent_used": 37.36
         }
     }
-}`
+}```
 
 2.5.3.2. Explain how to configure the Discovery service
 - create a service (choose plan) 

@@ -975,8 +975,9 @@ Example of environment metadata:
 - Click 'Build your own query'
 - Click 'Use the Discovery Query Language'
 
-Query structure
+##### Query structure
  [![Query structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/query_structure2.png)]
+ Operators table - https://www.ibm.com/watson/developercloud/doc/discovery/query-reference.html#operators
 
 Query Examples:
 - `enriched_text.sentiment.document.label:positive` - Will return all documents that have a positive sentiment.
@@ -985,6 +986,7 @@ Query Examples:
 - `enriched_text.entities.text::Watson` - Will return all documents that contain the entity Watson. (The operator :: specifies an exact match. By using an exact match we don't get false positives on similar entities, for example Watson Health and Dr. Watson would be ignored.)
 - `enriched_text.entities.text:IBM,enriched_text.entities.text:!Watson` - Will return all documents that contain the entity IBM, but not the entity Watson (The operator :! specifies "does not contain".)
 
+##### Combined Queries & Filters
 You can combine query parameters together to build more targeted queries. For example use both the filter and query parameters.
 When used in tandem with queries, filters execute first to narrow down the document set and speed up the query. Adding these filters will return unranked documents, and after that the accompanying query will run and return the results of that query ranked by relevance.
 
@@ -992,7 +994,15 @@ Filter examples:
 - `enriched_text.sentiment.document.label:positive` - Will return only the documents in the collection with the sentiment of positive.
 - `enriched_text.entities::(relevance>0.8,text::IBM)` - Will return only the documents that contain the entity IBM with a relevance score above 80% for that entity.
 
+##### Aggregations
+Aggregation queries return a set of data values; for example, top keywords, overall sentiment of entities, and more.
 
+ [![Aggregation structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/aggregation_structure.png)]
+
+Aggregation types: term, filter, nested, histogram, timeslice, top_hits, max, min, average, sum
+https://www.ibm.com/watson/developercloud/doc/discovery/query-reference.html#aggregations
+`nested(...)` expression sets the context to all following expressions of the aggregation  
+Good explantation of nested aggregation - https://youtu.be/pcNwV9prfmY?t=3m48s (especially note the explanation on 6:03)
 
 Reference:
 https://www.ibm.com/watson/developercloud/doc/discovery/index.html

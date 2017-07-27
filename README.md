@@ -1127,10 +1127,40 @@ https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 
 ###  3.6. Explain and configure Visual recognition.
 
-- Describe the process for training a classifier
-- Explain how to identify images with a specified classifier
-- Describe the capabilities of Face Detection/Recognition
-- Describe the capabilities of Natural Scene OCR
+3.6.1. Describe the process for training a classifier
+- via API: 
+
+  1. `POST /v3/classifiers` 
+
+  curl -X POST -F "beagle_positive_examples=@beagle.zip" -F "husky_positive_examples=@husky.zip" -F "goldenretriever_positive_examples=@golden-retriever.zip" -F "negative_examples=@cats.zip" -F "name=dogs" "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-key}&version=2016-05-20" 
+
+
+  Positive example filenames require the suffix _positive_examples. In this example, the filenames are beagle_positive_examples, goldenretriever_positive_examples, and husky_positive_examples. The prefix (beagle, goldenretriever, and husky) is returned as the name of class.
+
+  2. Check the training status periodically until you see a status of ready
+
+3.6.2. Explain how to identify images with a specified classifier
+
+- when training: use `POST /v3/classifiers/{classifier_id}` to update existing classifier
+- when classifying: use parameter `classifier_ids` to define which classifier should process given image
+
+3.6.3. Describe the capabilities of facial, gender, and age recognition
+
+'Face Detection' classifier can detect faces on the image and predict geneder and age for each face
+
+3.6.4. Describe the capabilities of Natural Scene OCR
+
+- Optical Character Recognition (OCR) is the electronic conversion of images of written or printed text into machine-encoded text
+- Natural scene character recognition is challenging due to the cluttered background, which is hard to separate from text
+
+The Visual Recognition service used to have a text recognition feature. It was available in the earlier beta version of the service, but has since been moved to closed beta according to the release notes:
+
+"Text recognition is now closed beta - We have gone back into a closed beta with the POST and GET /v3/recognize_text methods. We look forward to continuing to support BETA clients using the service, with no current plans for another open beta."
+
+3.6.5. Explain how collections are built and the use of similarity search
+Reference:
+https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/
+
 
 ###  3.7. Explain how Personality Insights service works.
 

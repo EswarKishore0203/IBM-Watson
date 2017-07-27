@@ -969,6 +969,30 @@ Example of environment metadata:
 - via Data Crawler (command line tool that will help you take your documents from the repositories where they reside (for example: file shares, databases, Microsoft SharePoint® ) and push them to the cloud, to be used by the Discovery Service)
 
 2.5.3.4. Explain how to build queries
+- Click on the magnifying glass icon to open the query page
+- Select your collection and click Get started
+- Click 'Build your own query'
+- Click 'Use the Discovery Query Language'
+
+Query structure
+ [![Query structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/query_structure2.png)]
+
+Query Examples:
+- enriched_text.sentiment.document.label:positive - Will return all documents that have a positive sentiment.
+- enriched_text.entities.type:company - Will return all documents that contain an entity of the type company
+- enriched_text.categories.label::"health and fitness" - Will return all documents in the health and fitness category. (The operator :: specifies an exact match.)
+- enriched_text.entities.text::Watson - Will return all documents that contain the entity Watson. (The operator :: specifies an exact match. By using an exact match we don't get false positives on similar entities, for example Watson Health and Dr. Watson would be ignored.)
+- enriched_text.entities.text:IBM,enriched_text.entities.text:!Watson - Will return all documents that contain the entity IBM, but not the entity Watson (The operator :! specifies "does not contain".)
+
+You can combine query parameters together to build more targeted queries. For example use both the filter and query parameters.
+When used in tandem with queries, filters execute first to narrow down the document set and speed up the query. Adding these filters will return unranked documents, and after that the accompanying query will run and return the results of that query ranked by relevance.
+
+Filter examples: 
+- `enriched_text.sentiment.document.label:positive` - Will return only the documents in the collection with the sentiment of positive.
+- ´enriched_text.entities::(relevance>0.8,text::IBM)´ - Will return only the documents that contain the entity IBM with a relevance score above 80% for that entity.
+
+
+
 Reference:
 https://www.ibm.com/watson/developercloud/doc/discovery/index.html
 https://www.youtube.com/watch?v=FikHwoJ6_FE

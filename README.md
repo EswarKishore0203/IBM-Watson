@@ -976,8 +976,9 @@ Example of environment metadata:
 - Click 'Use the Discovery Query Language'
 
 ##### Query structure
- [![Query structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/query_structure2.png)]
- Operators table - https://www.ibm.com/watson/developercloud/doc/discovery/query-reference.html#operators
+![Query structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/query_structure2.png)
+ 
+Operators table - https://www.ibm.com/watson/developercloud/doc/discovery/query-reference.html#operators
 
 Query Examples:
 - `enriched_text.sentiment.document.label:positive` - Will return all documents that have a positive sentiment.
@@ -997,7 +998,7 @@ Filter examples:
 ##### Aggregations
 Aggregation queries return a set of data values; for example, top keywords, overall sentiment of entities, and more.
 
- [![Aggregation structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/aggregation_structure.png)]
+ ![Aggregation structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/aggregation_structure.png)
 
 Aggregation types: term, filter, nested, histogram, timeslice, top_hits, max, min, average, sum
 

@@ -1105,16 +1105,25 @@ Pre-trained Watson services:
  
 ###  3.5. Explain and configure Natural Language Classification.
 
-The service enables developers without a background in machine learning or statistical algorithms to interpret the intent behind text.
-Configure:
-- Gather sample text from real end users (fake initially if you have to…but not much)
-- Determine the users intents that capture the actions/needs expressed in the text
-- Classify your user text into these user intents
-- Separate your user text into train/test datasets
-- Train an NLC classifier on your training dataset
-- Pass the user input to an NLC classifier
-- Determine the accuracy, precision, and recall of the NLC classifier using your test dataset
-- Improve the confidence level iteratively through back propagation or other means. 
+3.5.1. The service enables developers without a background in machine learning
+or statistical algorithms to interpret the intent behind text.
+3.5.2. Configure:
+3.5.2.1. Gather sample text from real end users (fake initially if you have to
+but not much)
+3.5.2.2. Determine the users intents that capture the actions/needs
+expressed in the text
+3.5.2.3. Classify your user text into these user intents
+3.5.2.4. Separate your user text into train/test datasets
+3.5.2.5. Train an NLC classifier on your training dataset
+3.5.2.6. Pass the user input to an NLC classifier
+3.5.2.7. Determine the accuracy, precision, and recall of the NLC classifier
+using your test dataset
+3.5.2.8. Improve the confidence level iteratively through back propagation (ivp: WTF?!)
+or other means.
+(ivp: https://console.bluemix.net/docs/services/natural-language-classifier/using-your-data.html#using-your-own-data)
+
+Reference:
+https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 
 ###  3.6. Explain and configure Visual recognition.
 

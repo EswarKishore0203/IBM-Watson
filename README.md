@@ -677,7 +677,7 @@ You submit JSON, plain text, or HTML input that contains your written content to
 ##### Service output
 JSON that provides a hierarchical representation of the analysis of the terms in the input message
 
-TODO examle
+example https://tone-analyzer-demo.mybluemix.net/
 
 Mored detailed documentation for [Tone Analyzer](https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html)
 
@@ -1055,13 +1055,21 @@ Pre-trained Watson services:
 ### 3.2. Provide examples of text classification using the NLC.
 
 3.2.1. Sentiment analysis
+
 3.2.2. Spam email detection
+
 3.2.3. Customer message routing
+
 3.2.4. Academic paper classification into technical fields of interest
+
 3.2.5. Forum post classification to determine correct posting category
+
 3.2.6. Patient reports for escalation and routing based on symptoms
+
 3.2.7. News article analysis
+
 3.2.8. Investment opportunity ranking
+
 3.2.9. Web page topic analysis
 
 
@@ -1115,10 +1123,10 @@ Pre-trained Watson services:
  
 ###  3.5. Explain and configure Natural Language Classification.
 
-3.5.1. The service enables developers without a background in machine learning
+#### 3.5.1. The service enables developers without a background in machine learning
 or statistical algorithms to interpret the intent behind text.
 
-3.5.2. Configure:
+#### 3.5.2. Configure:
 
 3.5.2.1. Gather sample text from real end users (fake initially if you have to
 but not much)
@@ -1144,7 +1152,7 @@ or other means.
 Reference:
 https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 
-###  3.6. Explain and configure Visual recognition.
+### 3.6. Explain and configure Visual recognition.
 
 #### 3.6.1. Describe the process for training a classifier
 - via API: 
@@ -1205,11 +1213,49 @@ see [Personality Insights](#personality-insights)
 see [Personality Insights](#personality-insights)
 
 ###  3.8. Explain how Tone Analyzer service works.
+#### 3.8.1. Describe the common use cases of the Tone Analyzer service
+see [Tone Analyzer](#tone-analyzer)
 
-- [Describe the common use cases of the Tone Analyzer service](#tone-analyzer)
-- Describe the basic flow of the Tone Analyzer service
-- [Explain the three categories of tone scores and their sub-tones: emotional tone, social tone, and language tone.](https://www.ibm.com/blogs/watson/2016/02/293/)
-- [Explain how Tone Analyzer service is different from the Alchemy Language - Sentiment Analysis and Emotion Insights service](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/tone-analyzer/index.shtml)
+#### 3.8.2. Describe the basic flow of the Tone Analyzer service
+- send text to general endpoint or customer engagement endpoint for analyze
+- enjoy the results ;)
+
+#### 3.8.3. Explain the three categories of tone scores and their sub-tones: emotional tone, social tone, and language tone.
+- Emotion tones
+
+  Emotion tones (ID emotion_tone) measure different types of emotions and feelings that people express.
+  
+    - Anger: Anger is evoked due to injustice, conflict, humiliation, negligence, or betrayal. If anger is active, the individual attacks the target, verbally or physically. If anger is passive, the person silently sulks and feels tension and hostility.
+    - Disgust: Disgust is an emotional response of revulsion to something considered offensive or unpleasant. The sensation refers to something revolting.
+    - Fear: Fear is a response to impending danger. It is a survival mechanism that is triggered as a reaction to some negative stimulus. Fear may be a mild caution or an extreme phobia.
+    - Joy: Joy (or happiness) has shades of enjoyment, satisfaction, and pleasure. Joy brings a sense of well-being, inner peace, love, safety, and contentment.
+    - Sadness: Sadness indicates a feeling of loss and disadvantage. When a person is quiet, less energetic, and withdrawn, it may be inferred that they feel sadness.
+
+- Social tones
+
+Social tones (ID social_tone) measure the social tendencies in people's writing. The tones are adopted from the Big Five personality model; for more information, see the Personality models described for the IBM Watson™ Personality Insights service.
+
+    - Agreeableness: The tendency to be compassionate and cooperative towards others [Selfish, uncaring, uncooperative, self-interested, confrontational, skeptical, or arrogant ||	Caring, sympathetic, cooperative, compromising, trustworthy, or humble]
+    - Conscientiousness:	The tendency to act in an organized or thoughtful way	[Spontaneous, laid-back, reckless, unmethodical, remiss, or disorganized ||	Disciplined, dutiful, achievement-striving, confident, driven, or organized]
+    - Emotional range:	The extent to which a person's emotions are sensitive to their environment	[Calm, bland, content, relaxed, unconcerned, or careful ||	Concerned, frustrated, angry, passionate, upset, stressed, insecure, or impulsive]
+    - Extraversion:	The tendency to seek stimulation in the company of others	[[Independent, timid, introverted, restrained, boring, or dreary	|| Engaging, seeking attention, needy, assertive, outgoing, sociable, cheerful, excitement-seeking, or busy]]
+    - Openness:	The extent to which a person is open to experiencing a variety of activities	[No-nonsense, straightforward, blunt, or preferring tradition and the obvious over the complex, ambiguous, and subtle ||	Intellectual, curious, emotionally aware, imaginative, willing to try new things, appreciating beauty, or open to change]
+
+- Language tones
+
+Language tones (ID language_tone) describe a person's perceived writing style. A score of less than 0.5 indicates that the content offered little or no evidence of the tone.
+
+    - Analytical: analytical	A person's reasoning and analytical attitude about things	[Intellectual, rational, systematic, emotionless, or impersonal]
+    - Confident: confident	A person's degree of certainty	[Assured, collected, hopeful, or egotistical]
+    - Tentative: tentative	A person's degree of inhibition	[Questionable, doubtful, or debatable]
+    
+3.8.4. Explain how Tone Analyzer service is different from the Natural Language
+Understanding - Sentiment Analysis and Emotion Insights service
+References:
+https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/
+https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html
+https://www.ibm.com/blogs/watson/2016/02/293/
+
 
 ###  3.9. Explain and execute Alchemy Language services.
 

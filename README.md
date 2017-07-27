@@ -1000,13 +1000,17 @@ Aggregation queries return a set of data values; for example, top keywords, over
  [![Aggregation structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/aggregation_structure.png)]
 
 Aggregation types: term, filter, nested, histogram, timeslice, top_hits, max, min, average, sum
+
 https://www.ibm.com/watson/developercloud/doc/discovery/query-reference.html#aggregations
+
 `nested(...)` expression sets the context to all following expressions of the aggregation  
 Good explantation of nested aggregation - https://youtu.be/pcNwV9prfmY?t=3m48s (especially note the explanation on 6:03)
 
 Reference:
 https://www.ibm.com/watson/developercloud/doc/discovery/index.html
+
 https://www.youtube.com/watch?v=FikHwoJ6_FE
+
 https://www.youtube.com/watch?v=fmIPeopG-ys&t=1s
 
 ## Section 3 – Fundamentals of IBM Watson Developer Cloud

@@ -1127,7 +1127,7 @@ https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 
 ###  3.6. Explain and configure Visual recognition.
 
-3.6.1. Describe the process for training a classifier
+#### 3.6.1. Describe the process for training a classifier
 - via API: 
 
   1. `POST /v3/classifiers` 
@@ -1139,16 +1139,16 @@ https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 
   2. Check the training status periodically until you see a status of ready
 
-3.6.2. Explain how to identify images with a specified classifier
+#### 3.6.2. Explain how to identify images with a specified classifier
 
 - when training: use `POST /v3/classifiers/{classifier_id}` to update existing classifier
 - when classifying: use parameter `classifier_ids` to define which classifier should process given image
 
-3.6.3. Describe the capabilities of facial, gender, and age recognition
+#### 3.6.3. Describe the capabilities of facial, gender, and age recognition
 
 'Face Detection' classifier can detect faces on the image and predict geneder and age for each face
 
-3.6.4. Describe the capabilities of Natural Scene OCR
+#### 3.6.4. Describe the capabilities of Natural Scene OCR
 
 - Optical Character Recognition (OCR) is the electronic conversion of images of written or printed text into machine-encoded text
 - Natural scene character recognition is challenging due to the cluttered background, which is hard to separate from text
@@ -1158,7 +1158,7 @@ The Visual Recognition service used to have a text recognition feature. It was a
 
 "Text recognition is now closed beta - We have gone back into a closed beta with the POST and GET /v3/recognize_text methods. We look forward to continuing to support BETA clients using the service, with no current plans for another open beta."
 
-3.6.5. Explain how collections are built and the use of similarity search
+#### 3.6.5. Explain how collections are built and the use of similarity search
 1. Create a collection with `POST /v3/collections`
 2. Wait until status of collection changes to available
 3. Call the beta `POST /v3/collections/{collection_id}/images` method to upload the image to the collection (maximum image size is 2 MB):
@@ -1170,6 +1170,17 @@ https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/
 
 
 ###  3.7. Explain how Personality Insights service works.
+#### 3.7.1. Describe the intended use of the Personality Insights service
+
+The IBM Watson™ Personality Insights service provides an Application Programming Interface (API) that enables applications to derive insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics, including Big Five, Needs, and Values, from digital communications such as email, text messages, tweets, and forum posts.
+
+The service can automatically infer, from potentially noisy social media, portraits of individuals that reflect their personality characteristics. It can also determine individuals' consumption preferences, which indicate their likelihood to prefer various products, services, and activities.
+
+3.7.2. Describe the inputs and outputs of the Personality Insights service
+[Personality Insights](#personality-insights)
+
+
+3.7.3. Describe the personality models of the Personality Insights service 
 
 - [Describe the intended use of the Personality Insights service](#personality-insights)
 - [Describe the inputs and outputs of the Personality Insights service](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/personality-insights.html)

@@ -929,7 +929,7 @@ The first time that you click this button, you need to choose an environment siz
 Note: You have several environment sizes to choose from, see the Discovery catalog for details. If you find later that you need a larger environment, you can upgrade to a larger one then. (Your original source files will not count against your file size limit.)
 
 Example of environment metadata:
-{
+`{
     "environment_id": "cc62bccd-4dd9-4e75-84dd-0a89f12c4f3f",
     "name": "byod",
     "description": "",
@@ -954,7 +954,7 @@ Example of environment metadata:
             "percent_used": 37.36
         }
     }
-}
+}`
 
 2.5.3.2. Explain how to configure the Discovery service
 - create a service (choose plan) 
@@ -978,18 +978,18 @@ Query structure
  [![Query structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/query_structure2.png)]
 
 Query Examples:
-- enriched_text.sentiment.document.label:positive - Will return all documents that have a positive sentiment.
-- enriched_text.entities.type:company - Will return all documents that contain an entity of the type company
-- enriched_text.categories.label::"health and fitness" - Will return all documents in the health and fitness category. (The operator :: specifies an exact match.)
-- enriched_text.entities.text::Watson - Will return all documents that contain the entity Watson. (The operator :: specifies an exact match. By using an exact match we don't get false positives on similar entities, for example Watson Health and Dr. Watson would be ignored.)
-- enriched_text.entities.text:IBM,enriched_text.entities.text:!Watson - Will return all documents that contain the entity IBM, but not the entity Watson (The operator :! specifies "does not contain".)
+- `enriched_text.sentiment.document.label:positive` - Will return all documents that have a positive sentiment.
+- `enriched_text.entities.type:company` - Will return all documents that contain an entity of the type company
+- `enriched_text.categories.label::"health and fitness"` - Will return all documents in the health and fitness category. (The operator :: specifies an exact match.)
+- `enriched_text.entities.text::Watson` - Will return all documents that contain the entity Watson. (The operator :: specifies an exact match. By using an exact match we don't get false positives on similar entities, for example Watson Health and Dr. Watson would be ignored.)
+- `enriched_text.entities.text:IBM,enriched_text.entities.text:!Watson` - Will return all documents that contain the entity IBM, but not the entity Watson (The operator :! specifies "does not contain".)
 
 You can combine query parameters together to build more targeted queries. For example use both the filter and query parameters.
 When used in tandem with queries, filters execute first to narrow down the document set and speed up the query. Adding these filters will return unranked documents, and after that the accompanying query will run and return the results of that query ranked by relevance.
 
 Filter examples: 
 - `enriched_text.sentiment.document.label:positive` - Will return only the documents in the collection with the sentiment of positive.
-- ´enriched_text.entities::(relevance>0.8,text::IBM)´ - Will return only the documents that contain the entity IBM with a relevance score above 80% for that entity.
+- `enriched_text.entities::(relevance>0.8,text::IBM)` - Will return only the documents that contain the entity IBM with a relevance score above 80% for that entity.
 
 
 

@@ -1249,28 +1249,97 @@ Language tones (ID language_tone) describe a person's perceived writing style. A
     - Confident: confident	A person's degree of certainty	[Assured, collected, hopeful, or egotistical]
     - Tentative: tentative	A person's degree of inhibition	[Questionable, doubtful, or debatable]
     
-3.8.4. Explain how Tone Analyzer service is different from the Natural Language
-Understanding - Sentiment Analysis and Emotion Insights service
+#### 3.8.4. Explain how Tone Analyzer service is different from the Natural Language Understanding - Sentiment Analysis and Emotion Insights service
+- NLU - Sentiment Analysis doesn't give you deep insight into authors personality/state. 
+- NLU - Emotion Insights service is only part of functionality provided by Tone Analyzer.
+
 References:
 https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/
 https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html
 https://www.ibm.com/blogs/watson/2016/02/293/
 
+### 3.9. Explain and execute IBM Watson Natural Language Understanding services.
 
-###  3.9. Explain and execute Alchemy Language services.
+#### 3.9.1. Identify the capabilities of Natural Language Understanding
 
-- [Identify the capabilities of Alchemy Language](#alchemylanguage)
-- Describe the text extraction features of Alchemy Language
-- Distinguish between keywords, entities, and concepts
-- Distinguish between document-level and targeted sentiment
-- Explain the difference between the taxonomy call and the knowledge graph
-- [Explain disambiguation as it relates to entities](http://www.alchemyapi.com/api/sentiment-analysis)
-- Explain how Emotion Analysis service works
- - [What emotions does Emotion Analysis detect?](http://www.alchemyapi.com/api/sentiment-analysis)
- - [Describe the main use cases for applying the Emotion Insights service](http://blog.alchemyapi.com/a-step-closer-to-building-empathetic-systems)
- - [Describe the main types of positive/negative sentiment extracted from digital text](http://www.alchemyapi.com/api/sentiment/proc.html)
- - [Describe the API types provided by the Sentiment Analysis service](http://www.alchemyapi.com/api/sentiment/urls.html)
- - Describe the differences between sentiment and emotion analyses
+**Features:**
+- Categories (e.g /news, /art and entertainment, /movies and tv/television, /news, /international news)
+- Concepts (e.g. Linguistics, Natural language processing, Natural language understanding)
+- Emotion (You can also enable emotion analysis for entities and keywords that are automatically detected by the service, e.g {"apples": joy, "oranges": anger})
+- Entities (e.g. IBM: Company, Armonk: Location, New York: Location, United States: Location)
+- Keywords (Australian Open, Tennis Australia, IBM SlamTracker analytics)
+- Metadata (For HTML and URL input, get the author of the webpage, the page title, and the publication date. For example:)
+- Relations ("awardedTo" relation between "Noble Prize in Physics" and "Albert Einstein"; "timeOf" relation between "1921" and "awarded")
+- Semantic Roles (e.g. Input "In 2011, Watson competed on Jeopardy!" => { Subject: Watson, Action: competed, Object: on Jeopardy})
+- Sentiment (e.g. Positive sentiment (score: 0.91))
+- (additionally) Language Detection
+
+**Supported Languages:**
+Arabic, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Swedish
+(for support of concrete features per language see https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/#supported-languages)
+
+#### 3.9.2. Describe the text extraction features of Natural Language Understanding
+
+see https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html#service-features
+
+#### 3.9.3. Distinguish between keywords, entities, and concepts
+
+The biggest difference is that concepts can pick up on things that aren't explicitly mentioned. For example, this article about Mount Rushmore returns (among others) the concept South Dakota, which is never explicitly mentioned. Keywords, on the other hand, are nouns and noun phrases that are pulled directly from the text based on their frequency or potential importance.
+
+While we're on the subject, entities are similar to keywords but are more specific. Entity extraction wouldn't pick up park rangers (a keyword), but it does pick up National Park Service.
+
+(https://www.quora.com/What-is-the-difference-between-keywords-and-concepts-in-the-AlchemyAPI-output)
+
+#### 3.9.4. Distinguish between document-level and targeted sentiment
+Document-level sentiment is a sentiment of the whole document, target sentiment is array of target analysis results. Each object contains the text of the target, sentiment score, and a label.
+
+(see https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/#sentiment)
+(see demo app https://natural-language-understanding-demo.mybluemix.net/)
+
+#### 3.9.5. Explain the difference between the taxonomy call and the knowledge graph
+- Taxonomy is hierarchical way to cathegorize things (i.e. it's just a bunch of categories, which can be used to "describe" some objects; ~= metadata) 
+- In contrast to it knowledge graph is information about concrete objects and their relationships (i.e. way to organize information about objects + this information; ~= matadata + data)
+
+https://en.wikipedia.org/wiki/Knowledge_Graph
+https://www.youtube.com/watch?v=mmQl6VGvX-c
+
+#### 3.9.6. Explain disambiguation as it relates to entities
+Example of ambiguaty: "Ford" can be a car or a person.
+
+When NLU find entity and cannot unambiguously detect it's type it provides information which can help to resolve ambiguity: entity subType information, a common entity name, and a dbpedia_resource link if applicable.
+
+Example 
+```
+"disambiguation": {
+        "name": "IBM",
+        "dbpedia_resource": "http://dbpedia.org/resource/IBM",
+        "subtype": [
+          "SoftwareLicense",
+          "OperatingSystemDeveloper",
+          "ProcessorManufacturer",
+          "SoftwareDeveloper",
+          "CompanyFounder",
+          "ProgrammingLanguageDesigner",
+          "ProgrammingLanguageDeveloper"
+        ]
+      }
+```
+
+#### 3.9.7. Explain how Emotion Analysis service works
+
+3.9.7.1. What emotions does Emotion Analysis detect?
+
+3.9.7.2. Describe the main use cases for applying the Emotion Insights service
+
+3.9.7.3. Describe the main types of positive/negative sentiment extracted from digital text
+
+3.9.7.4. Describe the API types provided by the Sentiment Analysis service
+
+3.9.7.5. Describe the differences between sentiment and emotion analyses
+
+Reference:
+https://www.ibm.com/watson/developercloud/natural-languageunderstanding/api/v1/
+
 
 ###  3.10. Explain and configure Retrieve and Rank service.
 

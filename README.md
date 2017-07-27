@@ -1020,19 +1020,37 @@ https://www.youtube.com/watch?v=fmIPeopG-ys&t=1s
 
 Some IBM Watson services work out-of-the-box as they were pre-trained in a specific domain (domain-adapted). Other Watson services require training. For pre-trained services, it’s critical to know the adapted domains as they indicate the areas in which the service will perform best.
 
-Pre-trained Watson services:
-- Watson Text-to-Speech
-- Watson Speech-to-text
-- Language Translation (conversational, news, and patent domains)
-- Alchemy Language (open-domain)
-- Watson Visual Insights
-- Tone Analyzer
-- Personality Insights (social media domain)
+#### 3.1.1. Some IBM Watson services work out-of-the-box as they were pre-trained
+in a specific domain (domain-adapted). Other Watson services require
+training. For pre-trained services, it’s critical to know the adapted
+domains as they indicate the areas in which the service will perform best.
 
-Services requiring training:
-- Natural Language Classifier
-- Rank part of Retrieve and Rank
-- Visual recognition (custom models)
+Pre-trained Watson services:
+
+3.1.2.1. Watson Text-to-Speech
+
+3.1.2.2. Watson Speech-to-text
+
+3.1.2.3. Language Translator (conversational, news, and patent domains)
+
+3.1.2.4. Natural Language Understanding (however similar models can be trained in Watson Knowledge Studio)
+
+3.1.2.5. Tone Analyzer
+
+3.1.2.6. Personality Insights (social media domain)
+
+3.1.2.7. Watson Discovery News
+
+3.1.2.8. Watson Discovery Service
+
+#### 3.1.3. Services requiring training:
+
+3.1.3.1. Natural Language Classifier
+
+3.1.3.2. Visual recognition (custom models, however it is supplied with some pre-built models)
+
+3.1.3.3. Watson Conversation
+
 
 ### 3.2. Provide examples of text classification using the NLC.
 

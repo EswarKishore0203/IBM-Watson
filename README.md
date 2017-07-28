@@ -1327,32 +1327,31 @@ Example
 
 #### 3.9.7. Explain how Emotion Analysis service works
 
-3.9.7.1. What emotions does Emotion Analysis detect?
+##### 3.9.7.1. What emotions does Emotion Analysis detect?
   - sadness
   - joy
   - fear
   - disgust
   - anger
 
-3.9.7.2. Describe the main use cases for applying the Emotion Insights service
+##### 3.9.7.2. Describe the main use cases for applying the Emotion Insights service
   - **Product Feedback and Campaign Effectiveness:** Monitor the emotional reaction of your target audience for your products, campaigns, and other marketing communications. 
 - **Customer Satisfaction:** Analyze customer surveys, emails, chats, and reviews to determine the emotional pulse of your customers. 
 - **Contact-center Management, Automated agents, and Robots:** Detect emotions in chats or other conversations and adapt to provide an appropriate response. For instance, direct a customer to a human agent if intense anger is detected.
    
 https://developer.ibm.com/watson/blog/2016/02/29/another-step-closer-to-building-empathetic-systems/
  
-3.9.7.3. Describe the main types of positive/negative sentiment extracted from digital text
+##### 3.9.7.3. Describe the main types of positive/negative sentiment extracted from digital text
 
 [see 3.9.4](#394-distinguish-between-document-level-and-targeted-sentiment)
 
-3.9.7.4. Describe the API types provided by the Sentiment Analysis service
+##### 3.9.7.4. Describe the API types provided by the Sentiment Analysis service
 
 The question is probably legacy taken over from Alechemy Language times (it used to have HTML, Text and WEB API [Sentiment Analysis API](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
 
 Currently NLU has all features combined in one main API endpoint /analyze (exists in 2 flavours - GET and POST) 
 
-
-3.9.7.5. Describe the differences between sentiment and emotion analyses
+##### 3.9.7.5. Describe the differences between sentiment and emotion analyses
 
 Emotion recognition is a special case of sentiment analysis. The output of sentiment analysis is produced in terms of either polarity (e.g., positive or negative) or in the form of rating (e.g., from 1 to 5). Emotions are a more detailed level of analysis in which the result are depicted in more expressive and fine-grained level of analysis.
 Sentiment analysis deals with only text, while emotions can be expressed by text, images, audio, video, facial signs etc.
@@ -1363,7 +1362,7 @@ https://www.ibm.com/watson/developercloud/natural-languageunderstanding/api/v1/
 
 ### 3.10.Explain, setup, configure and query the IBM Watson Discovery service.
 
-##### 3.10.1. How to create the Data Collection repository
+#### 3.10.1. How to create the Data Collection repository
 
 Inputs: environment_id, configuration_id
 
@@ -1377,11 +1376,11 @@ curl -X POST -u "{username}":"{password}" -H "Content-Type: application/json" -d
 }' "https://gateway.watsonplatform.net/discovery/api/v1/environments/{environment_id}/collections?version=2017-07-19"
 ```
 
-#### 3.10.1.1. Explain the significance of working with sample documents
+##### 3.10.1.1. Explain the significance of working with sample documents
 
 To make the configuration process more efficient, you can upload up to ten Microsoft Word, HTML, JSON, or PDF files that are representative of your document set. These are called sample documents. Sample documents are not added to your collection — they are only used to identify fields that are common to your documents and customize those fields to your requirements.
 
-#### 3.10.1.2. Explain the difference between Default and switching to a new custom collection
+##### 3.10.1.2. Explain the difference between Default and switching to a new custom collection
 I guess the question supposed to ask about Default and custom configurations (since there is no such as thing as default collection).
 
 ------
@@ -1405,7 +1404,7 @@ The easiest way to see if the default works for you is to test it by Uploading s
 
 Absolutely, you can add additional enrichments to as many fields as you wish. See Adding enrichments for details.
 
-3.10.1.3. Explain when might you need more than one collection
+##### 3.10.1.3. Explain when might you need more than one collection
 
 A collection is a set of your documents. Why would I want more than one collection? There are a few reasons, including:
 
@@ -1413,31 +1412,45 @@ You may want multiple collections in order to separate results for different aud
 The data may be so different that it doesn't make sense for it all to be queried at the same time
 
 #### 3.10.2. What are some of the steps required when you customize your configuration
-3.10.2.1. Identify sample documents
+##### 3.10.2.1. Identify sample documents
 
-3.10.2.2. Convert sample documents
+##### 3.10.2.2. Convert sample documents
 
-3.10.2.3. Add enrichments
+##### 3.10.2.3. Add enrichments
 
-3.10.2.4. Normalize data
+##### 3.10.2.4. Normalize data
 
 #### 3.10.3. What are the four standard document formats and explain the conversion flow (MS Word, PDF, HTML and JSON)
 
 #### 3.10.4. Adding Enrichments, explain the following enrichments:
 
-3.10.4.1. Entity Extraction
+##### 3.10.4.1. Entity Extraction
+Extracts people, companies, organizations, cities, geographic features, and more from this field.
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#entity-extraction)
 
-3.10.4.2. Keyword Extraction
+##### 3.10.4.2. Keyword Extraction
+Determines important keywords in this field, ranks them, and optionally detects the sentiment.
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#keyword-extraction)
 
-3.10.4.3. Taxonomy Classification
+##### 3.10.4.3. Taxonomy Classification (aka Category Classification)
+Classifies this field into a hierarchy of categories that's five levels deep.
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#category-classification)
 
-3.10.4.4. Concept Tagging
+##### 3.10.4.4. Concept Tagging
+Identifies general concepts that aren’t necessarily directly referenced in this field
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#concept-tagging)
 
-3.10.4.5. Relation Extraction
+##### 3.10.4.5. Relation Extraction (aka Semantic Role Extraction)
+Parses sentences into subject, action, and object form and returns additional semantic information.
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#semantic-role-extraction)
 
-3.10.4.6. Sentiment Analysis
+##### 3.10.4.6. Sentiment Analysis
+Identifies the overall positive or negative sentiment within this field.
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#sentiment-analysis)
 
-3.10.4.7. Emotion Analysis
+##### 3.10.4.7. Emotion Analysis
+Analyzes the emotions (anger, disgust, fear, joy, and sadness) in this field.
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#emotion-analysis)
 
 3.10.5. Explain document size limitations
 3.10.6. Explain the essence of the Normalization step, the last step in

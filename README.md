@@ -1522,25 +1522,35 @@ https://www.ibm.com/watson/developercloud/conversation/api/v1/
  
 ## Section 4 - Developing Cognitive applications using Watson Developer Cloud Services
 
-###  4.1. Call a Watson API to analyze content.
-- Alchemy Language
- - Create an instance of the Alchemy Language service in Bluemix
- - Select the correct API to call for text extraction, sentiment analysis, or any of the Alchemy Language services.
- - Pass your content to your Alchemy services’ endpoint through a RESTful API call
- - Natural Language Classifier
- - Gather sample text from real end users (fake initially if you have to…but not much)
- - Determine the users intents that capture the actions/needs expressed in the text
- - Classify your user text into these user intents
- - Separate your user text into train/test datasets
- - Create an instance of the Natural Language Classifier service in Bluemix
- - Train an NLC classifier on your training dataset
- - Pass your content to your NLC services’ endpoint through a RESTful API call
- - Determine the accuracy, precision, and recall of the NLC classifier using your test dataset
-- Personality Insights
- - Create an instance of the Personality Insights service in Bluemix
- - Gather text from users in their own voice
- - Ensure you meet the minimum limits for word count (currently 5,000 words) to limit sampling error.
- - Pass your content to your Personality Insight services’ endpoint through a RESTful API call
+### 4.1. Call a Watson API to analyze content.
+
+#### 4.1.1. Natural Language Understanding - Create an instance of the Natural Language Understanding service in Bluemix
+
+##### 4.1.1.1. Select the correct API to call for text extraction, sentiment analysis, or any of the Natural Language Understanding services.
+Outdated question. In contrast to Alchemy Language, NLU has only one endpoint where you can select features you need
+
+##### 4.1.1.2. Pass your content to your Alchemy services’ endpoint through a RESTful API call
+```
+curl -G -u "{username}":"{password}" -d "version=2017-02-27" -d "url=www.ibm.com" -d "features=keywords,entities" -d "entities.emotion=true" -d "entities.sentiment=true" -d "keywords.emotion=true" -d "keywords.sentiment=true" "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze"
+```
+
+##### 4.1.1.3. Natural Language Classifier
+##### 4.1.1.4. Gather sample text from real end users (fake initially if you have to…but not much)
+##### 4.1.1.5. Determine the users intents that capture the actions/needs expressed in the text
+##### 4.1.1.6. Classify your user text into these user intents
+##### 4.1.1.7. Separate your user text into train/test datasets
+##### 4.1.1.8. Create an instance of the Natural Language Classifier service in Bluemix
+##### 4.1.1.9. Train an NLC classifier on your training dataset
+##### 4.1.1.10. Pass your content to your NLC services’ endpoint through a RESTful API call
+##### 4.1.1.11. Determine the accuracy, precision, and recall of the NLC classifier using your test dataset
+
+### 4.1.2. Personality Insights - Create an instance of the Personality Insights
+service in Bluemix
+4.1.2.1. Gather text from users in their own voice
+4.1.2.2. Ensure you meet the minimum limits for word count to limit
+sampling error.
+4.1.2.3. Pass your content to your Personality Insight services’ endpoint
+through a RESTful API call
 
 ###  4.2. Describe the tasks required to implement the Conversational Agent / Digital Bot.
 

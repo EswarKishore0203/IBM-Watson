@@ -1562,17 +1562,34 @@ curl -X POST -u "{username}:{password}"
 
 ###  4.2. Describe the tasks required to implement the Conversational Agent / Digital Bot.
 
-- Document the primary conversation flow for your users.
-- Determine ways users could diverge from this flow and how to redirect them back.
-- Determine the primary user intents plus paraphrases at various nodes in your conversation
-- Define profile variables
-- Create instances of Dialog and NLC services on Bluemix
-- Upload these intents plus paraphrases into the NLC Service
-- Build out conversation flow with Dialog Service
-- Present your beta conversation agent to end users to capture real end user text
-- Identify areas where users strayed outside the domain of your conversation agent
-- Identify areas where your conversation agent misunderstood the user
-- Update your conversation agent with new intents plus real end user text
+#### 4.2.1. Scope if there is any historical data to draw upon in the creation of the digital agent.
+#### 4.2.2. Set expectations of what your conversational agent will and will not do.
+#### 4.2.3. Determine the user intents (What the end-user says to the bot) and entities (what they are talking about) in your conversation. Factor in historical data if applicable.
+#### 4.2.4. Design and define ideal conversation flow by writing questions and responses
+#### 4.2.5. Create a service instance of Watson Conversation in Bluemix
+#### 4.2.6. Launch a workspace through the provisioned service instance
+#### 4.2.7. Configure service to recognize user intents
+#### 4.2.8. Configure service to recognize user entities
+#### 4.2.9. Identify the usage of system entities
+#### 4.2.10. Map user intents and entities and define responses within dialog nodes
+#### 4.2.11. Build out the dialog conversation flow for the agent.
+#### 4.2.12. Determine ways users could diverge from your conversation process flow and ways to redirect them back.
+#### 4.2.13. Think on measures of conversation control and shaping. Does your agent conversation scope out and address what the end-user needs from the agent?
+#### 4.2.14. Will the end-user be able to comprehend the vocabulary, terminology, and style of the digital agent?
+#### 4.2.15. Define a conversation node to have multiple responses.
+#### 4.2.16. Bind Conversation service instance to an application.
+#### 4.2.17. Present your beta conversation agent to end users to capture real enduser interaction.
+#### 4.2.18. Identify areas where your conversation agent misunderstood the user.
+#### 4.2.19. Identify areas where users strayed outside the domain of your conversation agent through the Improve section of your Conversation workspace.
+#### 4.2.20. Update your conversation agent with new intents or entities to strengthen interactions.
+#### 4.2.21. Understand improvements of accuracy by utilizing training sets against themselves (K-Fold Cross Validation) and blind tests for when changes are made with your intents, entities, and dialog.
+"Remove a random 10%-20% (depend on number of question). Do not look at these questions. You use these as your blind test. Testing these will give you a reasonable expectation of how it will likely perform in the real world (assuming questions are not manufactured).
+
+In earlier versions of WEA, we had what was called an experiment (k-fold validation). The system would remove a single question from training, and then ask it back. It would do this for all questions. The purpose was to test each cluster, and see what clusters are impacting others.
+
+NLC/Conversation doesn't do this. To do it would take forever. You can use instead a monte-carlo cross fold. To do this, you take a random 10% from your train set, train on the 90% and then test on the 10% removed. You should do this a few times and average the results (at least 3 times)."
+
+https://stackoverflow.com/questions/39800476/best-practices-for-creating-intents-entities-with-ibm-conversation-service
 
 ###  4.3. Transform service outputs for consumption by other services.
 

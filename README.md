@@ -1361,17 +1361,104 @@ Reference:
 https://www.ibm.com/watson/developercloud/natural-languageunderstanding/api/v1/
 
 
-###  3.10. Explain and configure Retrieve and Rank service.
+### 3.10.Explain, setup, configure and query the IBM Watson Discovery service.
 
-- [Explain the function of the Retrieve and Rank service](#retrieve-and-rank)
-- Configure the Retrieve and Rank service
- - Create Solr cluster
- - Create and upload Solr configuration
- - Create Solr collection
- - Upload and index documents
- - Create / update ground truth
- - Create and train Ranker
- - Evaluate result / update ground truth
+##### 3.10.1. How to create the Data Collection repository
+
+Inputs: environment_id, configuration_id
+
+Example: 
+```
+curl -X POST -u "{username}":"{password}" -H "Content-Type: application/json" -d '{
+  "name": "test_collection",
+  "description": "My test collection",
+  "configuration_id": "{configuration_id}",
+  "language_code": "en"
+}' "https://gateway.watsonplatform.net/discovery/api/v1/environments/{environment_id}/collections?version=2017-07-19"
+```
+
+#### 3.10.1.1. Explain the significance of working with sample documents
+
+To make the configuration process more efficient, you can upload up to ten Microsoft Word, HTML, JSON, or PDF files that are representative of your document set. These are called sample documents. Sample documents are not added to your collection — they are only used to identify fields that are common to your documents and customize those fields to your requirements.
+
+#### 3.10.1.2. Explain the difference between Default and switching to a new custom collection
+I guess the question supposed to ask about Default and custom configurations (since there is no such as thing as default collection).
+
+------
+
+The Discovery service includes a standard configuration file that will convert, enrich and normalize your data without requiring you to manually configure these options.
+
+This default configuration file is named Default Configuration. It contains enrichments, plus standard document conversions based on font styles and sizes.
+
+First the default enrichments. Discovery will enrich (add cognitive metadata to) the text field of your documents with semantic information collected by four Watson Enrichments — Entity Extraction, Sentiment Analysis, Category Classification, and Concept Tagging (learn more about them here).
+
+[more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#the-default-configuration)
+
+------
+**When you need a custom configuration**
+
+**I understand that my documents may not be structured in the way the default configuration expects. How do I know if the default settings are right for me?**
+
+The easiest way to see if the default works for you is to test it by Uploading sample documents. If the sample JSON results meet your expectations, then no additional configuration is required.
+
+**I understand that default enrichments are added to the text field of my documents. Can I add additional enrichments to other fields?**
+
+Absolutely, you can add additional enrichments to as many fields as you wish. See Adding enrichments for details.
+
+3.10.1.3. Explain when might you need more than one collection
+
+A collection is a set of your documents. Why would I want more than one collection? There are a few reasons, including:
+
+You may want multiple collections in order to separate results for different audiences
+The data may be so different that it doesn't make sense for it all to be queried at the same time
+
+#### 3.10.2. What are some of the steps required when you customize your configuration
+3.10.2.1. Identify sample documents
+
+3.10.2.2. Convert sample documents
+
+3.10.2.3. Add enrichments
+
+3.10.2.4. Normalize data
+
+#### 3.10.3. What are the four standard document formats and explain the conversion flow (MS Word, PDF, HTML and JSON)
+
+#### 3.10.4. Adding Enrichments, explain the following enrichments:
+
+3.10.4.1. Entity Extraction
+
+3.10.4.2. Keyword Extraction
+
+3.10.4.3. Taxonomy Classification
+
+3.10.4.4. Concept Tagging
+
+3.10.4.5. Relation Extraction
+
+3.10.4.6. Sentiment Analysis
+
+3.10.4.7. Emotion Analysis
+
+3.10.5. Explain document size limitations
+3.10.6. Explain the essence of the Normalization step, the last step in
+customizing your configuration
+3.10.7. Explain some of the methods or ways of adding content after you are
+satisfied with the configuration work.
+3.10.7.1. Adding content through the API
+3.10.7.2. Adding content through the UI
+3.10.7.3. Adding content through the data crawler
+3.10.8. Querying your data
+3.10.8.1. Explain the three search query parameters (filter, query,
+aggregation)
+3.10.8.2. Explain the three structure query parameters (count, offset,
+return)
+3.10.8.3. Explain Aggregations
+References:
+https://www.ibm.com/watson/developercloud/discovery/api/v1/
+https://www.ibm.com/watson/developercloud/doc/discovery/index.htmlhttps://ww
+w.ibm.com/blogs/watson/2016/12/watson-discovery-service-understand-datascale-less-effort/
+https://www.youtube.com/watch?v=fmIPeopG-ys&t=1s
+https://www.ibm.com/blogs/bluemix/2016/11/watson-discovery-service/
  
 ## Section 4 - Developing Cognitive applications using Watson Developer Cloud Services
 

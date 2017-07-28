@@ -1328,12 +1328,28 @@ Example
 #### 3.9.7. Explain how Emotion Analysis service works
 
 3.9.7.1. What emotions does Emotion Analysis detect?
+  - sadness
+  - joy
+  - fear
+  - disgust
+  - anger
 
 3.9.7.2. Describe the main use cases for applying the Emotion Insights service
-
+  - **Product Feedback and Campaign Effectiveness:** Monitor the emotional reaction of your target audience for your products, campaigns, and other marketing communications. 
+- **Customer Satisfaction:** Analyze customer surveys, emails, chats, and reviews to determine the emotional pulse of your customers. 
+- **Contact-center Management, Automated agents, and Robots:** Detect emotions in chats or other conversations and adapt to provide an appropriate response. For instance, direct a customer to a human agent if intense anger is detected.
+   
+https://developer.ibm.com/watson/blog/2016/02/29/another-step-closer-to-building-empathetic-systems/
+ 
 3.9.7.3. Describe the main types of positive/negative sentiment extracted from digital text
 
+TODO
+
 3.9.7.4. Describe the API types provided by the Sentiment Analysis service
+
+The questions is probably legacy taken over from Alechemy Language times (is used to have HTML, Text and WEB API ![source](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
+
+Currently NLU has all features combined in one main API endpoint /analyze (exists in 2 flavours - GET and POST) 
 
 3.9.7.5. Describe the differences between sentiment and emotion analyses
 

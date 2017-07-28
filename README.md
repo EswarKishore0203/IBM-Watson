@@ -1354,6 +1354,9 @@ Currently NLU has all features combined in one main API endpoint /analyze (exist
 
 3.9.7.5. Describe the differences between sentiment and emotion analyses
 
+Emotion recognition is a special case of sentiment analysis. The output of sentiment analysis is produced in terms of either polarity (e.g., positive or negative) or in the form of rating (e.g., from 1 to 5). Emotions are a more detailed level of analysis in which the result are depicted in more expressive and fine-grained level of analysis.
+Sentiment analysis deals with only text, while emotions can be expressed by text, images, audio, video, facial signs etc.
+
 Reference:
 https://www.ibm.com/watson/developercloud/natural-languageunderstanding/api/v1/
 

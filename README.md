@@ -1343,13 +1343,14 @@ https://developer.ibm.com/watson/blog/2016/02/29/another-step-closer-to-building
  
 3.9.7.3. Describe the main types of positive/negative sentiment extracted from digital text
 
-TODO
+[see 3.9.4](#394-distinguish-between-document-level-and-targeted-sentiment)
 
 3.9.7.4. Describe the API types provided by the Sentiment Analysis service
 
-The questions is probably legacy taken over from Alechemy Language times (is used to have HTML, Text and WEB API [source](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
+The question is probably legacy taken over from Alechemy Language times (it used to have HTML, Text and WEB API [Sentiment Analysis API](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
 
 Currently NLU has all features combined in one main API endpoint /analyze (exists in 2 flavours - GET and POST) 
+
 
 3.9.7.5. Describe the differences between sentiment and emotion analyses
 

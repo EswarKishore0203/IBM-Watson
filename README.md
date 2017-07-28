@@ -1452,20 +1452,45 @@ Identifies the overall positive or negative sentiment within this field.
 Analyzes the emotions (anger, disgust, fear, joy, and sadness) in this field.
 [more details](https://www.ibm.com/watson/developercloud/doc/discovery/building.html#emotion-analysis)
 
-3.10.5. Explain document size limitations
-3.10.6. Explain the essence of the Normalization step, the last step in
-customizing your configuration
-3.10.7. Explain some of the methods or ways of adding content after you are
-satisfied with the configuration work.
-3.10.7.1. Adding content through the API
-3.10.7.2. Adding content through the UI
-3.10.7.3. Adding content through the data crawler
-3.10.8. Querying your data
-3.10.8.1. Explain the three search query parameters (filter, query,
-aggregation)
-3.10.8.2. Explain the three structure query parameters (count, offset,
-return)
-3.10.8.3. Explain Aggregations
+#### 3.10.5. Explain document size limitations
+
+The maximum file size for individual documents in your collection is 50MB
+
+#### 3.10.6. Explain the essence of the Normalization step, the last step in customizing your configuration
+In the Normalize section of the Discovery tooling you can move, merge, copy or remove fields.
+Empty fields (fields that contain no information) will be deleted by default. You can change that using the 'Remove empty fields' toggle.
+
+#### 3.10.7. Explain some of the methods or ways of adding content after you are satisfied with the configuration work.
+##### 3.10.7.1. Adding content through the API
+```
+curl -X POST -u "{username}":"{password}" -F file=@sample1.html "https://gateway.watsonplatform.net/discovery/api/v1/environments/{environment_id}/collections/{collection_id}/documents?version=2017-07-19"
+```
+
+##### 3.10.7.2. Adding content through the UI
+Go to Add data to this collection at the right of the screen and start uploading your documents via drag and drop or browse.
+##### 3.10.7.3. Adding content through the data crawler
+if you want to have a managed upload of a significant number of files, or you want to extract content from a supported repository (such as a DB2 database).
+
+1. Configure the Discovery service
+2. Download and install the Data Crawler on a supported Linux system that has access to the content that you want to crawl.
+3. Connect the Data Crawler to your content.
+4. Configure the Data Crawler to connect to the Discovery Service.
+5. Crawl your content.
+
+#### 3.10.8. Querying your data
+##### 3.10.8.1. Explain the three search query parameters (filter, query, aggregation)
+- Query: A query search returns all documents in your data set with full enrichments and full text in order of relevance. A query also excludes any documents that don't mention the query content. (These queries are written using the Discovery Query Language.)
+- Filter: When used in tandem with queries, filters execute first to narrow down the document set and speed up the query. Adding these filters will return unranked documents, and after that the accompanying query will run and return the results of that query ranked by relevance.
+- Aggregation: Aggregation queries return a set of data values; for example, top keywords, overall sentiment of entities, and more
+
+##### 3.10.8.2. Explain the three structure query parameters (count, offset, return)
+- count: Sets the number of documents that you want returned in the response
+- offset: The number of query results to omit from the start of the output. For example, if the count parameter is set to 10 and the offset parameter is set to 8, the query returns only the last two results. Do not use this parameter for deep pagination, as it impedes performance.
+- return: A comma-separated list of the portion of the document hierarchy to return. Any of the document hierarchy are valid values.
+
+##### 3.10.8.3. Explain Aggregations
+[Building aggregations](https://www.ibm.com/watson/developercloud/doc/discovery/using.html#building-aggregations)
+
 References:
 https://www.ibm.com/watson/developercloud/discovery/api/v1/
 https://www.ibm.com/watson/developercloud/doc/discovery/index.htmlhttps://ww

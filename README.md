@@ -1381,7 +1381,7 @@ curl -X POST -u "{username}":"{password}" -H "Content-Type: application/json" -d
 To make the configuration process more efficient, you can upload up to ten Microsoft Word, HTML, JSON, or PDF files that are representative of your document set. These are called sample documents. Sample documents are not added to your collection — they are only used to identify fields that are common to your documents and customize those fields to your requirements.
 
 ##### 3.10.1.2. Explain the difference between Default and switching to a new custom collection
-I guess the question supposed to ask about Default and custom configurations (since there is no such as thing as default collection).
+*I guess the question supposed to ask about default and custom configurations (since there is no such as thing as default collection). (Ivan)*
 
 ------
 
@@ -1497,6 +1497,28 @@ https://www.ibm.com/watson/developercloud/doc/discovery/index.htmlhttps://ww
 w.ibm.com/blogs/watson/2016/12/watson-discovery-service-understand-datascale-less-effort/
 https://www.youtube.com/watch?v=fmIPeopG-ys&t=1s
 https://www.ibm.com/blogs/bluemix/2016/11/watson-discovery-service/
+
+### 3.11.Explain and configure the IBM Watson Conversation service
+
+#### 3.11.1. Creating a workspace
+#### 3.11.2. Define intents (user input)
+#### 3.11.3. Define entities (relevant term or object)
+#### 3.11.4. Build a dialog (branching conversation flow)
+#### 3.11.5. Test the conversation agent / bind to application
+https://console.bluemix.net/docs/services/conversation/deploy.html#deployment-overview
+https://console.bluemix.net/docs/services/conversation/develop-app.html#building-a-client-application
+
+#### 3.11.6. Know how other Watson services can add value to Conversation service
+Discovery, RnR, Tone Analyzer
+
+#### 3.11.7. Describe the difference between short tail and long tail conversational exchanges.
+https://developer.ibm.com/dwblog/2017/chatbot-long-tail-questions-watson-conversation-discovery/
+
+#### 3.11.8. Explain how Discovery can support long tail conversations in Watson Conversation.
+https://developer.ibm.com/dwblog/2017/chatbot-long-tail-questions-watson-conversation-discovery/
+
+Reference:
+https://www.ibm.com/watson/developercloud/conversation/api/v1/
  
 ## Section 4 - Developing Cognitive applications using Watson Developer Cloud Services
 

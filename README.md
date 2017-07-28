@@ -1347,7 +1347,7 @@ TODO
 
 3.9.7.4. Describe the API types provided by the Sentiment Analysis service
 
-The questions is probably legacy taken over from Alechemy Language times (is used to have HTML, Text and WEB API ![source](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
+The questions is probably legacy taken over from Alechemy Language times (is used to have HTML, Text and WEB API [source](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
 
 Currently NLU has all features combined in one main API endpoint /analyze (exists in 2 flavours - GET and POST) 
 

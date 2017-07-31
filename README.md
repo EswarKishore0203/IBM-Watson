@@ -1031,7 +1031,7 @@ Pre-trained Watson services:
 
 3.1.2.2. Watson Speech-to-text
 
-3.1.2.3. Language Translator (conversational, news, and patent domains)
+3.1.2.3. Language Translator (conversational, news, and patent domains; however some one can also train custom models)
 
 3.1.2.4. Natural Language Understanding (however similar models can be trained in Watson Knowledge Studio)
 
@@ -1639,28 +1639,22 @@ I would probably also use NLC to train system about categorizing intents
 ##### 4.5.1.3. List classifiers
 ``curl -u "{username}":"{password}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"``
 
-4.5.2. Discovery Service
-4.5.2.1. Crawl, convert, enrich and normalize data.
-4.5.2.2. Securely explore your proprietary content as well as free and
-licensed public content.
-4.5.2.3. Apply additional enrichments such as concepts, relations, and
-sentiment through natural language processing.
-4.5.2.4. Query and analyze your results
-4.5.3. Language Translator –Use a default language domain or customize a
-domain
-4.5.3.1. Choose the language to translate or allow Watson to auto-detect
-the language of your input
-4.5.3.2. Select the language for the translator to output
-4.5.3.3. Enter or paste text into the input to be translated
-4.5.4. Visual Recognition
-4.5.4.1. Gather and prepare the training data for classifiers or collections
-4.5.4.2. Train and create new classifier or collection by uploading the
-training data to the API
-4.5.4.3. Classify images or search your collection by uploading image files
-to search against your collection
-4.5.4.4. View the search results of the identified objects, scenes, faces,
-and text that meet minimum threshold. For collections, view the
-search returns of similar images to the ones used to search.
+#### 4.5.2. Discovery Service
+##### 4.5.2.1. Crawl, convert, enrich and normalize data.
+##### 4.5.2.2. Securely explore your proprietary content as well as free and licensed public content.
+##### 4.5.2.3. Apply additional enrichments such as concepts, relations, and sentiment through natural language processing.
+##### 4.5.2.4. Query and analyze your results
+
+#### 4.5.3. Language Translator – Use a default language domain or customize a domain
+##### 4.5.3.1. Choose the language to translate or allow Watson to auto-detect the language of your input
+##### 4.5.3.2. Select the language for the translator to output
+##### 4.5.3.3. Enter or paste text into the input to be translated
+
+#### 4.5.4. Visual Recognition
+##### 4.5.4.1. Gather and prepare the training data for classifiers or collections
+##### 4.5.4.2. Train and create new classifier or collection by uploading the training data to the API
+##### 4.5.4.3. Classify images or search your collection by uploading image files to search against your collection
+##### 4.5.4.4. View the search results of the identified objects, scenes, faces, and text that meet minimum threshold. For collections, view the search returns of similar images to the ones used to search.
  
 ###  4.6. Deploy a web application to IBM Bluemix.
 

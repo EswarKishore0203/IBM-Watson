@@ -1611,33 +1611,24 @@ Cognitive systems tend to gain more value as additional services are composed. W
 
 #### 4.4.1. Conversation
 ##### 4.4.1.1. Goal: Engage user in back-and-forth dialog while detecting and acting on user intent. The specifics of the actions taken are guided by the entities discovered.
-##### 4.4.1.2. <span style="color:blue">Watson Conversation Service</span>
+##### 4.4.1.2. Watson Conversation Service
 #### 4.4.2. Q&A
 ##### 4.4.3.1. Goal: Answer a wide range of customer questions while offering precise answers for frequently asked facts and highly relevant passages for less frequent questions that may not have a single best answer
 ##### 4.4.3.2. Services: Watson Conversation Service + Watson Discovery Service
-4.4.4. Agent Assist
-4.4.4.1. Goal: Provide natural language help systems so call agents can
-rapidly retrieve answers to customer questions
-4.4.4.2. Services: Watson Conversation Service + Watson Speech to
-Text Service + Watson Text to Speech Service + Watson
-Discovery Service
-4.4.5. Automated Customer Support Routing
-4.4.5.1. Goal: Detect the topic of a ticket and route to the appropriate
-department to handle it. E.g. room service, maintenance,
-housekeeping in the case of hotel guest request routing.
-4.4.5.2. Watson Natural Language Understanding (Services: Keyword
-extraction and sentiment analysis)
-4.4.6. Social Monitoring
-4.4.6.1. Goal: Monitor all posts with specific keywords (e.g. for a
-company’s followers, sponsors, or critiques) to detect what’s being
-discussed and the sentiment/tone associated to it.
-4.4.6.2. Services used: Keyword extraction, entity extraction, and
-sentiment/tone analysis (Natural Language Understanding)
-4.4.7. Discovery Insights
-4.4.7.1. Goal: to prepare your unstructured data, create a query that will
-pinpoint the information you need, and then integrate those
-insights into your new application or existing solution.
-4.4.7.2. Services Used: (Watson Discovery Service)
+#### 4.4.4. Agent Assist
+##### 4.4.4.1. Goal: Provide natural language help systems so call agents can rapidly retrieve answers to customer questions
+##### 4.4.4.2. Services: Watson Conversation Service + Watson Speech to Text Service + Watson Text to Speech Service + Watson Discovery Service
+#### 4.4.5. Automated Customer Support Routing
+##### 4.4.5.1. Goal: Detect the topic of a ticket and route to the appropriate department to handle it. E.g. room service, maintenance, housekeeping in the case of hotel guest request routing.
+##### 4.4.5.2. Watson Natural Language Understanding (Services: Keyword extraction and sentiment analysis)
+I would probably also use NLC to train system about categorizing intents
+
+#### 4.4.6. Social Monitoring
+##### 4.4.6.1. Goal: Monitor all posts with specific keywords (e.g. for a company’s followers, sponsors, or critiques) to detect what’s being discussed and the sentiment/tone associated to it.
+##### 4.4.6.2. Services used: Keyword extraction, entity extraction, and sentiment/tone analysis (Natural Language Understanding)
+#### 4.4.7. Discovery Insights
+##### 4.4.7.1. Goal: to prepare your unstructured data, create a query that will pinpoint the information you need, and then integrate those insights into your new application or existing solution.
+##### 4.4.7.2. Services Used: (Watson Discovery Service)
  
 ### 4.5. Design and execute a use case driven service choreography (within an API).
 

@@ -1658,12 +1658,29 @@ I would probably also use NLC to train system about categorizing intents
  
 ###  4.6. Deploy a web application to IBM Bluemix.
 
-- Configure application’s manifest to request the correct memory and app instance allocations
- - Configure application with service credentials extracted from VCAP services
- - Create instances of your required services in IBM Bluemix
- - Install Cloud Foundry command line tools
- - Log-in to IBM Bluemix from the command line
- - Push the application to IBM Bluemix using the Cloud Foundry command line tools
+#### 4.6.1. Specific steps:
+##### 4.6.1.1. Setup an account on IBM Bluemix
+##### 4.6.1.2. Create an instance of an IBM Watson service in the Bluemix account. An instance can be created using either the Bluemix GUI or the Bluemix command line interface.
+- via GUI
+- via CLI: ``cf create-service service_name service_plan service_instance``
+
+##### 4.6.1.3. Obtain credentials from the IBM Watson service from the service instance.
+- via GUI
+- via CloudFoundry CLI: ``cf service-key my-service my-credentials-1``
+
+##### 4.6.1.4. These credentials can be obtained programmatically if the application is also hosted on IBM Reference: 
+probably they meant ``cf bind-service``
+##### 4.6.1.5. The credentials can also be viewed and recorded using the IBM Bluemix CLI or GUI interface.
+##### 4.6.1.6. The application can then invoke the IBM Watson Service using the published REST API for that service. Many developers use the Watson API Explorer to create and view API invocations of the desired service using REST protocol.
+https://watson-api-explorer.mybluemix.net/
+
+#### 4.6.2. Overall Getting Started reference:
+##### 4.6.2.1. “Getting started with Watson and Bluemix”
+Reference
+https://watson-api-explorer.mybluemix.net/
+https://www.ibm.com/watson/developercloud/doc/common/getting-startedvariables.html
+https://www.ibm.com/watson/developercloud/doc/common/index.html
+
  
 ## Section 5 - Administration & DevOps for applications using IBM Watson Developer Cloud Services
 

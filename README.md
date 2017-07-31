@@ -1593,17 +1593,17 @@ https://stackoverflow.com/questions/39800476/best-practices-for-creating-intents
 
 ###  4.3. Transform service outputs for consumption by other services.
 
-- Natural Language Classifier
- - Using classifiers from NLC to drive dialog selections in Dialog
-- Personality Insights
- - Use the service output from two different textual inputs and compare the personalities based on the results
-- Speech to text
- - Use the transcribed output from speed to text as input to language translation
-- Language translation
- - Use the translated text from language translation as input to text to speech
-- AlchemyNews
- - Use the top article returned by the search from AlchemyNews as input to AlchemyLanuage-Sentiment Analysis and Tone Analyzer
-- Use the top article returned by the search from AlchemyNews as input to relationship extraction to tell who is trending in the article
+#### 4.3.1. Natural Language Classifier
+##### 4.3.1.1. Using classifiers from NLC to drive dialog selections in Dialog
+#### 43.2. Personality Insights
+##### 4.3.2.1. Use the service output from two different textual inputs and compare the personalities based on the results
+#### 4.3.3. Speech to text
+##### 4.3.3.1. Use the transcribed output from speed to text as input to language translation
+#### 4.3.4. Language translation
+##### 4.3.4.1. Use the translated text from language translation as input to text to speech
+#### 4.3.5. Watson Discovery News
+##### 4.3.5.1. Use the top article returned by the search from Watson Discovery News as input to Watson Natural Language Understanding Sentiment Analysis and Watson Tone Analyzer 
+##### 4.3.5.2. Use the top article returned by the search from Watson Discovery News as input to relationship extraction to tell who is trending in the article
 
 ###  4.4. Define common design patterns for composing multiple Watson services together (across APIs).
 

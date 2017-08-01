@@ -1705,7 +1705,7 @@ https://console.ng.bluemix.net/docs/overview/whatisbluemix.html#bluemixoverview
 
 ### 5.1. Describe the process of obtaining credentials for Watson services.
 
-- [Use the Bluemix web interface](http://ibm.co/2jdqk8s)
+#### 5.1.1. [Use the Bluemix web interface](http://ibm.co/2jdqk8s)
 - [Get service credentials in Bluemix](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml)
 - [Get service credentials programmatically](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml)
 - [Manage organizations, spaces, and assigned users in IBM Bluemix](https://console.ng.bluemix.net/docs/admin/adminpublic.html#administer)

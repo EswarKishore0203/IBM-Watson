@@ -1725,6 +1725,23 @@ You pass a token to the HTTP interface of a service by using the X-Watson-Author
 ##### 5.1.6.2 Get a token programmatically
 just to call the ´´token´´ method of the authorizazion API from your app
 
+### 5.2. Examine application logs provided on IBM Bluemix
+#### 5.2.1. Log for apps running on Cloud Foundry
+https://console.bluemix.net/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov
+#### 5.2.2. View logs from the Bluemix dashboard
+#### 5.2.3. View logs from the command line interface
+#### 5.2.4. Filter logs
+https://console.bluemix.net/docs/services/CloudLogAnalysis/kibana/analize_logs_interactively.html#analize_logs_interactively
+
+#### 5.2.5. Configure external logs hosts
+https://console.bluemix.net/docs/services/CloudLogAnalysis/external/logging_external_hosts.html#thirdparty_logging
+
+#### 5.2.6. View logs from external logs hosts
+References:
+https://console.ng.bluemix.net/docs/monitor_log/monitoringandlogging.html#moni
+toring_logging_bluemix_apps
+http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html
+
 
 ### 5.2. Monitor resource utilization of applications using IBM Watson services.
 

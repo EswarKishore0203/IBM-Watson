@@ -1700,19 +1700,31 @@ e.g. Cloud Foundry, Docker and OpenStack.
 Reference: “What is IBM Bluemix” at
 https://console.ng.bluemix.net/docs/overview/whatisbluemix.html#bluemixoverview
 
- 
 ## Section 5 - Administration & DevOps for applications using IBM Watson Developer Cloud Services
 
 ### 5.1. Describe the process of obtaining credentials for Watson services.
 
 #### 5.1.1. [Use the Bluemix web interface](http://ibm.co/2jdqk8s)
-- [Get service credentials in Bluemix](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml)
-- [Get service credentials programmatically](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml)
-- [Manage organizations, spaces, and assigned users in IBM Bluemix](https://console.ng.bluemix.net/docs/admin/adminpublic.html#administer)
-- [Using tokens with Watson services](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-tokens.shtml)
- - Obtain a token
- - Use a token
- - Get a token programmatically
+
+#### 5.1.2. [Get service credentials in Bluemix](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml)
+
+#### 5.1.3. Get service credentials programmatically
+https://docs.cloudfoundry.org/devguide/services/application-binding.html#use
+https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-credentials.shtml
+
+#### 5.1.4  [Manage organizations, spaces, and assigned users in IBM Bluemix](https://console.ng.bluemix.net/docs/admin/adminpublic.html#administer)
+
+#### 5.1.5 [Using tokens with Watson services](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/gs-tokens.shtml)
+
+#### 5.1.6 Obtain a token
+The DataPower Edge Router is responsible for generating and validating authentication tokens. To obtain a token for a service, you send an HTTP ´´GET´´ request to the ´´token´´ method of the authorization API. The host depends on the service your are using. You can identify the host from the endpoint for the service's API.
+
+##### 5.1.6.1 Use a token
+You pass a token to the HTTP interface of a service by using the X-Watson-Authorization-Token request header, the watson-token query parameter, or a cookie. You must pass the token with each HTTP request.
+
+##### 5.1.6.2 Get a token programmatically
+just to call the ´´token´´ method of the authorizazion API from your app
+
 
 ### 5.2. Monitor resource utilization of applications using IBM Watson services.
 

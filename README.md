@@ -1681,6 +1681,24 @@ https://watson-api-explorer.mybluemix.net/
 https://www.ibm.com/watson/developercloud/doc/common/getting-startedvariables.html
 https://www.ibm.com/watson/developercloud/doc/common/index.html
 
+### 4.7. Explain the advantages of using IBM Bluemix as the cloud platform for cognitive application development and deployment.
+#### 4.7.1. Bluemix provides services for securely integrating on-premises and offpremises applications
+Bluemix Local - on-premises
+Bluemix Dedicated / Bluemix Public - off-premises
+
+#### 4.7.2. The services in the Bluemix catalog can be used by applications to meet needs in many functional and non-functional areas
+#### 4.7.3. Environmental, operational, and functional Security are built into the platform
+https://console.bluemix.net/docs/security/index.html#security
+
+4.7.4. Scaling application capacity is simple for applications following modern
+application design (such as 12-factor methodology)
+4.7.5. Bluemix facilities the integration and configuration of applications and
+services
+4.7.6. Bluemix is built on open source technologies with community governance
+Reference: “What is IBM Bluemix” at
+https://console.ng.bluemix.net/docs/overview/whatisbluemix.html#bluemixovervie
+w
+
  
 ## Section 5 - Administration & DevOps for applications using IBM Watson Developer Cloud Services
 

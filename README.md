@@ -1743,6 +1743,8 @@ toring_logging_bluemix_apps
 http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html
 
 
+----------------------
+
 ### 5.2. Monitor resource utilization of applications using IBM Watson services.
 
 - [Monitor applications running on Cloud Foundry](https://console.ng.bluemix.net/docs/monitor_log/monitoringandlogging.html#monitoring_logging_bluemix_apps)
@@ -1753,13 +1755,6 @@ http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html
 - Configure performance monitoring
 - [Monitor performance of applications](https://console.ng.bluemix.net/docs/monitor_log/monitoring/monitoring_bmx_ov.html#monitoring_bmx_ov)
 
-### 5.4. Examine application logs provided on IBM Bluemix.
 
-- [Log for apps running on Cloud Foundry](https://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html)
-- [View logs from the Bluemix dashboard](https://console.ng.bluemix.net/docs/monitor_log/monitoringandlogging.html#monitoring_logging_bluemix_apps)
-- View logs from the command line interface
-- Filter logs
-- Configure external logs hosts
-- View logs from external logs hosts
 
 

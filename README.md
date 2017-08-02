@@ -36,6 +36,7 @@ The Watson services are constantly evolving so always reference back to the [Wat
  - [2.2 Explain the uses of the Watson services in the Application Starter Kits.](#22-explain-the-uses-of-the-watson-services-in-the-application-starter-kits)
  - [2.3 Describe the Watson Conversational Agent.](#22-explain-the-uses-of-the-watson-services-in-the-application-starter-kits)
  - [2.4 Explain use cases for integrating external systems (such as Twitter, Weather API).](#24-explain-use-cases-for-integrating-external-systems-such-as-twitter-weather-api)
+ - [2.5 Describe the IBM Watson Discovery Service](#25-describe-the-ibm-watson-discovery-service)
 
 - [Section 3 – Fundamentals of IBM Watson Developer Cloud](#section-3--fundamentals-of-ibm-watson-developer-cloud)
  - [3.1 Distinguish cognitive services on WDC for which training is required or not.](#31-distinguish-cognitive-services-on-wdc-for-which-training-is-required-or-not)

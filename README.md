@@ -69,14 +69,13 @@ The Watson services are constantly evolving so always reference back to the [Wat
 ## Section 1 - Fundamentals of Cognitive Computing
 ### 1.1. Define the main characteristics of a cognitive system.
 
-- Cognitive systems understand, reason and learn 
- - Must understand structured and unstructured data 
- - Must reason by prioritizing recommendations and ability to form hypothesis 
- - Learns iteratively by repeated training as it build smarter patterns 
-- Cognitive systems are here to augment human knowledge not replace it 
-- Cognitive systems employ machine learning technologies 
- - Supervised learning versus unsupervised learning 
-- Cognitive systems use natural language processing 
+#### 1.1.1. Cognitive systems understand, reason and learn
+##### 1.1.1.1. Must understand structured and unstructured data
+##### 1.1.1.2. Must reason by prioritizing recommendations and ability to form hypothesis
+##### 1.1.1.3. Learns iteratively by repeated training as it build smarter patterns
+#### 1.1.2. Cognitive systems are here to augment human knowledge not replace it
+#### 1.1.3. Cognitive systems employ machine learning technologies
+#### 1.1.4. Cognitive systems use natural language processing
 
 ### 1.2 Explain neural nets.
 

@@ -281,6 +281,8 @@ physicians can more accurately diagnose patients.
   
 ### 1.5. Define Precision, Recall, and Accuracy.
 
+see https://developer.ibm.com/dwblog/2016/chatbot-cognitive-performance-metrics-accuracy-precision-recall-confusion-matrix/
+
 #### 1.5.1. [Precision:](#https://en.wikipedia.org/wiki/Precision_and_recall)
 - Definition: Precision is the percentage of documents labelled as positive that are actually positive.
 - Formula: True Positives/(True Positives + False Positives)
@@ -384,6 +386,10 @@ The goal of the ML model is to learn patterns that generalize well for unseen da
 
 A number of metrics are used in ML to measure the predictive accuracy of a model. The choice of accuracy metric depends on the ML task. It is important to review these metrics to decide if your model is performing well.
 
+
+#### 1.7.1. Define accuracy of a system (True positive + true negative)/(TP + TN + False P + False N)
+
+#### 1.7.2. Explain factors that affect accuracy in supervised learning
 ###### 1.7.2.1  Sample size of training set data, dangers of over fitting, curated content 
 Small Data problems
 Problems of small-data are numerous, but mainly revolve around high variance:
@@ -412,7 +418,10 @@ Why do I need a blind set?
 Because you use test data to assess accuracy in detail, you get to know the documents and their features after a while. For example, you start to know which entity types, relation types, and text types in the documents are best understood by the machine learning model, and which are not. This information is important because it helps you focus on making the right improvements - refining the type system, supplementing the training data to fill gaps, or adding dictionaries, for example. As the test documents get used iteratively to improve the model, they can start to influence the model training indirectly. That's why the "blind" set of documents is so important.
 
 #### 1.7.5. Importance of iterative training using feedback that has diminished costs derivative  
-(ivp: TODO)
+???
+
+https://developer.ibm.com/dwblog/2016/chatbot-cognitive-performance-metrics-accuracy-precision-recall-confusion-matrix
+https://www.ibm.com/developerworks/community/blogs/jfp/entry/Overfitting_In_Machine_Learning?lang=en
 
 ### 1.8. Perform Domain Adaption using Watson Knowledge Studio (WKS).
 

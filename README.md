@@ -372,6 +372,8 @@ Long story short: split your data into 3 subsets: training, validation, test. Tr
 
 https://www.quora.com/What-is-training-validation-and-testing-data-sets-scenario-in-machine-learning
 
+see also https://elitedatascience.com/machine-learning-iteration
+
 ###### 1.6.3.1.1. Data = Inputs + Outputs 
 ###### 1.6.3.1.2. Input + Output Sets => a set of functions that map input to output 
 ##### 1.6.3.2. We train these functions using the training data 

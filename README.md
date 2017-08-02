@@ -26,7 +26,7 @@ The Watson services are constantly evolving so always reference back to the [Wat
  - [1.5 Define Precision, Recall, and Accuracy.](#15-define-precision-recall-and-accuracy)
  - [1.6 Explain the importance of separating training, validation and test data.](#16-explain-the-importance-of-separating-training-validation-and-test-data)
  - [1.7 Measure accuracy of service.](#17-measure-accuracy-of-service)
- - [1.8 Perform Domain Adaption using Watson Knowledge Studio (WKS).](#18-perform-domain-adaption-using-watson-knowledge-studio-WKS)
+ - [1.8 Perform Domain Adaption using Watson Knowledge Studio (WKS).](#18-perform-domain-adaption-using-watson-knowledge-studio-wks)
  - [1.9 Define Intents and Classes.](#19-define-intents-and-classes)
  - [1.10 Explain difference between ground truth and corpus.](#110-explain-difference-between-ground-truth-and-corpus)
  - [1.11 Define the difference between the user question and the user intent.](#111-define-the-difference-between-the-user-question-and-the-user-intent)

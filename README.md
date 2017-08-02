@@ -649,7 +649,7 @@ With the IBM Watson™ Conversation service, you can create an application that 
 
 This diagram shows the overall architecture of a complete solution:
 
-![Watson Conversation](https://console.bluemix.net/docs/api/content/services/conversation/images/conversation_arch_overview.png)
+![Watson Conversation](https://raw.githubusercontent.com/Bluemix-Watson-Labs/conversation-api-overview/master/conversation_arch_overview.png)
 
 - Users interact with your application through the user interface that you implement. For example, A simple chat window or a mobile app, or even a robot with a voice interface.
 - The application sends the user input to the Conversation service.

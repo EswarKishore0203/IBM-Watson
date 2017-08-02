@@ -374,9 +374,9 @@ https://www.quora.com/What-is-training-validation-and-testing-data-sets-scenario
 ##### 1.6.3.4. We select the best outcome 
 ##### 1.6.3.5. We test the best outcome (function / neural net (weights,etc)) with the test data 
 
-https://www.quora.com/What-is-the-difference-between-bootstrapping-and-crossvalidation
-https://developer.ibm.com/dwblog/2016/chatbot-cognitive-performance-metricsaccuracy-precision-recall-confusion-matrix/#respond
-https://www.quora.com/What-is-a-training-data-set-test-data-set-in-machinelearning-What-are-the-rules-for-selecting-them
+https://www.quora.com/What-is-the-difference-between-bootstrapping-and-cross-validation
+https://developer.ibm.com/dwblog/2016/chatbot-cognitive-performance-metrics-accuracy-precision-recall-confusion-matrix
+https://www.quora.com/What-is-a-training-data-set-test-data-set-in-machine-learning-What-are-the-rules-for-selecting-them
 
 ### 1.7. Measure accuracy of service.
 

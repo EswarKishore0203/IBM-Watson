@@ -64,10 +64,7 @@ The Watson services are constantly evolving so always reference back to the [Wat
 - [Section 5 - Administration & DevOps for applications using IBM Watson Developer Cloud Services](#section-5---administration--devops-for-applications-using-ibm-watson-developer-cloud-services)
 
  - [5.1 Describe the process of obtaining credentials for Watson services.](#51-describe-the-process-of-obtaining-credentials-for-watson-services)
- - [5.2 Monitor resource utilization of applications using IBM Watson services.](#52-monitor-resource-utilization-of-applications-using-ibm-watson-services)
- - [5.3 Monitoring application performance on IBM Bluemix.](#53-monitoring-application-performance-on-ibm-bluemix)
- - [5.4 Examine application logs provided on IBM Bluemix.](#54-examine-application-logs-provided-on-ibm-bluemix)
-
+ - [5.2 Examine application logs provided on IBM Bluemix.](#52-examine-application-logs-provided-on-ibm-bluemixs)
 
 ## Section 1 - Fundamentals of Cognitive Computing
 ### 1.1. Define the main characteristics of a cognitive system.

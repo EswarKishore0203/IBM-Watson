@@ -152,8 +152,7 @@ Video:
 
 (ivp: see also stochastic vs mini-batches, epoch)
 
-### 1.3 Explain machine learning technologies 
-(supervised, unsupervised, reinforcement learning approaches).
+### 1.3 Explain machine learning technologies (supervised, unsupervised, reinforcement learning approaches).
 
 ##### 1.3.1. Explain the connection between Machine learning and Cognitive systems
 Reference: [Computing, cognition and the future of knowing](http://www.research.ibm.com/software/IBMResearch/multimedia/Computing_Cognition_WhitePaper.pdf)
@@ -244,33 +243,42 @@ https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm#k-NN_outlier
 ### 1.4. Define a common set of use cases for cognitive systems.
 
 Customer Call Centers
-- Agent Assist: Q&A
-- Problem Solved: Provides a natural language help system so call agents can rapidly retrieve answers to customer questions
- - Services used: Conversation, natural language answer retrieval, keyword extraction, and entity extraction
-- Automation: Customer/Technical Support Tickets Routing
+#### 1.4.1. Agent Assist: email based Q&A
+1.4.1.1. **Problem Solved**: Provides a natural language help system for call agents to rapidly retrieve answers to customer questions
 
-Customer: Go Moment  
- - Problems Solved:
-  - a) Detect the topic of a ticket and route to the appropriate department to handle it 
-  - b) room service, maintenance, housekeeping
-  - c) Escalate support tickets based on customersentiment
-  - d) Route support requests to agents that already solved similar problems by detecting natural language similarities between new customer tickets and resolved ones.
-- Services used: natural language (text) classification, keyword extraction, entity extraction, and sentiment/tone analysis
+1.4.1.2. **Capabilities needed for this use case**: Conversation, natural language answer retrieval, keyword extraction, and entity extraction
 
-(see also https://www.ibm.com/blogs/watson/2016/02/go-moment-is-enhancing-your-hotel-experience/)
+1.4.1.3. **Services used**: Natural Language Classifier, Watson Discovery
 
-Physicians
-- Expert Advisor:
- - Example: Watson Discovery Advisor
- - Problem Solved: Provides relevant medical suggestions and insights in natural language so physicians can more accurately diagnose patients.
- - Services used: Conversation + natural language answer retrieval, entity extraction 
+1.4.1.4. **Benefits**:
+
+1.4.1.4.1. Detect the topic of a ticket and route to the appropriate department to handle it (Example: room service, maintenance, housekeeping)
+
+1.4.1.4.2. Escalate support tickets based on customer sentiment
+
+1.4.1.4.3. Route support requests to agents that already solved similar problems by detecting natural language similarities between new customer tickets and resolved ones.
+
+1.4.1.4.4. Automation: Customer/Technical Support Tickets
+Routing
+
+1.4.1.5. **Watson Services used**: natural language (text) classification, keyword extraction, entity extraction, and sentiment/tone analysis
+
+#### 1.4.2. Physicians
+##### 1.4.2.1. Expert Advisor:
+1.4.2.1.1. **Example**: Watson Discovery Advisor
+
+1.4.2.1.2. **Problem Solve**d: Provides relevant medical suggestions and insights in natural language so
+physicians can more accurately diagnose patients.
+1.4.2.1.3. **Services used**: Conversation, Natural Language Classifier, Watson Discovery
  
-Social Media
-- Data Insights:
- - Partner: Ground Signal
- - Problem Solved: Extract useful insights from social media such as Instagram and Twitter by determining the content of photos and topics/sentiment of user posts.
- - Services used: keyword, entity, and sentiment/tone analysis
- 
+#### 1.4.3. Social Media Data Insights:
+
+1.4.3.1. **Partner**: Ground Signal
+
+1.4.3.2. **Problem Solved**: Extract useful insights from social media such as Instagram and Twitter by determining the content of photos and topics/sentiment of user posts.
+
+ 1.4.3.3. **Services used**: Natural Language Classifier, Watson Discovery, Visual Recognition
+  
 ### 1.5. Define Precision, Recall, and Accuracy.
 
 #### 1.5.1. [Precision:](#https://en.wikipedia.org/wiki/Precision_and_recall)
@@ -285,7 +293,7 @@ Social Media
 - Accuracy is the fraction of documents relevant to a query that were successfully retrieved.
 - Formula: (True Positives + True Negatives)/Total Document Count
 
-(ivp: https://nlp.stanford.edu/IR-book/pdf/08eval.pdf)
+see also: https://nlp.stanford.edu/IR-book/pdf/08eval.pdf
 
 #### 1.5.4. Diagrams like this are often useful in capturing the True/False
 Positive/Negatives described above:

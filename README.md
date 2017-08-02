@@ -811,7 +811,7 @@ For those who want to offset their carbon footprint on the carbon credit exchang
 
 ### 2.5. Describe the IBM Watson Discovery Service
 SUBTASK(S):
-2.5.1. List the functionalities that the Watson Discovery service provides
+#### 2.5.1. List the functionalities that the Watson Discovery service provides
 IBM Watson™ Discovery brings together a functionally rich set of integrated, automated Watson APIs to:
 
 - Crawl, convert, enrich and normalize data.

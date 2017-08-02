@@ -1052,7 +1052,7 @@ using your test dataset
 
 3.5.2.8. Improve the confidence level iteratively through back propagation (ivp: WTF?!)
 or other means.
-(ivp: https://console.bluemix.net/docs/services/natural-language-classifier/using-your-data.html#using-your-own-data)
+https://console.bluemix.net/docs/services/natural-language-classifier/using-your-data.html#using-your-own-data
 
 Reference:
 https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/

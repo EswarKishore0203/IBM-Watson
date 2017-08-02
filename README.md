@@ -825,13 +825,13 @@ IBM Watson™ Discovery brings together a functionally rich set of integrated, a
 - query
 - analyze
 
-2.5.2. Explain the components of the Discovery service
+#### 2.5.2. Explain the components of the Discovery service
 - environment - think of an environment as the warehouse where you are storing all your boxes of documents
 - configuration - defines how to process & enrich the documents
 - collection - think of a collection as a box where you will store your documents in your environment
 
-2.5.3. Use the Discovery service via APIs or the Discovery Tooling
-2.5.3.1. Explain how to setup the environment
+#### 2.5.3. Use the Discovery service via APIs or the Discovery Tooling
+##### 2.5.3.1. Explain how to setup the environment
 The first time that you click this button, you need to choose an environment size from the list of options. Your Discovery service environment is where all your data that is stored will live. Think of an environment as the warehouse where you are storing all your boxes of documents. Make your selection and your environment will be created.
 Note: You have several environment sizes to choose from, see the Discovery catalog for details. If you find later that you need a larger environment, you can upgrade to a larger one then. (Your original source files will not count against your file size limit.)
 
@@ -864,11 +864,12 @@ Example of environment metadata:
 }
 ```
 
-2.5.3.2. Explain how to configure the Discovery service
+##### 2.5.3.2. Explain how to configure the Discovery service
 - create a service (choose plan) 
 - (optional) create configuration with description of documents transformations and enrichments (Note:  Before you start changing settings, you should upload the sample document that you identified at the start of this task)
 - create a collection
-2.5.3.3. Explain how to add content
+
+##### 2.5.3.3. Explain how to add content
 - via API: POST /v1/environments/{environment_id}/collections/{collection_id}/documents or with SDK
 - via Tooling: 
   1. Click on the file  icon in the top left of your screen and select your collection.
@@ -876,13 +877,13 @@ Example of environment metadata:
   3. Go to Add data to this collection at the right of the screen and start uploading your documents.
 - via Data Crawler (command line tool that will help you take your documents from the repositories where they reside (for example: file shares, databases, Microsoft SharePoint® ) and push them to the cloud, to be used by the Discovery Service)
 
-2.5.3.4. Explain how to build queries
+##### 2.5.3.4. Explain how to build queries
 - Click on the magnifying glass icon to open the query page
 - Select your collection and click Get started
 - Click 'Build your own query'
 - Click 'Use the Discovery Query Language'
 
-##### Query structure
+###### Query structure
 ![Query structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/query_structure2.png)
  
 Operators table - https://www.ibm.com/watson/developercloud/doc/discovery/query-reference.html#operators
@@ -894,7 +895,7 @@ Query Examples:
 - `enriched_text.entities.text::Watson` - Will return all documents that contain the entity Watson. (The operator :: specifies an exact match. By using an exact match we don't get false positives on similar entities, for example Watson Health and Dr. Watson would be ignored.)
 - `enriched_text.entities.text:IBM,enriched_text.entities.text:!Watson` - Will return all documents that contain the entity IBM, but not the entity Watson (The operator :! specifies "does not contain".)
 
-##### Combined Queries & Filters
+###### Combined Queries & Filters
 You can combine query parameters together to build more targeted queries. For example use both the filter and query parameters.
 When used in tandem with queries, filters execute first to narrow down the document set and speed up the query. Adding these filters will return unranked documents, and after that the accompanying query will run and return the results of that query ranked by relevance.
 
@@ -902,7 +903,7 @@ Filter examples:
 - `enriched_text.sentiment.document.label:positive` - Will return only the documents in the collection with the sentiment of positive.
 - `enriched_text.entities::(relevance>0.8,text::IBM)` - Will return only the documents that contain the entity IBM with a relevance score above 80% for that entity.
 
-##### Aggregations
+###### Aggregations
 Aggregation queries return a set of data values; for example, top keywords, overall sentiment of entities, and more.
 
  ![Aggregation structure](https://www.ibm.com/watson/developercloud/doc/discovery/images/aggregation_structure.png)

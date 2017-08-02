@@ -811,7 +811,7 @@ More detailed documentation for [Speech to Text](https://www.ibm.com/watson/deve
 
 When systems communicate with each other, this is considered Internet of Things
 
-(ivp: IoT use cases:
+IoT use cases:
 #### Predictive maintenance
 By leveraging streaming data from sensors and devices to quickly assess current conditions, recognize warning signs, deliver alerts and automatically trigger appropriate maintenance processes, IoT turns maintenance into a dynamic, rapid and automated task
 #### Smart metering
@@ -822,7 +822,6 @@ Keeping track of and predicting product demand can be tricky and mistakes have a
 
 #### Energy consumption
 For those who want to offset their carbon footprint on the carbon credit exchange, IoT provides a way of accurately tracking and trading carbon credits and energy consumption.
-)
 
 - [Explain the components of systems communicating with one another](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 - [Use case of Twitter and sentiment analysis](https://www.ibm.com/blogs/bluemix/2016/06/cognitive-apis-with-watson-sentiment-analysis/)

@@ -935,51 +935,30 @@ domains as they indicate the areas in which the service will perform best.
 
 Pre-trained Watson services:
 
-3.1.2.1. Watson Text-to-Speech
-
-3.1.2.2. Watson Speech-to-text
-
-3.1.2.3. Language Translator (conversational, news, and patent domains; however some one can also train custom models)
-
-3.1.2.4. Natural Language Understanding (however similar models can be trained in Watson Knowledge Studio)
-
-3.1.2.5. Tone Analyzer
-
-3.1.2.6. Personality Insights (social media domain)
-
-3.1.2.7. Watson Discovery News
-
-3.1.2.8. Watson Discovery Service
+##### 3.1.2.1. Watson Text-to-Speech
+##### 3.1.2.2. Watson Speech-to-text
+##### 3.1.2.3. Language Translator (conversational, news, and patent domains; however some one can also train custom models)
+##### 3.1.2.4. Natural Language Understanding (however similar models can be trained in Watson Knowledge Studio)
+##### 3.1.2.5. Tone Analyzer
+##### 3.1.2.6. Personality Insights (social media domain)
+##### 3.1.2.7. Watson Discovery News
+##### 3.1.2.8. Watson Discovery Service
 
 #### 3.1.3. Services requiring training:
-
-3.1.3.1. Natural Language Classifier
-
-3.1.3.2. Visual recognition (custom models, however it is supplied with some pre-built models)
-
-3.1.3.3. Watson Conversation
-
+##### 3.1.3.1. Natural Language Classifier
+##### 3.1.3.2. Visual recognition (custom models, however it is supplied with some pre-built models)
+##### 3.1.3.3. Watson Conversation
 
 ### 3.2. Provide examples of text classification using the NLC.
-
-3.2.1. Sentiment analysis
-
-3.2.2. Spam email detection
-
-3.2.3. Customer message routing
-
-3.2.4. Academic paper classification into technical fields of interest
-
-3.2.5. Forum post classification to determine correct posting category
-
-3.2.6. Patient reports for escalation and routing based on symptoms
-
-3.2.7. News article analysis
-
-3.2.8. Investment opportunity ranking
-
-3.2.9. Web page topic analysis
-
+#### 3.2.1. Sentiment analysis
+#### 3.2.2. Spam email detection
+#### 3.2.3. Customer message routing
+#### 3.2.4. Academic paper classification into technical fields of interest
+#### 3.2.5. Forum post classification to determine correct posting category
+#### 3.2.6. Patient reports for escalation and routing based on symptoms
+#### 3.2.7. News article analysis
+#### 3.2.8. Investment opportunity ranking
+#### 3.2.9. Web page topic analysis
 
 ### 3.3. Explain the Watson SDKs available as part of the services on Watson Developer Cloud.
 

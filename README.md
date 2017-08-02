@@ -567,7 +567,7 @@ Classes ordered by confidence
 
 ##### How to use the service
 The process of creating and using the classifier:
-![Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/images/classifier_process.png)
+[![Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/images/classifier_process.png)]
 
 ##### CSV training data file format
 Make sure that your CSV training data adheres to the following format requirements:
@@ -652,7 +652,7 @@ With the IBM Watson™ Conversation service, you can create an application that 
 
 This diagram shows the overall architecture of a complete solution:
 
-![Watson Conversation](https://console.bluemix.net/docs/api/content/services/conversation/images/conversation_arch_overview.png)
+[![Watson Conversation](https://console.bluemix.net/docs/api/content/services/conversation/images/conversation_arch_overview.png)]
 
 - Users interact with your application through the user interface that you implement. For example, A simple chat window or a mobile app, or even a robot with a voice interface.
 - The application sends the user input to the Conversation service.

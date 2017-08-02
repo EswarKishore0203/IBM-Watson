@@ -321,23 +321,23 @@ Hence the separation to 50/25/25.
 
 In case if you don't need to choose an appropriate model from several rivaling approaches, you can just re-partition your set that you basically have only training set and test set, without performing the validation of your trained model. I personally partition them 70/30 then.
 
-#### 1.6.2 Another: Usinh Bootstrap method vs Cross Validation
+https://stats.stackexchange.com/questions/19048/what-is-the-difference-between-test-set-and-validation-set/60662#60662
+
+#### 1.6.2 Another: Using Bootstrap method vs Cross Validation
 ##### 1.6.2.1. the bootstrap method allows us to simulate the process of obtaining new data sets, so that we can estimate the error/ variability of our estimate without generating additional samples
 
-(ivp:
-resampling methods: cross-validation and the bootstrap. These methods refit a model of interest to samples formed
-from the training set, in order to obtain additional
-information about the fitted model.
-
+Resampling methods: cross-validation and the bootstrap. These methods refit a model of interest to samples formed
+from the training set, in order to obtain additional information about the fitted model.
+----
 Сross validation is a technique for validating the model performance, and it’s done by split the training data into k parts. We take k-1 parts as our training set and use the “held out” part as our test set. We repeat that k times differently (we hold out different part every time). Finally we take the average of the k scores as our performance estimation.
 
 Cross validation can suffer bias or variance. if we increase the number of splits (k), the variance will increase and bias will decrease. On contrast, if we decrease (k), the bias will increase and variance will decrease. Generally 10-fold CV is used but of course it depends on the size of the training data.
 ----
 Bootstrapping is a technique that helps in many situations like validation of a predictive model performance, ensemble methods, estimation of bias and variance of the model.
 
-It works by sampling with replacement from the original data, and take the “not chosen” data points as test cases (or use the whole original dataset as test set (ivp)). We can make this several times and calculate the average score as estimation of our model performance.
-
------
+It works by sampling with replacement from the original data, and take the “not chosen” data points as test cases (or use the whole original dataset as test set). We can make this several times and calculate the average score as estimation of our model performance.
+----
+Types of bootstrap:
 1. ‘simple’ bootstrap. This involves creating resamples with replacement from the original data, of the same size; applying the modelling strategy to the resample; using the model to predict the values of the full set of original data and calculating a goodness of fit statistic (eg either R-squared or root mean squared error) comparing the predicted value to the actual value. Note - Following Efron, Harrell calls this the “simple bootstrap”, but other authors and the useful caret package use “simple bootstrap” to mean the resample model is used to predict the out-of-bag values at each resample point, rather than the full original sample.
 2. ‘enhanced’ bootstrap. This is a little more involved and is basically a method of estimating the ‘optimism’ of the goodness of fit statistic. There’s a nice step by step explanation by thestatsgeek which I won’t try to improve on.
 3. repeated 10-fold cross-validation. 10-fold cross-validation involves dividing your data into ten parts, then taking turns to fit the model on 90% of the data and using that model to predict the remaining 10%. The average of the 10 goodness of fit statistics becomes your estimate of the actual goodness of fit. One of the problems with k-fold cross-validation is that it has a high variance ie doing it different times you get different results based on the luck of you k-way split; so repeated k-fold cross-validation addresses this by performing the whole process a number of times and taking the average.
@@ -346,8 +346,6 @@ It works by sampling with replacement from the original data, and take the “no
 #### 1.6.3. Training Process: 
 
 ##### 1.6.3.1. Data = Training Data + Cross-Validation Data + Test Data 
-
-(ivp: 
 
 Well, most ML models are described by two sets of parameters. The 1st set consists in “regular” parameters that are “learned” through training. The other parameters, called hyperparameters or meta-parameters are parameters which values are set before the learning starts (think, for example, the learning rate, the regularisation parameter, the number of layers or neurons in a layer for ANN etc.)
 
@@ -365,15 +363,21 @@ Multiple training sessions are run on the actual training set, for various hyper
 
 After choosing the best model (and implicitly the values for the hyperparameters) this model is evaluated agains the test dataset and the performance is reported.
 
-Long story short: split your data into 3 subsets: training, validation, test. Train multiple variations of your model on the training dataset, chose the one with the best performance on the validation set and report how it generalise to the test set (important - the test set is kept hidden throughout the training process).)
+Long story short: split your data into 3 subsets: training, validation, test. Train multiple variations of your model on the training dataset, chose the one with the best performance on the validation set and report how it generalise to the test set (important - the test set is kept hidden throughout the training process).
+
+https://www.quora.com/What-is-training-validation-and-testing-data-sets-scenario-in-machine-learning
 
 ###### 1.6.3.1.1. Data = Inputs + Outputs 
-###### 1.6.3.1.2. Input + Output Sets  a set of functions that map input to output 
+###### 1.6.3.1.2. Input + Output Sets => a set of functions that map input to output 
 ##### 1.6.3.2. We train these functions using the training data 
 ##### 1.6.3.3. We select which function gives less errors or better classification or prediction by feeding them each the validation data / blind (cross-validate)  
 ##### 1.6.3.4. We select the best outcome 
 ##### 1.6.3.5. We test the best outcome (function / neural net (weights,etc)) with the test data 
- 
+
+https://www.quora.com/What-is-the-difference-between-bootstrapping-and-crossvalidation
+https://developer.ibm.com/dwblog/2016/chatbot-cognitive-performance-metricsaccuracy-precision-recall-confusion-matrix/#respond
+https://www.quora.com/What-is-a-training-data-set-test-data-set-in-machinelearning-What-are-the-rules-for-selecting-them
+
 ### 1.7. Measure accuracy of service.
 
 The goal of the ML model is to learn patterns that generalize well for unseen data instead of just memorizing the data that it was shown during training. Once you have a model, it is important to check if your model is performing well on unseen examples that you have not used for training the model. To do this, you use the model to predict the answer on the evaluation dataset (held out data) and then compare the predicted target to the actual answer (ground truth).

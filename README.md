@@ -471,41 +471,29 @@ To answer correctly, we need to understand the intent behind the question, in or
   - Imperative: “Show me the directions to my the nearest gas station.”
   
 ## Section 2 - Use Cases of Cognitive Services
+### 2.1. Select appropriate combination of cognitive technologies based on use-case and data format.
+#### 2.1.1. Agent-assist for email-based customer call center
+##### 2.1.1.1. Data: customer emails
+##### 2.1.1.2. Features needed: Q&A, Text classification, entity extraction and, keyword extraction
+##### 2.1.1.3. Watson-specific Services addressing the requirements: Natural Language Classifier, Watson Discovery, Natural Language Understanding
+#### 2.1.2. Agent-assist for phone-based customer call center
+##### 2.1.2.1. Data: customer voice recordings
+##### 2.1.2.2. Features needed: Q&A, Speech recognition, text-to-speech, text classification, entity extraction, keyword extraction
+##### 2.1.2.3. Watson-specific Services addressing the requirements: Watson Conversation, Watson Discovery, Natural Language Understanding, Watson Text to Speech, Watson Speech to Text
+#### 2.1.3. Expert advisor use case for physicians
+##### 2.1.3.1. Data: natural language intents
+##### 2.1.3.2. Features needed: Q&A, Text classification, entity extraction and keyword extraction
+##### 2.1.3.3. Watson-specific Services addressing the requirements: Natural Language Classifier, Watson Conversation, Watson Discovery, Natural Language Understanding
+#### 2.1.4. Data insights for Instagram images
+##### 2.1.4.1. Data: images
+##### 2.1.4.2. Features needed: Image classification and natural OCR
+##### 2.1.4.3. Watson-specific: Visual Recognition
+#### 2.1.5. Data insights for Twitter
+##### 2.1.5.1. Data: tweets
+##### 2.1.5.2. Features needed: Text classification, entity extraction, keyword extraction, personality profile
+##### 2.1.5.3. Watson-specific Services addressing the requirements: Natural Language Classifier, Natural Language Understanding, Personality Insights and Watson Discovery
 
-### 2.1.1. Agent-assist for email-based customer call center
-  2.1.1.1. Data: customer emails
-  2.1.1.2. Features needed: Q&A, Text classification, entity extraction and,
-keyword extraction
-  2.1.1.3. Watson-specific Services addressing the requirements:
-Natural Language Classifier, Watson Discovery, Natural Language
-Understanding
-### 2.1.2. Agent-assist for phone-based customer call center
-  2.1.2.1. Data: customer voice recordings
-  2.1.2.2. Features needed: Q&A, Speech recognition, text-to-speech, text
-classification, entity extraction, keyword extraction
-  2.1.2.3. Watson-specific Services addressing the requirements:
-Watson Conversation, Watson Discovery, Natural Language
-Understanding, Watson Text to Speech, Watson Speech to Text
-### 2.1.3. Expert advisor use case for physicians
-  2.1.3.1. Data: natural language intents
-  2.1.3.2. Features needed: Q&A, Text classification, entity extraction and
-keyword extraction
-  2.1.3.3. Watson-specific Services addressing the requirements:
-Natural Language Classifier, Watson Conversation, Watson
-Discovery, Natural Language Understanding
-### 2.1.4. Data insights for Instagram images
-  2.1.4.1. Data: images
-  2.1.4.2. Features needed: Image classification and natural OCR
-  2.1.4.3. Watson-specific: Visual Recognition
-### 2.1.5. Data insights for Twitter
-  2.1.5.1. Data: tweets
-  2.1.5.2. Features needed: Text classification, entity extraction, keyword
-extraction, personality profile
-  2.1.5.3. Watson-specific Services addressing the requirements:
-Natural Language Classifier, Natural Language Understanding,
-Personality Insights and Watson Discovery
- 
-### 2.2. Explain the uses of the Watson services in the Application Starter Kits.
+#### 2.2. Explain the uses of the Watson services in the Application Starter Kits.
 
 #### Chatbot with Long Tail Search
 Use a conversational interface to answer both simple, common questions and complex, less common questions by adding search capability to a chatbot application.

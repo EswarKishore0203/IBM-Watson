@@ -150,7 +150,10 @@ Video:
 [![Neural Networks Demystified - Part 3: Gradient Descent](https://i.ytimg.com/vi/5u0jaA3qAGk/maxresdefault.jpg)](https://www.youtube.com/watch?v=5u0jaA3qAGk?v=VID)
 [Neural Networks Demystified - Part 3: Gradient Descent](https://www.youtube.com/watch?v=5u0jaA3qAGk?v=VID)
 
-(ivp: see also stochastic vs mini-batches, epoch)
+see also: 
+https://www.quora.com/Whats-the-difference-between-gradient-descent-and-stochastic-gradient-descent
+https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent
+
 
 ### 1.3 Explain machine learning technologies (supervised, unsupervised, reinforcement learning approaches).
 

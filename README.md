@@ -47,8 +47,9 @@ The Watson services are constantly evolving so always reference back to the [Wat
  - [3.6 Explain and configure Visual recognition.](#36-explain-and-configure-visual-recognition)
  - [3.7 Explain how Personality Insights service works.](#37-explain-how-personality-insights-service-works)
  - [3.8 Explain how Tone Analyzer service works.](#39-explain-and-execute-alchemy-language-services)
- - [3.9 Explain and execute Alchemy Language services.](#39-explain-and-execute-alchemy-language-services)
- - [3.10 Explain and configure Retrieve and Rank service.](#310-explain-and-configure-retrieve-and-rank-service)
+ - [3.9 Explain and execute IBM Watson Natural Language Understanding.](#39-explain-and-execute-ibm-watson-natural-language-understanding-services)
+ - [3.10 Explain and configure Watson Discovery Service](#310explain-setup-configure-and-query-the-ibm-watson-discovery-service)
+ - [3.11 Explain and configure Watson Conversation Service](#311explain-and-configure-the-ibm-watson-conversation-service)
 
 - [Section 4 - Developing Cognitive applications using Watson Developer Cloud Services](#section-4---developing-cognitive-applications-using-watson-developer-cloud-services)
  

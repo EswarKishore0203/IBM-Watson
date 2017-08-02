@@ -317,7 +317,7 @@ Hence the separation to 50/25/25.
 In case if you don't need to choose an appropriate model from several rivaling approaches, you can just re-partition your set that you basically have only training set and test set, without performing the validation of your trained model. I personally partition them 70/30 then.
 
 #### 1.6.2 Another: Usinh Bootstrap method vs Cross Validation
-1.6.2.1. the bootstrap method allows us to simulate the process of obtaining new data sets, so that we can estimate the error/ variability of our estimate without generating additional samples
+##### 1.6.2.1. the bootstrap method allows us to simulate the process of obtaining new data sets, so that we can estimate the error/ variability of our estimate without generating additional samples
 
 (ivp:
 resampling methods: cross-validation and the bootstrap. These methods refit a model of interest to samples formed
@@ -338,9 +338,9 @@ It works by sampling with replacement from the original data, and take the “no
 3. repeated 10-fold cross-validation. 10-fold cross-validation involves dividing your data into ten parts, then taking turns to fit the model on 90% of the data and using that model to predict the remaining 10%. The average of the 10 goodness of fit statistics becomes your estimate of the actual goodness of fit. One of the problems with k-fold cross-validation is that it has a high variance ie doing it different times you get different results based on the luck of you k-way split; so repeated k-fold cross-validation addresses this by performing the whole process a number of times and taking the average.
 )
 
-### 1.6.3. Training Process: 
+#### 1.6.3. Training Process: 
 
-1.6.3.1. Data = Training Data + Cross-Validation Data + Test Data 
+##### 1.6.3.1. Data = Training Data + Cross-Validation Data + Test Data 
 
 (ivp: 
 
@@ -362,12 +362,12 @@ After choosing the best model (and implicitly the values for the hyperparameters
 
 Long story short: split your data into 3 subsets: training, validation, test. Train multiple variations of your model on the training dataset, chose the one with the best performance on the validation set and report how it generalise to the test set (important - the test set is kept hidden throughout the training process).)
 
-1.6.3.1.1. Data = Inputs + Outputs 
-1.6.3.1.2. Input + Output Sets  a set of functions that map input to output 
-1.6.3.2. We train these functions using the training data 
-1.6.3.3. We select which function gives less errors or better classification or prediction by feeding them each the validation data / blind (cross-validate)  
-1.6.3.4. We select the best outcome 
-1.6.3.5. We test the best outcome (function / neural net (weights,etc)) with the test data 
+###### 1.6.3.1.1. Data = Inputs + Outputs 
+###### 1.6.3.1.2. Input + Output Sets  a set of functions that map input to output 
+##### 1.6.3.2. We train these functions using the training data 
+##### 1.6.3.3. We select which function gives less errors or better classification or prediction by feeding them each the validation data / blind (cross-validate)  
+##### 1.6.3.4. We select the best outcome 
+##### 1.6.3.5. We test the best outcome (function / neural net (weights,etc)) with the test data 
  
 ### 1.7. Measure accuracy of service.
 
@@ -375,25 +375,23 @@ The goal of the ML model is to learn patterns that generalize well for unseen da
 
 A number of metrics are used in ML to measure the predictive accuracy of a model. The choice of accuracy metric depends on the ML task. It is important to review these metrics to decide if your model is performing well.
 
-1.7.2.1  Sample size of training set data, dangers of over fitting, curated content 
-
-(ivp: Small Data problems
+###### 1.7.2.1  Sample size of training set data, dangers of over fitting, curated content 
+Small Data problems
 Problems of small-data are numerous, but mainly revolve around high variance:
 Over-fitting becomes much harder to avoid
 You don’t only over-fit to your training data, but sometimes you over-fit to your validation set as well.
 Outliers become much more dangerous.
-Noise in general becomes a real issue, be it in your target variable or in some of the features.)
+Noise in general becomes a real issue, be it in your target variable or in some of the features.
 
-1.7.3. Explain factors that affect accuracy of unsupervised learning 
-1.7.3.1. Sample size, curse of dimensionality, over/under fitting 
-(ivp: Curse of dimentionality: With a fixed number of training samples, the predictive power reduces as the dimensionality increases, and this is known as Hughes phenomenon)
-1.7.4. Running a Blind set test 
-(ivp: 
+#### 1.7.3. Explain factors that affect accuracy of unsupervised learning 
+##### 1.7.3.1. Sample size, curse of dimensionality, over/under fitting 
+Curse of dimentionality: With a fixed number of training samples, the predictive power reduces as the dimensionality increases, and this is known as Hughes phenomenon
+##### 1.7.4. Running a Blind set test 
 
-Training Set: Data used to train the ML algorithm. The developer may
+**Training Set**: Data used to train the ML algorithm. The developer may
 also look at this data to help design the system. This is usually the
 largest subset.
-Tuning Set: Data set aside to assess how well the program performs on
+**Tuning Set**: Data set aside to assess how well the program performs on
 unseen data and/or to set parameters. Helps to minimize overfitting.
 Blind Test Set: Data set aside to perform a final evaluation of how well
 the program performs on new data. The developer should never look
@@ -403,9 +401,8 @@ https://www.ibm.com/watson/developercloud/doc/wks/improve-ml.html#wks_mamanageda
 
 Why do I need a blind set? 
 Because you use test data to assess accuracy in detail, you get to know the documents and their features after a while. For example, you start to know which entity types, relation types, and text types in the documents are best understood by the machine learning model, and which are not. This information is important because it helps you focus on making the right improvements - refining the type system, supplementing the training data to fill gaps, or adding dictionaries, for example. As the test documents get used iteratively to improve the model, they can start to influence the model training indirectly. That's why the "blind" set of documents is so important.
-)
 
-1.7.5. Importance of iterative training using feedback that has diminished costs derivative  
+#### 1.7.5. Importance of iterative training using feedback that has diminished costs derivative  
 (ivp: TODO)
 
 ### 1.8. Perform Domain Adaption using Watson Knowledge Studio (WKS).
@@ -567,7 +564,7 @@ Classes ordered by confidence
 
 ##### How to use the service
 The process of creating and using the classifier:
-[![Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/images/classifier_process.png)]
+![Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/images/classifier_process.png)
 
 ##### CSV training data file format
 Make sure that your CSV training data adheres to the following format requirements:
@@ -652,7 +649,7 @@ With the IBM Watson™ Conversation service, you can create an application that 
 
 This diagram shows the overall architecture of a complete solution:
 
-[![Watson Conversation](https://console.bluemix.net/docs/api/content/services/conversation/images/conversation_arch_overview.png)]
+![Watson Conversation](https://console.bluemix.net/docs/api/content/services/conversation/images/conversation_arch_overview.png)
 
 - Users interact with your application through the user interface that you implement. For example, A simple chat window or a mobile app, or even a robot with a voice interface.
 - The application sends the user input to the Conversation service.

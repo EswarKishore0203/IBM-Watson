@@ -55,10 +55,11 @@ The Watson services are constantly evolving so always reference back to the [Wat
  
  - [4.1 Call a Watson API to analyze content.](#41-call-a-watson-api-to-analyze-content)
  - [4.2 Describe the tasks required to implement the Conversational Agent / Digital Bot.](#42-describe-the-tasks-required-to-implement-the-conversational-agent--digital-bot)
- - [4.3 Transform service outputs for consumption by other services.](/#43-transform-service-outputs-for-consumption-by-other-services)
+ - [4.3 Transform service outputs for consumption by other services.](#43-transform-service-outputs-for-consumption-by-other-services)
  - [4.4 Define common design patterns for composing multiple Watson services together (across APIs).](#44-define-common-design-patterns-for-composing-multiple-watson-services-together-across-apis)
  - [4.5 Design and execute a use case driven service choreography (within an API).](#45-design-and-execute-a-use-case-driven-service-choreography-within-an-api)
  - [4.6 Deploy a web application to IBM Bluemix.](#46-deploy-a-web-application-to-ibm-bluemix)
+ - [4.7 Explain the advantages of using IBM Bluemix as the cloud platform for cognitive application development and deployment.](#47-explain-the-advantages-of-using-ibm-bluemix-as-the-cloud-platform-for-cognitive-application-development-and-deployment)
 
 - [Section 5 - Administration & DevOps for applications using IBM Watson Developer Cloud Services](#section-5---administration--devops-for-applications-using-ibm-watson-developer-cloud-services)
 

@@ -463,27 +463,25 @@ Use Watson Knowledge Studio to perform the following tasks:
 
 ### 1.9. Define Intents and Classes.
 
-- The Natural Language Classifier service available via WDC, enables clustering or classification based on some measure of inherent similarity or distance given the input data. Such clustering is known as intents or classes.
+#### 1.9.1- The Natural Language Classifier service available via WDC, enables clustering or classification based on some measure of inherent similarity or distance given the input data. Such clustering is known as intents or classes.
 
-- Where classes may include images, intent is a similar clustering for written utterances in unstructured natural language format.
+#### 1.9.2- Where classes may include images, intent is a similar clustering for written utterances in unstructured natural language format.
 
-### 1.10. Explain difference between ground truth and corpus.
+### 1.10. Define the difference between the user question and the user intent.
 
-- Ground truth is used in both supervised and unsupervised machine learning approaches, yet portray different values and formats. For example, in a typical supervised learning system, ground truth consisted of inputs (questions) and approved outputs (answers). With the aide of logistical regression and iterative training the system improves in accuracy.
+#### 1.10.1. To answer correctly, we need to understand the intent behind the question, in order to first classify it then take action on it (e.g., with a Dialog API)
+#### 1.10.2. The user question is the verbatim question
+#### 1.10.3. The user intent maps the user question to a known classification
+#### 1.10.4. This is a form of classifying question based on search goals
+#### 1.10.5. Intents are the superset of all actions your users may want your cognitive system to undertake. Put another way, questions are a subset of user intents. Questions usually end in "?", but sometimes we need to extract the user intent from the underlying context. Common examples of user intents:
 
-- In unsupervised approach, such as NLC, the ground truth consists of a comma-separated csv or a JSON file that lists hundreds of sample utterances and a dozen or so intents (or classes) classifying those utterances.
+- Automation: “Schedule a meeting with Sue at 5pm next Tuesday.”
+- Declarative: “I need to change my password.”
+- Imperative: “Show me the directions to my the nearest gas station.”
 
-### 1.11. Define the difference between the user question and the user intent.
-
-To answer correctly, we need to understand the intent behind the question, in order to first classify it then take action on it (e.g., with a Dialog API)
-- The user question is the verbatim question
-- The user intent maps the user question to a known classification
-- This is a form of classifying question based on search goals
-- Intents are the superset of all actions your users may want your cognitive system to undertake. Put another way, questions are a subset of user intents. Questions usually end in "?", but sometimes we need to extract the user intent from the underlying context.
- - Common examples of user intents:
-  - Automation: “Schedule a meeting with Sue at 5pm next Tuesday.”
-  - Declarative: “I need to change my password.”
-  - Imperative: “Show me the directions to my the nearest gas station.”
+Reference:
+https://developer.ibm.com/answers/topics/watson-conversation/
+https://www.ibm.com/watson/developercloud/doc/conversation/index.html
   
 ## Section 2 - Use Cases of Cognitive Services
 ### 2.1. Select appropriate combination of cognitive technologies based on use-case and data format.

@@ -356,7 +356,7 @@ http://www.burns-stat.com/documents/tutorials/the-statistical-bootstrap-and-othe
 
 ##### 1.6.3.1. Data = Training Data + Cross-Validation Data + Test Data 
 
-;ost ML models are described by two sets of parameters. The 1st set consists of “regular” parameters that are “learned” through training. The other parameters, called hyperparameters or meta-parameters are parameters which values are set before the learning starts (think, for example, the learning rate, the regularisation parameter, the number of layers or neurons in a layer for ANN etc.)
+Most ML models are described by two sets of parameters. The 1st set consists of “regular” parameters that are “learned” through training. The other parameters, called hyperparameters or meta-parameters are parameters which values are set before the learning starts (think, for example, the learning rate, the regularisation parameter, the number of layers or neurons in a layer for ANN etc.)
 
 Obviously, different values for those parameters may lead to different (sometimes by a lot) generalisation performance for our Machine Learning model therefore we need to identify a set of optimal values for them and this is done by training multiple models with different values for the hyperparameters (how to chose those values falls under the name of hyperparameter optimisation - Hyperparameter optimization - Wikipedia)
 

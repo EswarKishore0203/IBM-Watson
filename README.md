@@ -237,11 +237,10 @@ Three broad categories of anomaly detection techniques exist. Unsupervised anoma
 https://en.wikipedia.org/wiki/Anomaly_detection
 https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm#k-NN_outlier
 
--------
-- The local outlier factor is based on a concept of a local density, where locality is given by {\displaystyle k} k nearest neighbors, whose distance is used to estimate the density. By comparing the local density of an object to the local densities of its neighbors, one can identify regions of similar density, and points that have a substantially lower density than their neighbors. These are considered to be outliers.
-
 ##### 1.3.2.3. Reinforcement learning
 - These algorithms choose an action, based on each data point and later learn how good the decision was. Over time, the algorithm changes its strategy to learn better and achieve the best reward. Thus, reinforcement learning is particularly well-suited to problems which include a long-term versus short-term reward trade-off. 
+
+https://www.youtube.com/watch?v=e3Jy2vShroE&t=209s
 
 ### 1.4. Define a common set of use cases for cognitive systems.
 

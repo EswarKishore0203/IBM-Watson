@@ -246,16 +246,22 @@ https://www.youtube.com/watch?v=e3Jy2vShroE&t=209s
 
 Customer Call Centers
 #### 1.4.1. Agent Assist: email based Q&A
+
 1.4.1.1. **Problem Solved**: Provides a natural language help system for call agents to rapidly retrieve answers to customer questions
+
 1.4.1.2. **Capabilities needed for this use case**: Conversation, natural language answer retrieval, keyword extraction, and entity extraction
+
 1.4.1.3. **Services used**: Natural Language Classifier(ivp: or Watson Conversation for intent detection), Watson Discovery
+
 1.4.1.4. **Benefits**:
+
 1.4.1.4.1. Detect the topic of a ticket and route to the appropriate department to handle it (Example: room service, maintenance, housekeeping)
 
 1.4.1.4.2. Escalate support tickets based on customer sentiment
+
 1.4.1.4.3. Route support requests to agents that already solved similar problems by detecting natural language similarities between new customer tickets and resolved ones.
-1.4.1.4.4. Automation: Customer/Technical Support Tickets
-Routing
+
+1.4.1.4.4. Automation: Customer/Technical Support Tickets Routing
 
 1.4.1.5. **Watson Services used**: natural language (text) classification, keyword extraction, entity extraction, and sentiment/tone analysis
 

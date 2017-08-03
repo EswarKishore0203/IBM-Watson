@@ -419,9 +419,11 @@ Curse of dimentionality: With a fixed number of training samples, the predictive
 **Training Set**: Data used to train the ML algorithm. The developer may
 also look at this data to help design the system. This is usually the
 largest subset.
+
 **Tuning Set**: Data set aside to assess how well the program performs on
 unseen data and/or to set parameters. Helps to minimize overfitting.
-Blind Test Set: Data set aside to perform a final evaluation of how well
+
+**Blind Test Set**: Data set aside to perform a final evaluation of how well
 the program performs on new data. The developer should never look
 at these texts!
 

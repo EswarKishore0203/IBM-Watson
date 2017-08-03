@@ -267,10 +267,12 @@ Customer Call Centers
 
 #### 1.4.2. Physicians
 ##### 1.4.2.1. Expert Advisor:
+
 1.4.2.1.1. **Example**: Watson Discovery Advisor
 
-1.4.2.1.2. **Problem Solve**d: Provides relevant medical suggestions and insights in natural language so
+1.4.2.1.2. **Problem Solved**: Provides relevant medical suggestions and insights in natural language so
 physicians can more accurately diagnose patients.
+
 1.4.2.1.3. **Services used**: Conversation, Natural Language Classifier, Watson Discovery
  
 #### 1.4.3. Social Media Data Insights:
@@ -286,11 +288,11 @@ physicians can more accurately diagnose patients.
 see https://developer.ibm.com/dwblog/2016/chatbot-cognitive-performance-metrics-accuracy-precision-recall-confusion-matrix/
 
 #### 1.5.1. [Precision:](#https://en.wikipedia.org/wiki/Precision_and_recall)
-- Definition: Precision is the percentage of documents labelled as positive that are actually positive.
+- Definition: Precision is the percentage of documents labelled as positive that are actually positive (~= how clean are retrieved results)
 - Formula: True Positives/(True Positives + False Positives)
 
 #### 1.5.2. [Recall:](#https://en.wikipedia.org/wiki/Precision_and_recall)
-- Recall is the percent of documents labelled as positive were successfully retrieved.
+- Recall is the percent of documents labelled as positive were successfully retrieved. (~= how good is system in finding all relevant results)
 - Formula: True Positives/(True Positives + False Negatives)
 
 #### 1.5.3. Accuracy:

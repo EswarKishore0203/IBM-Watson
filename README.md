@@ -345,7 +345,7 @@ Bootstrapping is a technique that helps in many situations like validation of a 
 
 It works by sampling **with replacement** from the original data, and take the “not chosen” data points as test cases (ivp: or use the whole original dataset as test set). We can make this several times and calculate the average score as estimation of our model performance.
 
-###### Other explanation:
+###### Another explanation:
 The idea: We have just one dataset. When we compute a statistic on the data, we only know that one statistic — we don’t see how variable that statistic is. The bootstrap creates a large number of datasets that we might have seen and computes the statistic on each of these datasets. Thus we get a distribution of the statistic. Key is the strategy to create data that “we might have seen”.
 
 https://www.quora.com/What-is-the-difference-between-bootstrapping-and-cross-validation
@@ -356,23 +356,27 @@ http://www.burns-stat.com/documents/tutorials/the-statistical-bootstrap-and-othe
 
 ##### 1.6.3.1. Data = Training Data + Cross-Validation Data + Test Data 
 
-Well, most ML models are described by two sets of parameters. The 1st set consists in “regular” parameters that are “learned” through training. The other parameters, called hyperparameters or meta-parameters are parameters which values are set before the learning starts (think, for example, the learning rate, the regularisation parameter, the number of layers or neurons in a layer for ANN etc.)
+;ost ML models are described by two sets of parameters. The 1st set consists of “regular” parameters that are “learned” through training. The other parameters, called hyperparameters or meta-parameters are parameters which values are set before the learning starts (think, for example, the learning rate, the regularisation parameter, the number of layers or neurons in a layer for ANN etc.)
 
 Obviously, different values for those parameters may lead to different (sometimes by a lot) generalisation performance for our Machine Learning model therefore we need to identify a set of optimal values for them and this is done by training multiple models with different values for the hyperparameters (how to chose those values falls under the name of hyperparameter optimisation - Hyperparameter optimization - Wikipedia)
 
 Now, imagine you have you data and you need to run a supervised ML algorithm on it. You split the data into:
 
-training - this is the data for which your algorithm knows the “labels” and which you will feed it to the training process to build your model.
-test - this is a portion of the data that you keep hidden from your algorithm and only use it after the training takes places to compute some metrics that can give you a hint on how your algorithm behaves. For each item in you test dataset you predict its “value” using the built model and compare against the real “value”
-Now, back to the context of hyperparameter optimisation. If you run the same algorithm (train on training, evaluate on test) for multiple sets of hyperparameters and chose the model with the best “performance” on the test set you risk overfitting this test set. To avoid this problem of overfitting the test data, the training set is split once more into:
+**training** - this is the data for which your algorithm knows the “labels” and which you will feed it to the training process to build your model.
 
-actual training - a subset of the training set that is used to optimise the model
-validation - another subset of the training set that is used to evaluate the model performance for each run / set of hyperparameter values.
-Multiple training sessions are run on the actual training set, for various hyperparameter values and the models are evaluated agains the validation dataset. The model with the best performance is then chosen - remember that so far the algorithm has not yet seen the test data therefore there is no suspicion of overfitting it.
+**test** - this is a portion of the data that you keep hidden from your algorithm and only use it after the training takes places to compute some metrics that can give you a hint on how your algorithm behaves. For each item in you test dataset you predict its “value” using the built model and compare against the real “value”
+
+Now, back to the context of hyperparameter optimization. If you run the same algorithm (train on training, evaluate on test) for multiple sets of hyperparameters and chose the model with the best “performance” on the test set you risk overfitting this test set. To avoid this problem of overfitting the test data, the training set is split once more into:
+
+actual **training** - a subset of the training set that is used to optimise the model
+
+**validation** - another subset of the training set that is used to evaluate the model performance for each run / set of hyperparameter values.
+
+Multiple training sessions are run on the actual training set, for various hyperparameter values and the models are evaluated against the validation dataset. The model with the best performance is then chosen - remember that so far the algorithm has not yet seen the test data therefore there is no suspicion of overfitting it.
 
 After choosing the best model (and implicitly the values for the hyperparameters) this model is evaluated agains the test dataset and the performance is reported.
 
-Long story short: split your data into 3 subsets: training, validation, test. Train multiple variations of your model on the training dataset, chose the one with the best performance on the validation set and report how it generalise to the test set (important - the test set is kept hidden throughout the training process).
+**Long story short**: split your data into 3 subsets: training, validation, test. Train multiple variations of your model on the training dataset, chose the one with the best performance on the validation set and report how it generalise to the test set (important - the test set is kept hidden throughout the training process).
 
 https://www.quora.com/What-is-training-validation-and-testing-data-sets-scenario-in-machine-learning
 

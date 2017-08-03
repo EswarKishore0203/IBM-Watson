@@ -343,14 +343,14 @@ Cross validation can suffer bias or variance. if we increase the number of split
 ----
 Bootstrapping is a technique that helps in many situations like validation of a predictive model performance, ensemble methods, estimation of bias and variance of the model.
 
-It works by sampling with replacement from the original data, and take the “not chosen” data points as test cases (or use the whole original dataset as test set). We can make this several times and calculate the average score as estimation of our model performance.
+It works by sampling **with replacement** from the original data, and take the “not chosen” data points as test cases (ivp: or use the whole original dataset as test set). We can make this several times and calculate the average score as estimation of our model performance.
 
-----
-Types of bootstrap:
-1. ‘simple’ bootstrap. This involves creating resamples with replacement from the original data, of the same size; applying the modelling strategy to the resample; using the model to predict the values of the full set of original data and calculating a goodness of fit statistic (eg either R-squared or root mean squared error) comparing the predicted value to the actual value. Note - Following Efron, Harrell calls this the “simple bootstrap”, but other authors and the useful caret package use “simple bootstrap” to mean the resample model is used to predict the out-of-bag values at each resample point, rather than the full original sample.
-2. ‘enhanced’ bootstrap. This is a little more involved and is basically a method of estimating the ‘optimism’ of the goodness of fit statistic. There’s a nice step by step explanation by thestatsgeek which I won’t try to improve on.
-3. repeated 10-fold cross-validation. 10-fold cross-validation involves dividing your data into ten parts, then taking turns to fit the model on 90% of the data and using that model to predict the remaining 10%. The average of the 10 goodness of fit statistics becomes your estimate of the actual goodness of fit. One of the problems with k-fold cross-validation is that it has a high variance ie doing it different times you get different results based on the luck of you k-way split; so repeated k-fold cross-validation addresses this by performing the whole process a number of times and taking the average.
+###### Other explanation:
+The idea: We have just one dataset. When we compute a statistic on the data, we only know that one statistic — we don’t see how variable that statistic is. The bootstrap creates a large number of datasets that we might have seen and computes the statistic on each of these datasets. Thus we get a distribution of the statistic. Key is the strategy to create data that “we might have seen”.
 
+https://www.quora.com/What-is-the-difference-between-bootstrapping-and-cross-validation
+https://stats.stackexchange.com/questions/18348/differences-between-cross-validation-and-bootstrapping-to-estimate-the-predictio
+http://www.burns-stat.com/documents/tutorials/the-statistical-bootstrap-and-other-resampling-methods-2/#bootstrap
 
 #### 1.6.3. Training Process: 
 

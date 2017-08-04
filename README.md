@@ -404,12 +404,17 @@ A number of metrics are used in ML to measure the predictive accuracy of a model
 
 #### 1.7.2. Explain factors that affect accuracy in supervised learning
 ###### 1.7.2.1  Sample size of training set data, dangers of over fitting, curated content 
-Small Data problems
+- Small Data problems:
+
 Problems of small-data are numerous, but mainly revolve around high variance:
 Over-fitting becomes much harder to avoid
 You don’t only over-fit to your training data, but sometimes you over-fit to your validation set as well.
 Outliers become much more dangerous.
 Noise in general becomes a real issue, be it in your target variable or in some of the features.
+
+- Knowledge curation: 
+
+This stage, which is external to Watson Knowledge Studio , refers to the process of selecting, collecting, preserving, and maintaining content relevant to a specific domain. Curation adds value to data; it transforms data into trusted information and knowledge.
 
 #### 1.7.3. Explain factors that affect accuracy of unsupervised learning 
 ##### 1.7.3.1. Sample size, curse of dimensionality, over/under fitting 

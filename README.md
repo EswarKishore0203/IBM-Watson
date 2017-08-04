@@ -915,23 +915,24 @@ http://mashable.com/2016/01/27/softbank-pepper-robot-store/#kYx8ZMpu0Sqw
 
 ### 2.4. Explain use cases for integrating external systems (such as Twitter, Weather API).
 
+#### [Explain the components of systems communicating with one another](https://console.ng.bluemix.net/docs/services/IoT/index.html)
+
 When systems communicate with each other, this is considered Internet of Things
 
 IoT use cases:
-#### Predictive maintenance
+##### Predictive maintenance
 By leveraging streaming data from sensors and devices to quickly assess current conditions, recognize warning signs, deliver alerts and automatically trigger appropriate maintenance processes, IoT turns maintenance into a dynamic, rapid and automated task
-#### Smart metering
+##### Smart metering
 A smart meter is an internet-capable device that measures energy, water or natural gas consumption of a building or home, according to Silicon Labs.
 Traditional meters only measure total consumption, whereas smart meters record when and how much of a resource is consumed. Power companies are deploying smart meters to monitor consumer usage and adjust prices according to the time of day and season.
-#### IoT in the supply chain
+##### IoT in the supply chain
 Keeping track of and predicting product demand can be tricky and mistakes have a cost implication – either through over-supply (and therefore wastage), or under-supply (and the attendant missed sales opportunities.) IoT technology could track the location of individual components, and broadcast supply and demand on a shared blockchain. Data as to demand request, supply volumes, or part expiration dates could be instantly accessed and analysed to identify where production needs to be stepped up
 
-#### Energy consumption
+##### Energy consumption
 For those who want to offset their carbon footprint on the carbon credit exchange, IoT provides a way of accurately tracking and trading carbon credits and energy consumption.
 
-- [Explain the components of systems communicating with one another](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-- [Use case of Twitter and sentiment analysis](https://www.ibm.com/blogs/bluemix/2016/06/cognitive-apis-with-watson-sentiment-analysis/)
-- [Use case of the Weather APIs and mission critical decision that are impacted by weather](https://www.ibm.com/blogs/bluemix/2015/10/ibm-insights-weather-available-in-bluemix/?HavasWatsonStudyGuide)
+#### [Use case of Twitter and sentiment analysis](https://www.ibm.com/blogs/bluemix/2016/06/cognitive-apis-with-watson-sentiment-analysis/)
+#### [Use case of the Weather APIs and mission critical decision that are impacted by weather](https://www.ibm.com/blogs/bluemix/2015/10/ibm-insights-weather-available-in-bluemix/?HavasWatsonStudyGuide)
 
 ### 2.5. Describe the IBM Watson Discovery Service
 SUBTASK(S):

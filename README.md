@@ -414,7 +414,7 @@ Noise in general becomes a real issue, be it in your target variable or in some 
 
 - Knowledge curation: 
 
-This stage, which is external to Watson Knowledge Studio , refers to the process of selecting, collecting, preserving, and maintaining content relevant to a specific domain. Curation adds value to data; it transforms data into trusted information and knowledge.
+This stage refers to the process of selecting, collecting, preserving, and maintaining content relevant to a specific domain. Curation adds value to data; it transforms data into trusted information and knowledge.
 
 #### 1.7.3. Explain factors that affect accuracy of unsupervised learning 
 ##### 1.7.3.1. Sample size, curse of dimensionality, over/under fitting 

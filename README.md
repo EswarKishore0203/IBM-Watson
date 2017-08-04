@@ -915,7 +915,7 @@ http://mashable.com/2016/01/27/softbank-pepper-robot-store/#kYx8ZMpu0Sqw
 
 ### 2.4. Explain use cases for integrating external systems (such as Twitter, Weather API).
 
-#### [Explain the components of systems communicating with one another](https://console.ng.bluemix.net/docs/services/IoT/index.html)
+- #### [Explain the components of systems communicating with one another](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 
 When systems communicate with each other, this is considered Internet of Things
 
@@ -931,8 +931,8 @@ Keeping track of and predicting product demand can be tricky and mistakes have a
 ##### Energy consumption
 For those who want to offset their carbon footprint on the carbon credit exchange, IoT provides a way of accurately tracking and trading carbon credits and energy consumption.
 
-#### [Use case of Twitter and sentiment analysis](https://www.ibm.com/blogs/bluemix/2016/06/cognitive-apis-with-watson-sentiment-analysis/)
-#### [Use case of the Weather APIs and mission critical decision that are impacted by weather](https://www.ibm.com/blogs/bluemix/2015/10/ibm-insights-weather-available-in-bluemix/?HavasWatsonStudyGuide)
+- #### [Use case of Twitter and sentiment analysis](https://www.ibm.com/blogs/bluemix/2016/06/cognitive-apis-with-watson-sentiment-analysis/)
+- #### [Use case of the Weather APIs and mission critical decision that are impacted by weather](https://www.ibm.com/blogs/bluemix/2015/10/ibm-insights-weather-available-in-bluemix/?HavasWatsonStudyGuide)
 
 ### 2.5. Describe the IBM Watson Discovery Service
 SUBTASK(S):

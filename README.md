@@ -560,9 +560,9 @@ https://www.ibm.com/watson/developercloud/doc/wks/index.html
 
 ### 1.9. Define Intents and Classes.
 
-#### 1.9.1- The Natural Language Classifier service available via WDC, enables clustering or classification based on some measure of inherent similarity or distance given the input data. Such clustering is known as intents or classes.
+#### 1.9.1. The Natural Language Classifier service available via WDC, enables clustering or classification based on some measure of inherent similarity or distance given the input data. Such clustering is known as intents or classes.
 
-#### 1.9.2- Where classes may include images, intent is a similar clustering for written utterances in unstructured natural language format.
+#### 1.9.2. Where classes may include images, intent is a similar clustering for written utterances in unstructured natural language format.
 
 ### 1.10. Define the difference between the user question and the user intent.
 

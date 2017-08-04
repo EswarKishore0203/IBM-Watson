@@ -529,12 +529,34 @@ A relation type defines a binary, ordered relationship between two entities. For
 For some relation types, the order of entity mentions matters. For example, the employedBy relation type allows the entity type PERSON or PEOPLE as the first mention in the relationship, and ORGANIZATION or GPE as the second mention, but not the other way around. Mary employedBy IBM is a valid relationship; IBM employedBy Mary is not. For some relation types, such as spouseOf, colleague, or sibling, order does not matter. When you define a relation type where order is not important, a best practice is to add information to the annotation guidelines to regularize how the relation type is used. A convention for noting such symmetrical relations is to say that the entity mention that occurs first in the text should be the first one in the relation.
 
 #### 1.8.5. Define entity types, relationships and co-references
+co-references: https://www.ibm.com/watson/developercloud/doc/wks/user-guide.html#wks_hacoref
+
 #### 1.8.6. Define and load dictionaries for pre-annotation
+Pre-annotating documents based on the dictionaries that you add to a Watson Knowledge Studio project. After you create a machine-learning annotator, you can use the annotator to pre-annotate new documents that you add to the corpus. Pre-annotation is a process of machine-annotating a document to the extent possible before a machine-learning model is available to do so. Pre-annotation can reduce human-annotation labor by replacing some human annotation creation with mere verification of the correctness of machine annotation.
+
 #### 1.8.7. Understand Human Annotation
+
+A typical workflow includes the following steps:
+
+1. Human annotators submit annotated documents for review.
+2. The project manager (who may be a senior domain expert) reviews the accuracy of their work and compares how consistently the human annotators annotated documents that overlap between the annotation sets.
+3. If the inter-annotator agreement score is too low, the project manager rejects the annotation set and returns it to the human annotator to be improved. When an annotation set is rejected, all documents in the set are placed back into editable mode.
+4. If the project manager approves an annotation set, documents that do not overlap across annotation sets are promoted to ground truth so that the annotations can be used to train the annotator component.
+5. The project manager reviews the overlapping documents and resolves the annotation conflicts. At this stage, referred to as adjudication, the team might review and revise the annotation guidelines to help clarify misunderstandings that caused text to be incorrectly or inconsistently annotated by different human annotators.
+
+In some cases, a project manager might want a higher percentage of overlap for evaluating inter-annotator agreement than the percentage of overlap for adjudicating differences. For example, if inter-annotator agreement looks OK, then the project manager might decide that it is OK to promote either annotation to ground truth.
+
+6. As the project manager resolves annotation conflicts, the approved annotations are promoted to ground truth.
+
+https://www.ibm.com/watson/developercloud/doc/wks/annotate-documents.html
+https://www.ibm.com/watson/developercloud/doc/wks/build-groundtruth.html
+
 #### 1.8.8. Understand SIRE (machine learning information extraction)
+https://developer.ibm.com/answers/questions/28191/what-is-the-watson-relationship-extraction-service.html
+https://www.ibm.com/blogs/insights-on-business/government/relationship-extraction/
 
 Reference: 
-https://www.ibm.com/watson/developercloud/doc/wks/wks_projconfig.shtml
+https://www.ibm.com/watson/developercloud/doc/wks/index.html
 
 ### 1.9. Define Intents and Classes.
 

@@ -938,6 +938,7 @@ For those who want to offset their carbon footprint on the carbon credit exchang
 SUBTASK(S):
 #### 2.5.1. List the functionalities that the Watson Discovery service provides
 **In essense:** Watson Disovery = NLU + storage + search/analytics
+
 -------
 IBM Watson™ Discovery brings together a functionally rich set of integrated, automated Watson APIs to:
 
@@ -945,6 +946,7 @@ IBM Watson™ Discovery brings together a functionally rich set of integrated, a
 - Securely explore your proprietary content as well as free and licensed public content.
 - Apply additional enrichments such as concepts, relations, and sentiment through natural language processing.
 - Simplify development while still providing direct access to APIs.
+
 ------
 Another version:
 - ingest

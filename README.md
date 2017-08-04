@@ -435,6 +435,7 @@ Because you use test data to assess accuracy in detail, you get to know the docu
 #### 1.7.5. Importance of iterative training using feedback that has diminished costs derivative  
 ???
 
+Reference:
 https://developer.ibm.com/dwblog/2016/chatbot-cognitive-performance-metrics-accuracy-precision-recall-confusion-matrix
 https://www.ibm.com/developerworks/community/blogs/jfp/entry/Overfitting_In_Machine_Learning?lang=en
 
@@ -456,7 +457,7 @@ Use Watson™ Knowledge Studio to create a machine-learning model that understan
 To become a subject matter expert in a given industry or domain, Watson must be trained. You can facilitate the task of training Watson with Watson Knowledge Studio. It provides easy-to-use tools for annotating unstructured domain literature, and uses those annotations to create a custom machine-learning model that understands the language of the domain. The accuracy of the model improves through iterative testing, ultimately resulting in an algorithm that can learn from the patterns that it sees and recognize those patterns in large collections of new documents.
 
 The following diagram illustrates how it works.
-[![Watson™ Knowledge Studio](https://www.ibm.com/watson/developercloud/doc/wks/images/wks-ovw-anno.png)]
+![Watson™ Knowledge Studio](https://www.ibm.com/watson/developercloud/doc/wks/images/wks-ovw-anno.png)
 
 1. Based on a set of domain-specific source documents, the team creates a type system that defines entity types and relation types for the information of interest to the application that will use the model.
 2. A group of two or more human annotators annotate a small set of source documents to label words that represent entity types, words that represent relation types between entity mentions, and to identify coreferences of entity types. Any inconsistencies in annotation are resolved, and one set of optimally annotated documents is built, which forms the ground truth.
@@ -475,6 +476,60 @@ Use Watson Knowledge Studio to perform the following tasks:
 - Import analyzed documents that are in UIMA CAS XMI format. For example, you can import UIMA CAS XMI files that were exported from IBM Watson Explorer content analytics collections or IBM Watson Explorer Content Analytics Studio.
 - Deploy a trained model to use with the AlchemyLanguage service.
 - Export a trained model to use in IBM Watson Explorer.
+
+
+
+#### 1.8.1. Analyze the domain
+#### 1.8.2. Create a project
+#### 1.8.3. Develop the type system
+https://www.ibm.com/watson/developercloud/doc/wks/typesystem.html
+#### 1.8.4. Understand "mention", "entity", and "relation"
+##### Mentions 
+A mention is any span of text that you consider relevant in your domain data. For example, in a type system about automotive vehicles, occurrences of terms like airbag, Ford Explorer, and child restraint system might be relevant mentions.
+
+##### Entity types 
+An entity type is how you categorize a real-world thing. An entity mention is an example of a thing of that type. For example, the mention "President Obama" can be annotated as a PERSON entity type. The mention "IBM" can be annotated as an ORGANIZATION entity type. Entities are often nouns, but can also be verbs, as long as the verb is important to capture for the purposes of the application that will use the type system. For example, EVENT_CRASH might be a valid entity type for a type system about automotive vehicles, so that the word hit in the sentence, "The car hit the barrier." can be annotated.
+
+The goal of your annotation project is to annotate each mention in a document with the type of thing that it is. After a mention is classified by entity type, the labeled span of text is referred to as an entity.
+
+A type system that you build with Watson Knowledge Studio can include the following entity type attributes. The attributes help qualify mentions in text, but they are not marked as entity types by a machine-learning annotator. For example, if the entity type ORGANIZATION has an entity subtype called COMMERCIAL, COMMERCIAL is not marked as an entity type on its own.
+
+###### Role
+
+Qualifies the mention by the context in which the mention occurs. For example, the mention "France" in the statement, "the students went to France", is marked with the entity type GPE because France is a geo-political entity. But, because France in this context is also a destination for the traveling students, the entity type is qualified by adding an attribute, in this case the role LOCATION. For another example, the mention "Lawyers" might be marked with the entity type PEOPLE and also by the role OCCUPATION.
+
+###### Entity subtype
+
+Further classifies the entity type. For example, the entity type ORGANIZATION might include the subtypes COMMERCIAL, GOVERNMENT, MILITARY, and EDUCATION.
+
+###### Mention type
+
+Qualifies the mention by certain parts of speech:
+
+- NAM: the mention is a proper name, such as a person's name or the name of an organization.
+- NOM: the mention is nominal (a common noun), such as company or president.
+- PRO: the mention is a pronoun, such as he, we, or it.
+- NONE: none of the other three mention types are applicable.
+Mention class
+
+Qualifies the mention by indicating whether the mention is specific, generic, or negated:
+
+- SPC: the mention is specific, often including the word "the" in English, such as "the book" or "the hurricane occurred in September". In these examples, the mentions "book" and "hurricane" would be annotated with the attribute SPC.
+- GEN: the mention is generic, such as "a book" or "hurricanes usually occur in the fall". In these examples, the mentions "book" and "hurricanes" would be annotated with the attribute GEN.
+- NEG: the mention is negated, such as references to "no book". When you train an annotator, the algorithm can learn from both negative and positive examples, so it's important to mark mentions of both types.
+
+##### Relation type
+A relation type defines a binary, ordered relationship between two entities. For a relation mention to exist, text must explicitly define the relation and bind mentions of the two entities together, and must do so within a single sentence. For example, the sentence Mary works for IBM is textual evidence of the employedBy relation type.
+
+For some relation types, the order of entity mentions matters. For example, the employedBy relation type allows the entity type PERSON or PEOPLE as the first mention in the relationship, and ORGANIZATION or GPE as the second mention, but not the other way around. Mary employedBy IBM is a valid relationship; IBM employedBy Mary is not. For some relation types, such as spouseOf, colleague, or sibling, order does not matter. When you define a relation type where order is not important, a best practice is to add information to the annotation guidelines to regularize how the relation type is used. A convention for noting such symmetrical relations is to say that the entity mention that occurs first in the text should be the first one in the relation.
+
+#### 1.8.5. Define entity types, relationships and co-references
+#### 1.8.6. Define and load dictionaries for pre-annotation
+#### 1.8.7. Understand Human Annotation
+#### 1.8.8. Understand SIRE (machine learning information extraction)
+
+Reference: 
+https://www.ibm.com/watson/developercloud/doc/wks/wks_projconfig.shtml
 
 ### 1.9. Define Intents and Classes.
 

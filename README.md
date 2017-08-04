@@ -586,18 +586,26 @@ https://www.ibm.com/watson/developercloud/doc/conversation/index.html
 ##### 2.1.1.1. Data: customer emails
 ##### 2.1.1.2. Features needed: Q&A, Text classification, entity extraction and, keyword extraction
 ##### 2.1.1.3. Watson-specific Services addressing the requirements: Natural Language Classifier, Watson Discovery, Natural Language Understanding
+Pipeline: map user question to intent (with NLC) => extract the search parameters (e.g. entities) from the question(with NLU) => search for appropriate answer (with Discovery)
+
 #### 2.1.2. Agent-assist for phone-based customer call center
 ##### 2.1.2.1. Data: customer voice recordings
 ##### 2.1.2.2. Features needed: Q&A, Speech recognition, text-to-speech, text classification, entity extraction, keyword extraction
 ##### 2.1.2.3. Watson-specific Services addressing the requirements: Watson Conversation, Watson Discovery, Natural Language Understanding, Watson Text to Speech, Watson Speech to Text
+Pipeline: convert voice input to text(with Watson Speech to Text) => map user question to intent (with Conversation) =>  extract the search parameters (e.g. entities) from the question(with NLU) => searche for appropriate answer (with Discovery) => convert answer to voice(with Watson Text to Speech)
+
 #### 2.1.3. Expert advisor use case for physicians
 ##### 2.1.3.1. Data: natural language intents
 ##### 2.1.3.2. Features needed: Q&A, Text classification, entity extraction and keyword extraction
 ##### 2.1.3.3. Watson-specific Services addressing the requirements: Natural Language Classifier, Watson Conversation, Watson Discovery, Natural Language Understanding
+Not sure why one needs both NLC and Conversation in one system, but in general use case is very similar to 2.1.1
+
 #### 2.1.4. Data insights for Instagram images
 ##### 2.1.4.1. Data: images
 ##### 2.1.4.2. Features needed: Image classification and natural OCR
 ##### 2.1.4.3. Watson-specific: Visual Recognition
+Regarding OCR see [3.6.4](#364-describe-the-capabilities-of-natural-scene-ocr)
+
 #### 2.1.5. Data insights for Twitter
 ##### 2.1.5.1. Data: tweets
 ##### 2.1.5.2. Features needed: Text classification, entity extraction, keyword extraction, personality profile

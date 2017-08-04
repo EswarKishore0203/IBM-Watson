@@ -650,12 +650,9 @@ Services Used: Retrieve and Rank
 
 [You can view the list of Watson Starter Kits here](https://www.ibm.com/watson/developercloud/starter-kits.html)
 
-### 2.3. Describe the Watson Conversational Agent.
+--------------------------------------------------------
 
 For section 2.2 and 2.3, we deep dive into the Watson services currently available and stated in the study guide. By understanding the services individually, it will help with knowing what services would work for different scenarios. 
-
-## (Unsorted)
-
 
 ### [Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/index.html)
 
@@ -908,6 +905,13 @@ Text transcriptions of the audio with recognized words
 By default, the service stops transcription at the first end-of-speech (EOS) incident, which is denoted by a half-second of non-speech (typically silence) or when the stream terminates. Set the continuous parameter to true to instruct the service to transcribe the entire audio stream until the stream terminates. In this case, the results can include multiple transcript elements to indicate phrases separated by pauses. You can concatenate the transcript elements to assemble the complete transcription of the audio stream.
 
 More detailed documentation for [Speech to Text](https://www.ibm.com/watson/developercloud/doc/speech-to-text/)
+
+### 2.3. Describe the Watson Conversational Agent.
+#### 2.3.1. Connie is the concierge at Hilton
+http://newsroom.hilton.com/index.cfm/news/hilton-and-ibm-pilot-connie-the-worlds-first-watsonenabled-hotel-concierge
+
+#### 2.3.2. Pepper is the helper Robot in Tokyo by Softbank
+http://mashable.com/2016/01/27/softbank-pepper-robot-store/#kYx8ZMpu0Sqw
 
 ### 2.4. Explain use cases for integrating external systems (such as Twitter, Weather API).
 

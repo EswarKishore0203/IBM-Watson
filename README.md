@@ -64,7 +64,7 @@ The Watson services are constantly evolving so always reference back to the [Wat
 - [Section 5 - Administration & DevOps for applications using IBM Watson Developer Cloud Services](#section-5---administration--devops-for-applications-using-ibm-watson-developer-cloud-services)
 
  - [5.1 Describe the process of obtaining credentials for Watson services.](#51-describe-the-process-of-obtaining-credentials-for-watson-services)
- - [5.2 Examine application logs provided on IBM Bluemix.](#52-examine-application-logs-provided-on-ibm-bluemixs)
+ - [5.2 Examine application logs provided on IBM Bluemix.](#52-examine-application-logs-provided-on-ibm-bluemix)
  
  - [Appendix A. Watson Services Summary](#appendix-a-watson-services-summary)
  - [Appendix B. Watson Services Input Limitations](#appendix-b-watson-services-input-limitations)

@@ -684,7 +684,6 @@ For those who want to offset their carbon footprint on the carbon credit exchang
 #### [Use case of the Weather APIs and mission critical decision that are impacted by weather](https://www.ibm.com/blogs/bluemix/2015/10/ibm-insights-weather-available-in-bluemix/?HavasWatsonStudyGuide)
 
 ### 2.5. Describe the IBM Watson Discovery Service
-SUBTASK(S):
 #### 2.5.1. List the functionalities that the Watson Discovery service provides
 **In essense:** Watson Disovery = NLU + storage + search/analytics
 

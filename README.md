@@ -930,6 +930,7 @@ However, don't connect adjacent words to create new terms not found in the langu
 ##### 3.5.2.8. Improve the confidence level iteratively through back propagation (ivp: WTF?!) or other means.
 https://console.bluemix.net/docs/services/natural-language-classifier/using-your-data.html#using-your-own-data
 
+
 Reference:
 https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 
@@ -939,11 +940,13 @@ https://www.ibm.com/watson/developercloud/natural-language-classifier/api/v1/
 - via API: 
 
   1. `POST /v3/classifiers` 
-
+Example:
+```
   curl -X POST -F "beagle_positive_examples=@beagle.zip" -F "husky_positive_examples=@husky.zip" -F "goldenretriever_positive_examples=@golden-retriever.zip" -F "negative_examples=@cats.zip" -F "name=dogs" "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-key}&version=2016-05-20" 
-
+```
 
   Positive example filenames require the suffix _positive_examples. In this example, the filenames are beagle_positive_examples, goldenretriever_positive_examples, and husky_positive_examples. The prefix (beagle, goldenretriever, and husky) is returned as the name of class.
+  
 
   2. Check the training status periodically until you see a status of ready
 
@@ -1792,6 +1795,23 @@ By default, the service stops transcription at the first end-of-speech (EOS) inc
 
 More detailed documentation for [Speech to Text](https://www.ibm.com/watson/developercloud/doc/speech-to-text/)
 
+### [Visual Recognition](https://www.ibm.com/watson/developercloud/doc/visual-recognition/index.html)
+
+he IBM Watson™ Visual Recognition service uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
+
+A set of built-in classes provides highly accurate results without training. You can train custom classifiers to create specialized classes. You can also create custom collections of your own images, and then upload an image to search the collection for similar images.
+
+#### How to use the service
+![Using VR service](https://www.ibm.com/watson/developercloud/doc/visual-recognition/images/vr-process2.png)
+
+#### Supported languages Anchor
+
+The Classify an image method supports English (en), Spanish (es), Arabic (ar), and Japanese (ja) for default classes. Custom classifiers returned with this method support only English. Collections methods are language agnostic.
+
+All other methods support English only.
+
+
+
 ## Appendix B: Watson Services Input Limitations
 
 <table>
@@ -1854,6 +1874,28 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
    The maximum file size for individual documents in your collection is 50MB.
       </td>
     </tr>
+    
+    <tr>
+      <td>
+        Visual Recognition
+      </td>
+      <td>
+          <b>size limitations for training calls and data</b>
+<ul>
+<li>The service accepts a maximum of 10,000 images or 100 MB per .zip file</li>
+<li>The service requires a minimum of 10 images per .zip file.</li>
+<li>The service accepts a maximum of 256 MB per training call.</li>
+<li>Minimum recommend size of an image is 32X32 pixels.</li>
+</ul>
+
+<b>Size limitations for classification calls:</b>
+<ul>
+<li>The POST /v3/classify methods accept a maximum of 20 images per batch.</li>
+<li>The POST /v3/detect_faces methods accept a maximum of 15 images per batch.</li>
+</ul>
+      
+  </td>
+  </tr>
   </tbody>
 </table>
 

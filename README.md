@@ -812,21 +812,29 @@ in a specific domain (domain-adapted). Other Watson services require
 training. For pre-trained services, it’s critical to know the adapted
 domains as they indicate the areas in which the service will perform best.
 
-Pre-trained Watson services:
+##### 3.1.2. Pre-trained Watson services:
 
 ##### 3.1.2.1. Watson Text-to-Speech
 ##### 3.1.2.2. Watson Speech-to-text
-##### 3.1.2.3. Language Translator (conversational, news, and patent domains; however some one can also train custom models)
-##### 3.1.2.4. Natural Language Understanding (however similar models can be trained in Watson Knowledge Studio)
+##### 3.1.2.3. Language Translator (conversational, news, and patent domains)
+However one can also train custom models (https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html)
+
+##### 3.1.2.4. Natural Language Understanding 
+However can also use custom models trained in Watson Knowledge Studio
+
 ##### 3.1.2.5. Tone Analyzer
 ##### 3.1.2.6. Personality Insights (social media domain)
 ##### 3.1.2.7. Watson Discovery News
 ##### 3.1.2.8. Watson Discovery Service
+However can also use custom models trained in Watson Knowledge Studio
 
 #### 3.1.3. Services requiring training:
 ##### 3.1.3.1. Natural Language Classifier
-##### 3.1.3.2. Visual recognition (custom models, however it is supplied with some pre-built models)
-##### 3.1.3.3. Watson Conversation
+##### 3.1.3.2. Visual recognition (for custom models)
+However it is supplied with some pre-built models
+
+##### 3.1.3.3. Watson Conversation 
+Note: Watson Virtual Agent is a chatbot service with some pre-trained models
 
 ### 3.2. Provide examples of text classification using the NLC.
 #### 3.2.1. Sentiment analysis
@@ -852,8 +860,8 @@ Pre-trained Watson services:
 
 #### 3.3.2 Describe the advantage and disadvantages of using an SDK
 
- advantages: easier to start; less coding; conventient interface
- disadvantage: additional libraries in your project; limited to API methods which currently implemented in SDK; a bit less control over communication; SDK must be up-to-date
+ Advantages: easier to start; less coding; conventient interface
+ Disadvantage: additional libraries in your project; limited to API methods which currently implemented in SDK; a bit less control over communication; SDK must be up-to-date
  
 #### 3.3.3 Find the Watson SDKs and other resources on the WDC GitHub
   - [Watson Developer Cloud Github](https://github.com/watson-developer-cloud/)
@@ -862,15 +870,14 @@ Pre-trained Watson services:
 
 #### 3.4.1 Identify the Language services on WDC 
 
- - (Conversation)
- - Document Conversion 
- - (Discovery)
+ - Conversation
+ - Discovery
  - Language Translator 
  - Natural Language Classifier 
- - (Natural Language Understanding)
- - (Personality Insights) 
+ - Natural Language Understanding
+ - Personality Insights
  - Retrieve and Rank 
- - (Tone Analyzer)
+ - Tone Analyzer
  
 #### 3.4.2 Identify the Vision services on WDC
 
@@ -882,10 +889,15 @@ Pre-trained Watson services:
  - Text to Speech
  
 #### 3.4.4 Identify the Data Insights services on WDC
+I guess this question means services which can be used for getting insight from existing data (in contrast to the services which are primarily used for operational needs). Under this assumption the answer is:
 
- - Discovery 
- - Personality Insight
- - Tone Analyzer
+- Discovery
+- Natural Language Understanding
+- Personality Insights
+- Tone Analyzer
+- (Natural Language Classifier) - [can be used for analytics, but I would say inherently it is more operational tool]
+- (Visual Recognition) - [as a helper for prearing data for analytics]
+- (Speech to Text) - [as a helper for prearing data for analytics]
  
 ###  3.5. Explain and configure Natural Language Classification.
 

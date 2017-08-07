@@ -1810,8 +1810,10 @@ More detailed documentation for [Speech to Text](https://www.ibm.com/watson/deve
       </td>
     </tr>
     <tr>
-      <td>col 2 is</td>
-      <td align="center">centered</td>
+     <td>Tone Analyzer</td>
+     <td>
+JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentences).  
+     </td>
     </tr>
     <tr>
       <td>zebra stripes</td>

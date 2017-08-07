@@ -1830,6 +1830,14 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
 
 <b>Audio transmission</b>: Lets the client pass as much as 100 MB of audio to the service as a continuous stream of data chunks or as a one-shot delivery, passing all of the data at one time. With streaming, the service enforces various timeouts to preserve resources.
       </td>
+    </tr> 
+    <tr>
+      <td>
+        Discovery
+      </td>
+      <td>
+   The maximum file size for individual documents in your collection is 50MB.
+      </td>
     </tr>
   </tbody>
 </table>

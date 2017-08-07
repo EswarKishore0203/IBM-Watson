@@ -1876,13 +1876,14 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
     </tr>
     
     <tr>
-     <td>
-       Visual Recognition
-     </td>
-     <td>
-       XXX
-     </td>
+      <td>
+        Discovery
+      </td>
+      <td>
+   The maximum file size for individual documents in your collection is 50MB.
+      </td>
     </tr>
+    
   </tbody>
 </table>
 

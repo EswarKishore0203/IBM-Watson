@@ -1816,8 +1816,8 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
      </td>
     </tr>
     <tr>
-      <td>zebra stripes</td>
-      <td align="center">are neat</td>
+      <td>Retrieve and Rank</td>
+      <td>The maximum size for a ranker's training-data set is 300 MB. Using training-data sets larger than 300 MB results in the Retrieve and Rank service returning a 500 HTTP error (Internal Server Failure).</td>
     </tr>
     <tr>
       <td>

@@ -1821,13 +1821,15 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
     </tr>
     <tr>
       <td>
-        <ul>
-          <li>item1</li>
-          <li>item2</li>
-        </ul>
+        Speech to Text
       </td>
-      <td align="center">See the list</td>
-      <td align="right">from the first column</td>
+      <td>
+      <b>Models</b>: For most languages, supports both broadband (for audio that is sampled at a minimum rate of 16 KHz) and narrowband (for audio that is sampled at a minimum rate of 8 KHz) models.
+      
+<b>Audio formats</b>: Transcribes Free Lossless Audio Codec (FLAC), MP3 (Motion Picture Experts Group, or MPEG) format, Linear 16-bit Pulse-Code Modulation (PCM), Waveform Audio File Format (WAV), Ogg format with the Opus or Vorbis codec, Web Media (WebM) format with the Opus or Vorbis codec, mu-law (or u-law) audio data, or basic audio.
+
+<b>Audio transmission</b>: Lets the client pass as much as 100 MB of audio to the service as a continuous stream of data chunks or as a one-shot delivery, passing all of the data at one time. With streaming, the service enforces various timeouts to preserve resources.
+      </td>
     </tr>
   </tbody>
 </table>

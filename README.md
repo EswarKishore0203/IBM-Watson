@@ -1876,25 +1876,25 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
     </tr>
     
     <tr>
-      <td>
-        Visual Recognition
-      </td>
-      <td>
-          <b>size limitations for training calls and data</b>
-<ul>
-<li>The service accepts a maximum of 10,000 images or 100 MB per .zip file</li>
-<li>The service requires a minimum of 10 images per .zip file.</li>
-<li>The service accepts a maximum of 256 MB per training call.</li>
-<li>Minimum recommend size of an image is 32X32 pixels.</li>
-</ul>
+    <td>
+      Visual Recognition
+    </td>
+    <td>
+        <b>size limitations for training calls and data</b>
+        <ul>
+        <li>The service accepts a maximum of 10,000 images or 100 MB per .zip file</li>
+        <li>The service requires a minimum of 10 images per .zip file.</li>
+        <li>The service accepts a maximum of 256 MB per training call.</li>
+        <li>Minimum recommend size of an image is 32X32 pixels.</li>
+        </ul>
 
-<b>Size limitations for classification calls:</b>
-<ul>
-<li>The POST /v3/classify methods accept a maximum of 20 images per batch.</li>
-<li>The POST /v3/detect_faces methods accept a maximum of 15 images per batch.</li>
-</ul>
-      
-  </td>
+        <b>Size limitations for classification calls:</b>
+        <ul>
+        <li>The POST /v3/classify methods accept a maximum of 20 images per batch.</li>
+        <li>The POST /v3/detect_faces methods accept a maximum of 15 images per batch.</li>
+        </ul>
+
+    </td>
   </tr>
   </tbody>
 </table>

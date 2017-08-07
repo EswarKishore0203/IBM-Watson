@@ -1024,18 +1024,18 @@ https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html#use-cases
 - Social tones
 
 Social tones (ID social_tone) measure the social tendencies in people's writing. The tones are adopted from the Big Five personality model; for more information, see the Personality models described for the IBM Watson™ Personality Insights service.
-    - Agreeableness: The tendency to be compassionate and cooperative towards others [Selfish, uncaring, uncooperative, self-interested, confrontational, skeptical, or arrogant ||	Caring, sympathetic, cooperative, compromising, trustworthy, or humble]
-    - Conscientiousness:	The tendency to act in an organized or thoughtful way	[Spontaneous, laid-back, reckless, unmethodical, remiss, or disorganized ||	Disciplined, dutiful, achievement-striving, confident, driven, or organized]
-    - Emotional range:	The extent to which a person's emotions are sensitive to their environment	[Calm, bland, content, relaxed, unconcerned, or careful ||	Concerned, frustrated, angry, passionate, upset, stressed, insecure, or impulsive]
-    - Extraversion:	The tendency to seek stimulation in the company of others	[[Independent, timid, introverted, restrained, boring, or dreary	|| Engaging, seeking attention, needy, assertive, outgoing, sociable, cheerful, excitement-seeking, or busy]]
-    - Openness:	The extent to which a person is open to experiencing a variety of activities	[No-nonsense, straightforward, blunt, or preferring tradition and the obvious over the complex, ambiguous, and subtle ||	Intellectual, curious, emotionally aware, imaginative, willing to try new things, appreciating beauty, or open to change]
+  - Agreeableness: The tendency to be compassionate and cooperative towards others [Selfish, uncaring, uncooperative, self-interested, confrontational, skeptical, or arrogant ||	Caring, sympathetic, cooperative, compromising, trustworthy, or humble]
+  - Conscientiousness:	The tendency to act in an organized or thoughtful way	[Spontaneous, laid-back, reckless, unmethodical, remiss, or disorganized ||	Disciplined, dutiful, achievement-striving, confident, driven, or organized]
+  - Emotional range:	The extent to which a person's emotions are sensitive to their environment	[Calm, bland, content, relaxed, unconcerned, or careful ||	Concerned, frustrated, angry, passionate, upset, stressed, insecure, or impulsive]
+  - Extraversion:	The tendency to seek stimulation in the company of others	[[Independent, timid, introverted, restrained, boring, or dreary	|| Engaging, seeking attention, needy, assertive, outgoing, sociable, cheerful, excitement-seeking, or busy]]
+  - Openness:	The extent to which a person is open to experiencing a variety of activities	[No-nonsense, straightforward, blunt, or preferring tradition and the obvious over the complex, ambiguous, and subtle ||	Intellectual, curious, emotionally aware, imaginative, willing to try new things, appreciating beauty, or open to change]
 
 - Language tones
 
 Language tones (ID language_tone) describe a person's perceived writing style. A score of less than 0.5 indicates that the content offered little or no evidence of the tone.
-    - Analytical: analytical	A person's reasoning and analytical attitude about things	[Intellectual, rational, systematic, emotionless, or impersonal]
-    - Confident: confident	A person's degree of certainty	[Assured, collected, hopeful, or egotistical]
-    - Tentative: tentative	A person's degree of inhibition	[Questionable, doubtful, or debatable]
+  - Analytical: analytical	A person's reasoning and analytical attitude about things	[Intellectual, rational, systematic, emotionless, or impersonal]
+  - Confident: confident	A person's degree of certainty	[Assured, collected, hopeful, or egotistical]
+  - Tentative: tentative	A person's degree of inhibition	[Questionable, doubtful, or debatable]
     
 #### 3.8.4. Explain how Tone Analyzer service is different from the Natural Language Understanding - Sentiment Analysis and Emotion Insights service
 - NLU - Sentiment Analysis doesn't give you deep insight into authors personality/state. 

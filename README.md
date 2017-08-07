@@ -1038,8 +1038,8 @@ Language tones (ID language_tone) describe a person's perceived writing style. A
 - Tentative: tentative	A person's degree of inhibition	[Questionable, doubtful, or debatable]
     
 #### 3.8.4. Explain how Tone Analyzer service is different from the Natural Language Understanding - Sentiment Analysis and Emotion Insights service
-- NLU - Sentiment Analysis doesn't give you deep insight into authors personality/state. 
-- Emotion Insights service is only part of functionality provided by Tone Analyzer.
+- NLU - Sentiment Analysis doesn't give you deep insight into authors personality. 
+- with NLU-Emotion Insights one can compute emotions for arbitrary phrases of the document(aka targets), whereas Tone Analyzer can compute emotions only on document level or on sentense level.
 
 References:
 https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/
@@ -1062,6 +1062,8 @@ https://www.ibm.com/blogs/watson/2016/02/293/
 - Sentiment (e.g. Positive sentiment (score: 0.91))
 - (additionally) Language Detection
 
+https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/index.html
+
 **Supported Languages:**
 Arabic, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Swedish
 (for support of concrete features per language see https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/#supported-languages)
@@ -1072,8 +1074,10 @@ see https://www.ibm.com/watson/developercloud/doc/natural-language-understanding
 
 #### 3.9.3. Distinguish between keywords, entities, and concepts
 
+##### Keyrowds vs Concepts
 The biggest difference is that concepts can pick up on things that aren't explicitly mentioned. For example, this article about Mount Rushmore returns (among others) the concept South Dakota, which is never explicitly mentioned. Keywords, on the other hand, are nouns and noun phrases that are pulled directly from the text based on their frequency or potential importance.
 
+##### Keyrowds vs Entities
 While we're on the subject, entities are similar to keywords but are more specific. Entity extraction wouldn't pick up park rangers (a keyword), but it does pick up National Park Service.
 
 (https://www.quora.com/What-is-the-difference-between-keywords-and-concepts-in-the-AlchemyAPI-output)
@@ -1086,15 +1090,15 @@ Document-level sentiment is a sentiment of the whole document, target sentiment 
 
 #### 3.9.5. Explain the difference between the taxonomy call and the knowledge graph
 - Taxonomy is hierarchical way to cathegorize things (i.e. it's just a bunch of categories, which can be used to "describe" some objects; ~= metadata) 
-- In contrast to it knowledge graph is information about concrete objects and their relationships (i.e. way to organize information about objects + this information; ~= matadata + data)
+- In contrast to it, knowledge graph is information about concrete objects and their relationships (i.e. way to organize information about objects + this information; ~= matadata + data)
 
 https://en.wikipedia.org/wiki/Knowledge_Graph
 https://www.youtube.com/watch?v=mmQl6VGvX-c
 
 #### 3.9.6. Explain disambiguation as it relates to entities
-Example of ambiguaty: "Ford" can be a car or a person.
+Example of ambiguity: "Ford" can be a car or a person.
 
-When NLU find entity and cannot unambiguously detect it's type it provides information which can help to resolve ambiguity: entity subType information, a common entity name, and a dbpedia_resource link if applicable.
+When NLU find entity and cannot unambiguously detect its type, it provides information which can help to resolve ambiguity: name of the entity, matching entity subTypes, and a dbpedia_resource link if applicable.
 
 Example 
 ```
@@ -1128,14 +1132,23 @@ Example
 - **Contact-center Management, Automated agents, and Robots:** Detect emotions in chats or other conversations and adapt to provide an appropriate response. For instance, direct a customer to a human agent if intense anger is detected.
    
 https://developer.ibm.com/watson/blog/2016/02/29/another-step-closer-to-building-empathetic-systems/
+
+see also [Describe the common use cases of the Tone Analyzer service](#381-describe-the-common-use-cases-of-the-tone-analyzer-service)
  
 ##### 3.9.7.3. Describe the main types of positive/negative sentiment extracted from digital text
 
-[see 3.9.4](#394-distinguish-between-document-level-and-targeted-sentiment)
+###### Positive:
+  - joy
+
+###### Negative:  
+  - sadness
+  - fear
+  - disgust
+  - anger
 
 ##### 3.9.7.4. Describe the API types provided by the Sentiment Analysis service
 
-The question is probably legacy taken over from Alechemy Language times (it used to have HTML, Text and WEB API [Sentiment Analysis API](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
+The question is probably legacy taken over from past times of Alechemy Language (it used to have HTML, Text and WEB API [Sentiment Analysis API](http://web.archive.org/web/20160319211133/http://www.alchemyapi.com/api/sentiment/urls.html)). 
 
 Currently NLU has all features combined in one main API endpoint /analyze (exists in 2 flavours - GET and POST) 
 

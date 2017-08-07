@@ -1805,7 +1805,7 @@ More detailed documentation for [Speech to Text](https://www.ibm.com/watson/deve
        
 <ul>
  <li>The training data must have at least five records (rows) and no more than 15,000 records.</li>
- <li>The maximum total length of a text value is 1024 characters.</li>
+ <li>The maximum total length of a text value is 1024 characters. (or 144 according to sample test https://www-03.ibm.com/certify/content/sampletests/SAMC7020-230.pdf)</li>
 </ul>
       </td>
     </tr>

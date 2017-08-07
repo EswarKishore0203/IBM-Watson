@@ -1715,7 +1715,7 @@ The Personality Insights service is based on the psychology of language in combi
    
    Each of these top-level dimensions has six facets that further characterize an individual according to the dimension.
 - **Needs** describe which aspects of a product will resonate with a person. The model includes twelve characteristic needs: Excitement, Harmony, Curiosity, Ideal, Closeness, Self-expression, Liberty, Love, Practicality, Stability, Challenge, and Structure.
-- **Values** describe motivating factors that influence a person's decision making. The model includes five values:Self-transcendence / Helping others, Conservation / Tradition, Hedonism / Taking pleasure in life, Self-enhancement / Achieving success, and Open to change / Excitement.
+- **Values** describe motivating factors that influence a person's decision making. The model includes five values: Self-transcendence / Helping others, Conservation / Tradition, Hedonism / Taking pleasure in life, Self-enhancement / Achieving success, and Open to change / Excitement.
 
 More detailed documentation for [Personality Insights](https://www.ibm.com/watson/developercloud/doc/personality-insights/)
 

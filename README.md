@@ -1522,7 +1522,7 @@ http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html
 
 
 --------------------------------------------------------
-## Appendix: Watson Services Summary
+## Appendix A: Watson Services Summary
 
 ### [Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/index.html)
 

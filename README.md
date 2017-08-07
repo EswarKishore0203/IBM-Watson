@@ -1776,6 +1776,31 @@ By default, the service stops transcription at the first end-of-speech (EOS) inc
 
 More detailed documentation for [Speech to Text](https://www.ibm.com/watson/developercloud/doc/speech-to-text/)
 
+## Appendix B: Watson Services Input Limitations
 
+|Service Name|Limitation|
+|---	 	      |---	      |
+| Natural Language Classifier|
+#### CSV training data file format
+
+Make sure that your CSV training data adheres to the following format requirements:
+
+The data must be UTF-8 encoded.
+Separate text values and each class value by a comma delimiter. Each record (row) is terminated by an end-of-line character, which is a special character or sequence of characters that indicate the end of a line.
+Each record must have one text value and at least one class value.
+Class values cannot include tabs or end-of-line characters.
+Text values cannot contain tabs or new lines without special handling. To preserve tabs or new lines, escape a tab with \t, and escape new lines with \r, \n or \r\n.
+For example, Example text\twith a tab is valid, but Example text with a tab is not valid.
+Always enclose text or class values with double quotation marks in the training data when it includes the following characters:
+Commas ("Example text, with comma").
+Double quotation marks. In addition, quotation marks must be escaped with double quotation marks ("Example text with ""quotation""").
+Size limitations
+
+#### There are size limitations to the training data:
+
+The training data must have at least five records (rows) and no more than 15,000 records.
+The maximum total length of a text value is 1024 characters.|
+|   	        |   	      |
+|   	        |   	      |
 
 

@@ -997,7 +997,15 @@ see [Personality Insights](#personality-insights)
 
 ###  3.8. Explain how Tone Analyzer service works.
 #### 3.8.1. Describe the common use cases of the Tone Analyzer service
-see [Tone Analyzer](#tone-analyzer)
+- Social listening and audience monitoring: Monitor social media to understand what customers are saying about your brand in real-time. For example, you might determine that your customers in Chicago are sad after the Bulls lost or happy during the Taste of Chicago festival. (General purpose endpoint)
+
+- Personalized marketing: Determine whom to target with personalized messaging and when. For example, a travel company might target happy consumers with "treat yourself" messaging, sad consumers with "escape" messaging, and angry consumers with "relax" messaging. (General purpose endpoint)
+
+- Chat bots: Enable an automated agent to detect customer tones and, based on the tones identified, craft suitable responses. For example, you might respond to sadness with "I'm sorry you are upset about this problem" or to satisfaction with "I'm glad you are satisfied with our service." (Customer engagement endpoint)
+
+- Customer engagement monitoring and quality assurance: Monitor the overall tone of agent and customer communications, detect anomalies, and highlight opportunities to train agents on how to better communicate. (Customer engagement endpoint)
+
+https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html#use-cases
 
 #### 3.8.2. Describe the basic flow of the Tone Analyzer service
 - send text to general endpoint or customer engagement endpoint for analyze
@@ -1017,7 +1025,6 @@ see [Tone Analyzer](#tone-analyzer)
 - Social tones
 
 Social tones (ID social_tone) measure the social tendencies in people's writing. The tones are adopted from the Big Five personality model; for more information, see the Personality models described for the IBM Watson™ Personality Insights service.
-
     - Agreeableness: The tendency to be compassionate and cooperative towards others [Selfish, uncaring, uncooperative, self-interested, confrontational, skeptical, or arrogant ||	Caring, sympathetic, cooperative, compromising, trustworthy, or humble]
     - Conscientiousness:	The tendency to act in an organized or thoughtful way	[Spontaneous, laid-back, reckless, unmethodical, remiss, or disorganized ||	Disciplined, dutiful, achievement-striving, confident, driven, or organized]
     - Emotional range:	The extent to which a person's emotions are sensitive to their environment	[Calm, bland, content, relaxed, unconcerned, or careful ||	Concerned, frustrated, angry, passionate, upset, stressed, insecure, or impulsive]
@@ -1027,14 +1034,13 @@ Social tones (ID social_tone) measure the social tendencies in people's writing.
 - Language tones
 
 Language tones (ID language_tone) describe a person's perceived writing style. A score of less than 0.5 indicates that the content offered little or no evidence of the tone.
-
     - Analytical: analytical	A person's reasoning and analytical attitude about things	[Intellectual, rational, systematic, emotionless, or impersonal]
     - Confident: confident	A person's degree of certainty	[Assured, collected, hopeful, or egotistical]
     - Tentative: tentative	A person's degree of inhibition	[Questionable, doubtful, or debatable]
     
 #### 3.8.4. Explain how Tone Analyzer service is different from the Natural Language Understanding - Sentiment Analysis and Emotion Insights service
 - NLU - Sentiment Analysis doesn't give you deep insight into authors personality/state. 
-- NLU - Emotion Insights service is only part of functionality provided by Tone Analyzer.
+- Emotion Insights service is only part of functionality provided by Tone Analyzer.
 
 References:
 https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/

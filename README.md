@@ -901,30 +901,33 @@ I guess this question means services which can be used for getting insight from 
  
 ###  3.5. Explain and configure Natural Language Classification.
 
-#### 3.5.1. The service enables developers without a background in machine learning
-or statistical algorithms to interpret the intent behind text.
+#### 3.5.1. The service enables developers without a background in machine learning or statistical algorithms to interpret the intent behind text.
 
 #### 3.5.2. Configure:
 
-3.5.2.1. Gather sample text from real end users (fake initially if you have to
-but not much)
+##### 3.5.2.1. Gather sample text from real end users (fake initially if you have to but not much)
+##### 3.5.2.2. Determine the users intents that capture the actions/needs expressed in the text
+##### 3.5.2.3. Classify your user text into these user intents
+##### 3.5.2.4. Separate your user text into train/test datasets
+##### 3.5.2.5. Train an NLC classifier on your training dataset
+Guidelines for good training:
+- Limit the length of input text to fewer than 60 words.
+- Limit the number of classes to several hundred classes. Support for larger numbers of classes might be included in later versions of the service.
+- Make sure that each class is matched with at least 5 - 10 records when each text record has only one class. This number provides enough training on that class.
+- Evaluate the need for multiple classes. Two common reasons drive multiple classes:
+    - When the text is vague, identifying a single class is not always clear.
+    - When experts interpret the text in different ways, multiple classes support those interpretations.
 
-3.5.2.2. Determine the users intents that capture the actions/needs
-expressed in the text
+     However, if many texts in your training data include multiple classes, or if some texts have more than three classes, you might need to refine the classes. For example, review whether the classes are hierarchical. If they are hierarchical, include the leaf node as the class.
 
-3.5.2.3. Classify your user text into these user intents
+- Include standard hyphenated terms when they are part of the training data (back-to-back or part-time job).
 
-3.5.2.4. Separate your user text into train/test datasets
+However, don't connect adjacent words to create new terms not found in the language of the training data. For example, instead of defining dish-ran-away or with_the_spoon, define the relevant phrases as separate words (dish ran away and with the spoon) with the appropriate class.
 
-3.5.2.5. Train an NLC classifier on your training dataset
 
-3.5.2.6. Pass the user input to an NLC classifier
-
-3.5.2.7. Determine the accuracy, precision, and recall of the NLC classifier
-using your test dataset
-
-3.5.2.8. Improve the confidence level iteratively through back propagation (ivp: WTF?!)
-or other means.
+##### 3.5.2.6. Pass the user input to an NLC classifier
+##### 3.5.2.7. Determine the accuracy, precision, and recall of the NLC classifier using your test dataset
+##### 3.5.2.8. Improve the confidence level iteratively through back propagation (ivp: WTF?!) or other means.
 https://console.bluemix.net/docs/services/natural-language-classifier/using-your-data.html#using-your-own-data
 
 Reference:

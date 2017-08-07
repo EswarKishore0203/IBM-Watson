@@ -1707,12 +1707,12 @@ The Personality Insights service offers a set of core analytics for discovering 
 The Personality Insights service is based on the psychology of language in combination with data analytics algorithms. The service analyzes the content that you send and returns a personality profile for the author of the input. The service infers personality characteristics based on three models:
 
 - **Big Five** personality characteristics represent the most widely used model for generally describing how a person engages with the world. The model includes five primary dimensions:
- - Agreeableness is a person's tendency to be compassionate and cooperative toward others.
- - Conscientiousness is a person's tendency to act in an organized or thoughtful way.
- - Extraversion is a person's tendency to seek stimulation in the company of others.
- - Emotional Range, also referred to as Neuroticism or Natural Reactions, is the extent to which a person's emotions are sensitive to the person's environment.
- - Openness is the extent to which a person is open to experiencing a variety of activities.
-- Each of these top-level dimensions has six facets that further characterize an individual according to the dimension.
+   - Agreeableness is a person's tendency to be compassionate and cooperative toward others.
+   - Conscientiousness is a person's tendency to act in an organized or thoughtful way.
+   - Extraversion is a person's tendency to seek stimulation in the company of others.
+   - Emotional Range, also referred to as Neuroticism or Natural Reactions, is the extent to which a person's emotions are sensitive to the person's environment.
+   - Openness is the extent to which a person is open to experiencing a variety of activities.
+  - Each of these top-level dimensions has six facets that further characterize an individual according to the dimension.
 - **Needs** describe which aspects of a product will resonate with a person. The model includes twelve characteristic needs: Excitement, Harmony, Curiosity, Ideal, Closeness, Self-expression, Liberty, Love, Practicality, Stability, Challenge, and Structure.
 - **Values** describe motivating factors that influence a person's decision making. The model includes five values:Self-transcendence / Helping others, Conservation / Tradition, Hedonism / Taking pleasure in life, Self-enhancement / Achieving success, and Open to change / Excitement.
 

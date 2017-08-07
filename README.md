@@ -1778,10 +1778,17 @@ More detailed documentation for [Speech to Text](https://www.ibm.com/watson/deve
 
 ## Appendix B: Watson Services Input Limitations
 
-|Service Name|Limitation|
-|---	 	      |---	      |
-| Natural Language Classifier|
-#### CSV training data file format
+
+<table>
+  <tbody>
+    <tr>
+      <th>Service Name</th>
+      <th align="center">Limitations</th>
+    </tr>
+    <tr>
+      <td>Natural Language Classifier</td>
+      <td align="center">
+      <b>CSV training data file format</b>
 
 Make sure that your CSV training data adheres to the following format requirements:
 
@@ -1796,11 +1803,31 @@ Commas ("Example text, with comma").
 Double quotation marks. In addition, quotation marks must be escaped with double quotation marks ("Example text with ""quotation""").
 Size limitations
 
-#### There are size limitations to the training data:
+<b>There are size limitations to the training data:</b>
 
 The training data must have at least five records (rows) and no more than 15,000 records.
-The maximum total length of a text value is 1024 characters.|
-|   	        |   	      |
-|   	        |   	      |
+The maximum total length of a text value is 1024 characters.
+      </td>
+    </tr>
+    <tr>
+      <td>col 2 is</td>
+      <td align="center">centered</td>
+    </tr>
+    <tr>
+      <td>zebra stripes</td>
+      <td align="center">are neat</td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>item1</li>
+          <li>item2</li>
+        </ul>
+      </td>
+      <td align="center">See the list</td>
+      <td align="right">from the first column</td>
+    </tr>
+  </tbody>
+</table>
 
 

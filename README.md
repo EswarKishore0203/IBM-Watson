@@ -1015,12 +1015,11 @@ https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html#use-cases
 - Emotion tones
 
   Emotion tones (ID emotion_tone) measure different types of emotions and feelings that people express.
-  
-    - Anger: Anger is evoked due to injustice, conflict, humiliation, negligence, or betrayal. If anger is active, the individual attacks the target, verbally or physically. If anger is passive, the person silently sulks and feels tension and hostility.
-    - Disgust: Disgust is an emotional response of revulsion to something considered offensive or unpleasant. The sensation refers to something revolting.
-    - Fear: Fear is a response to impending danger. It is a survival mechanism that is triggered as a reaction to some negative stimulus. Fear may be a mild caution or an extreme phobia.
-    - Joy: Joy (or happiness) has shades of enjoyment, satisfaction, and pleasure. Joy brings a sense of well-being, inner peace, love, safety, and contentment.
-    - Sadness: Sadness indicates a feeling of loss and disadvantage. When a person is quiet, less energetic, and withdrawn, it may be inferred that they feel sadness.
+ - Anger: Anger is evoked due to injustice, conflict, humiliation, negligence, or betrayal. If anger is active, the individual attacks the target, verbally or physically. If anger is passive, the person silently sulks and feels tension and hostility.
+ - Disgust: Disgust is an emotional response of revulsion to something considered offensive or unpleasant. The sensation refers to something revolting.
+ - Fear: Fear is a response to impending danger. It is a survival mechanism that is triggered as a reaction to some negative stimulus. Fear may be a mild caution or an extreme phobia.
+ - Joy: Joy (or happiness) has shades of enjoyment, satisfaction, and pleasure. Joy brings a sense of well-being, inner peace, love, safety, and contentment.
+- Sadness: Sadness indicates a feeling of loss and disadvantage. When a person is quiet, less energetic, and withdrawn, it may be inferred that they feel sadness.
 
 - Social tones
 

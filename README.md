@@ -1800,13 +1800,13 @@ More detailed documentation for [Speech to Text](https://www.ibm.com/watson/deve
             <li>Commas ("Example text, with comma").</li>
             <li>Double quotation marks. In addition, quotation marks must be escaped with double quotation marks ("Example text with ""quotation""").</li>
          </ul>
-
-       <b>Size limitations</b>
+         
+<b>Size limitations</b>
        
-       <ul>
-       <li>The training data must have at least five records (rows) and no more than 15,000 records.</li>
-       <li>The maximum total length of a text value is 1024 characters.</li>
-       </ul>
+<ul>
+ <li>The training data must have at least five records (rows) and no more than 15,000 records.</li>
+ <li>The maximum total length of a text value is 1024 characters.</li>
+</ul>
       </td>
     </tr>
     <tr>

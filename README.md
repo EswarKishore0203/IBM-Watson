@@ -1874,16 +1874,14 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
    The maximum file size for individual documents in your collection is 50MB.
       </td>
     </tr>
-    
-    <tr>
-      <td>
-        Discovery
-      </td>
-      <td>
-   The maximum file size for individual documents in your collection is 50MB.
-      </td>
-    </tr>
-    
+ <tr>
+   <td>
+     Discovery1
+   </td>
+   <td>
+1The maximum file size for individual documents in your collection is 50MB.
+   </td>
+ </tr>
   </tbody>
 </table>
 

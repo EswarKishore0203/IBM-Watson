@@ -1886,7 +1886,6 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
      <li>The service accepts a maximum of 256 MB per training call.</li>
      <li>Minimum recommend size of an image is 32X32 pixels.</li>
     </ul>
-
     <b>Size limitations for classification calls:</b>
     <ul>
      <li>The POST /v3/classify methods accept a maximum of 20 images per batch.</li>

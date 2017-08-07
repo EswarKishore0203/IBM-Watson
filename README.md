@@ -66,7 +66,8 @@ The Watson services are constantly evolving so always reference back to the [Wat
  - [5.1 Describe the process of obtaining credentials for Watson services.](#51-describe-the-process-of-obtaining-credentials-for-watson-services)
  - [5.2 Examine application logs provided on IBM Bluemix.](#52-examine-application-logs-provided-on-ibm-bluemixs)
  
- - [Appendix. Watson Services Summary](#appendix-watson-services-summary)
+ - [Appendix A. Watson Services Summary](#appendix-a-watson-services-summary)
+ - [Appendix B. Watson Services Input Limitations](#appendix-b-watson-services-input-limitations)
 
 ## Section 1 - Fundamentals of Cognitive Computing
 ### 1.1. Define the main characteristics of a cognitive system.
@@ -653,7 +654,7 @@ Services Used: Retrieve and Rank
 [You can view the list of Watson Starter Kits here](https://www.ibm.com/watson/developercloud/starter-kits.html)
 
 ### 2.3. Describe the Watson Conversational Agent.
-For section 2.2 and 2.3, we deep dive into the [Watson services](#appendix-watson-services-summary) currently available and stated in the study guide. 
+For section 2.2 and 2.3, we deep dive into the [Watson services](#appendix-a-watson-services-summary) currently available and stated in the study guide. 
 
 #### 2.3.1. Connie is the concierge at Hilton
 http://newsroom.hilton.com/index.cfm/news/hilton-and-ibm-pilot-connie-the-worlds-first-watsonenabled-hotel-concierge

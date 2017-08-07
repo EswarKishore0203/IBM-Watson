@@ -1787,7 +1787,7 @@ More detailed documentation for [Speech to Text](https://www.ibm.com/watson/deve
     </tr>
     <tr>
       <td>Natural Language Classifier</td>
-      <td align="center">
+      <td>
       <b>CSV training data file format</b>
          <ul>
             <li>The data must be UTF-8 encoded.</li>

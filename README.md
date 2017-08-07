@@ -650,262 +650,6 @@ Services Used: Retrieve and Rank
 
 [You can view the list of Watson Starter Kits here](https://www.ibm.com/watson/developercloud/starter-kits.html)
 
---------------------------------------------------------
-
-For section 2.2 and 2.3, we deep dive into the Watson services currently available and stated in the study guide. By understanding the services individually, it will help with knowing what services would work for different scenarios. 
-
-### [Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/index.html)
-
-The IBM Watson™ Natural Language Classifier service uses machine learning algorithms to return the top matching predefined classes for short text inputs. The service interprets the intent behind text and returns a corresponding classification with associated confidence levels. The return value can then be used to trigger a corresponding action, such as redirecting the request or answering a question.
-
-##### Intended Use
-
-The Natural Language Classifier is tuned and tailored to short text (1000 characters or less) and can be trained to function in any domain or application.
-
-- Tackle common questions from your users that are typically handled by a live agent.
-- Classify SMS texts as personal, work, or promotional
-- Classify tweets into a set of classes, such as events, news, or opinions.
-- Based on the response from the service, an application can control the outcome to the user. For example, you can start another application, respond with an answer, begin a dialog, or any number of other possible outcomes.
-
-Here are some other examples of how you might apply the Natural Language Classifier:
-- Twitter, SMS, and other text messages
- - Classify tweets into a set of classes, such as events, news, or opinions.
- -  Analyze text messages into categories, such as Personal, Work, or Promotions.
-- Sentiment analysis
- - Analyze text from social media or other sources and identify whether it relates positively or negatively to an offering or service.
-
-##### You input
-Text to a pre-trained model
-
-##### Service output
-Classes ordered by confidence
-
-##### How to use the service
-The process of creating and using the classifier:
-![Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/images/classifier_process.png)
-
-##### CSV training data file format
-Make sure that your CSV training data adheres to the following format requirements:
-- The data must be UTF-8 encoded.
-- Separate text values and each class value by a comma delimiter. Each record (row) is terminated by an end-of-line character, which is a special character or sequence of characters that indicate the end of a line.
-- Each record must have one text value and at least one class value.
-- Class values cannot include tabs or end-of-line characters.
-- Text values cannot contain tabs or new lines without special handling. To preserve tabs or new lines, escape a tab with \t, and escape new lines with \r, \n or \r\n.
-- For example, Example text\twith a tab is valid, but Example text    with a tab is not valid.
-- Always enclose text or class values with double quotation marks in the training data when it includes the following characters:
-- Commas ("Example text, with comma").
-- Double quotation marks. In addition, quotation marks must be escaped with double quotation marks ("Example text with ""quotation""").
-
-##### Size limitations
-There are size limitations to the training data:
-- The training data must have at least five records (rows) and no more than 15,000 records.
-- The maximum total length of a text value is 1024 characters.
-
-##### Supported languages
-
-The classifier supports English (en), Arabic (ar), French (fr), German (de), Italian (it), Japanese (ja), Korean (ko), Portuguese (Brazilian) (pt), and Spanish (es). The language of the training data must match the language of the text that you intend to classify. Specify the language when you create the classifier.
-
-##### Guidelines for good training
-The following guidelines are not enforced by the API. However, the classifier tends to perform better when the training data adheres to them:
-- Limit the length of input text to fewer than 60 words.
-- Limit the number of classes to several hundred classes. Support for larger numbers of classes might be included in later versions of the service.
-- When each text record has only one class, make sure that each class is matched with at least 5 - 10 records to provide enough training on that class.
-- It can be difficult to decide whether to include multiple classes for a text. Two common reasons drive multiple classes:
-- When the text is vague, identifying a single class is not always clear.
-- When experts interpret the text in different ways, multiple classes support those interpretations.
-- However, if many texts in your training data include multiple classes, or if some texts have more than three classes, you might need to refine the classes. For example, review whether the classes are hierarchical. If they are hierarchical, include the leaf node as the class.
-
-[More detailed documentation for Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/index.html)
-
-### [Tone Analyzer](https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html)
-
-The IBM Watson™ Tone Analyzer Service uses linguistic analysis to detect three types of tones from text: emotion, social tendencies, and language style. Emotions identified include things like anger, fear, joy, sadness, and disgust. Identified social tendencies include things from the Big Five personality traits used by some psychologists. These include openness, conscientiousness, extroversion, agreeableness, and emotional range. Identified language styles include confident, analytical, and tentative.
-
-##### Intended Use
-
-##### Common uses for the Tone Analyzer service include:
-
-- Personal and business communications - Anyone could use the Tone Analyzer service to get feedback about their communications, which could improve the effectiveness of the messages and how they are received.
-- Message resonance - optimize the tones in your communication to increase the impact on your audience
-- Digital Virtual Agent for customer care - If a human client is interacting with an automated digital agent, and the client is agitated or angry, it is likely reflected in the choice of words they use to explain their problem. An automated agent could use the Tone Analyzer Service to detect those tones, and be programmed to respond appropriately to them.
-- Self-branding - Bloggers and journalists could use the Tone Analyzer Service to get feedback on their tone and fine-tune their writing to reflect a specific personality or style.
-
-##### You input
-Any Text
-
-You submit JSON, plain text, or HTML input that contains your written content to the service. The service accepts up to 128 KB of text, which is about 1000 sentences. The service returns JSON results that report the tone of your input. You can use these results to improve the perception and effectiveness of your communications, ensuring that your writing conveys the tone and style that you want for your intended audience. The following diagram shows the basic flow of calls to the service.
-
-##### Service output
-JSON that provides a hierarchical representation of the analysis of the terms in the input message
-
-example https://tone-analyzer-demo.mybluemix.net/
-
-Mored detailed documentation for [Tone Analyzer](https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html)
-
-
-### [Watson Conversation](https://www.ibm.com/watson/developercloud/doc/conversation/index.html)
-
-Watson Conversation combines a number of cognitive techniques to help you build and train a bot - defining intents and entities and crafting dialog to simulate conversation. The system can then be further refined with supplementary technologies to make the system more human-like or to give it a higher chance of returning the right answer. Watson Conversation allows you to deploy a range of bots via many channels, from simple, narrowly focused Bots to much more sophisticated, full-blown virtual agents across mobile devices, messaging platforms like Slack, or even through a physical robot.
-
-##### Suggested uses
-
-- Add a chatbot to your website that automatically responds to customers’ most frequently asked questions.
-- Build Twitter, Slack, Facebook Messenger, and other messaging platform chatbots that interact instantly with channel users.
-- Allow customers to control your mobile app using natural language virtual agents.
-
-##### You input
-
-Your domain expertise in the form of intents, entities and crafted conversation
-
-##### Service output
-
-A trained model that enables natural conversations with end users
-
-With the IBM Watson™ Conversation service, you can create an application that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
-
-##### How to use the service
-
-This diagram shows the overall architecture of a complete solution:
-
-![Watson Conversation](https://raw.githubusercontent.com/Bluemix-Watson-Labs/conversation-api-overview/master/conversation_arch_overview.png)
-
-- Users interact with your application through the user interface that you implement. For example, A simple chat window or a mobile app, or even a robot with a voice interface.
-- The application sends the user input to the Conversation service.
- - The application connects to a workspace, which is a container for your dialog flow and training data.
- - The service interprets the user input, directs the flow of the conversation and gathers information that it needs.
- - You can connect additional Watson services to analyze user input, such as Tone Analyzer or Speech to Text.
-- The application can interact with your back-end systems based on the user’s intent and additional information. For example, answer question, open tickets, update account information, or place orders. There is no limit to what you can do.
-
-More detailed documentation for [Watson Conversation](https://www.ibm.com/watson/developercloud/doc/conversation/index.html)
-
-### [Language Translator](https://www.ibm.com/watson/developercloud/doc/language-translator/)
-
-The Watson Language Translator service provides domain-specific translation utilizing Statistical Machine Translation techniques that have been perfected in our research labs over the past few decades. The service offers multiple domain-specific translation models, plus three levels of self-service customization for text with very specific language. (Note: The Watson Language Translation service has been rebranded as the Language Translator service. The Language Translator service provides the same capabilities as the Language Translation service, but with simpler pricing.)
-
-##### Intended use
-
-What can be done with Watson Language Translator? As an example, an English-speaking help desk representative can assist a Spanish-speaking customer through chat (using the conversational translation model). As another example, a West African news website can curate English news from across the globe and present it in French to its constituents (using the news translation model). Similarly, a patent attorney in the US can effectively discover prior art (to invalidate a patent claims litigation from a competitor) based on invention disclosures made in Korean with the Korean Patent Office. Another example would be that a bank can translate all of their product descriptions from English to Arabic using a custom model tailored to that bank's product names and terminology. All of these examples (and more) can benefit from the real-time, domain-specific translation abilities of the Language Translator service.
-
-##### You input
-
-Plain text in one of the supported input languages and domains.
-
-##### Service output
-
-Plain text in the target language selected.
-
-More detailed documentation for [Language Translator](https://www.ibm.com/watson/developercloud/doc/language-translator/)
-
-### [Personality Insights](https://www.ibm.com/watson/developercloud/doc/personality-insights/)
-
-Personality Insights extracts and analyzes a spectrum of personality attributes to help discover actionable insights about people and entities, and in turn guides end users to highly personalized interactions. The service outputs personality characteristics that are divided into three dimensions: the Big 5, Values, and Needs. We recommend using Personality Insights with at least 1200 words of input text.
-
-##### Intended Use
-
-The Personality Insights service lends itself to an almost limitless number of potential applications. Businesses can use the detailed personality portraits of individual customers for finer-grained customer segmentation and better-quality lead generation. This data enables them to design marketing, provide product recommendations, and deliver customer care that is more personal and relevant. Personality Insights can also be used to help recruiters or university admissions match candidates to companies or universities. For more detailed information, see the "Use Cases" section of the Personality Insights documentation.
-
-##### You input
-
-JSON, or Text or HTML (such as social media, emails, blogs, or other communication) written by one individual
-
-##### Service output
-
-A tree of cognitive and social characteristics in JSON or CSV format
-
-##### Personality Insights basics
-The Personality Insights service offers a set of core analytics for discovering actionable insights about people and entities. The following sections provide basic information about using the service.
-
-##### The personality models
-The Personality Insights service is based on the psychology of language in combination with data analytics algorithms. The service analyzes the content that you send and returns a personality profile for the author of the input. The service infers personality characteristics based on three models:
-
-- **Big Five** personality characteristics represent the most widely used model for generally describing how a person engages with the world. The model includes five primary dimensions:
- - Agreeableness is a person's tendency to be compassionate and cooperative toward others.
- - Conscientiousness is a person's tendency to act in an organized or thoughtful way.
- - Extraversion is a person's tendency to seek stimulation in the company of others.
- - Emotional Range, also referred to as Neuroticism or Natural Reactions, is the extent to which a person's emotions are sensitive to the person's environment.
- - Openness is the extent to which a person is open to experiencing a variety of activities.
-- Each of these top-level dimensions has six facets that further characterize an individual according to the dimension.
-- **Needs** describe which aspects of a product will resonate with a person. The model includes twelve characteristic needs: Excitement, Harmony, Curiosity, Ideal, Closeness, Self-expression, Liberty, Love, Practicality, Stability, Challenge, and Structure.
-- **Values** describe motivating factors that influence a person's decision making. The model includes five values:Self-transcendence / Helping others, Conservation / Tradition, Hedonism / Taking pleasure in life, Self-enhancement / Achieving success, and Open to change / Excitement.
-
-More detailed documentation for [Personality Insights](https://www.ibm.com/watson/developercloud/doc/personality-insights/)
-
-### [Retrieve and Rank](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/)
-
-This service helps users find the most relevant information for their query by using a combination of search and machine learning algorithms to detect "signals" in the data. Built on top of Apache Solr, developers load their data into the service, train a machine learning model based on known relevant results, then leverage this model to provide improved results to their end users based on their question or query.
-
-The Retrieve and Rank Service can be applied to a number of information retrieval scenarios. For example, an experienced technician who is going onsite and requires help troubleshooting a problem, or a contact center agent who needs assistance in dealing with an incoming customer issue, or a project manager finding domain experts from a professional services organization to build out a project team.
-
-##### You input
-
-Your documents
-Queries (questions) associated with your documents
-Service Runtime: User questions and queries
-
-##### Service output
-
-Indexed documents for retrieval
-Machine learning model (Rank)
-Service Runtime: A list of relevant documents and metadata
-
-##### Overview of the Retrieve and Rank service
-The IBM Watson™ Retrieve and Rank service combines two information retrieval components in a single service: the power of Apache Solr and a sophisticated machine learning capability. This combination provides users with more relevant results by automatically reranking them by using these machine learning algorithms.
-
-##### How to use the service
-The following image shows the process of creating and using the Retrieve and Rank service:
-
-![RR](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/images/retrieve_rank_process.png)
-
-For a step-by-step overview of using the Retrieve and Rank service, [see the Tutorial page.](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/tutorial.shtml)
-
-##### Technologies
-The purpose of the Retrieve and Rank service is to help you find documents that are more relevant than those that you might get with standard information retrieval techniques.
-
-- **Retrieve**: Retrieve is based on Apache Solr. It supports nearly all of the default Solr APIs and improves error handling and resiliency. You can start your solution by first using only the Retrieve features, and then add the ranking component.
-- **Rank**: The rank component (ranker) creates a machine-learning model trained on your data. You call the ranker in your runtime queries to use this model to boost the relevancy of your results with queries that the model has not previously seen.
-
-The service combines several proprietary machine learning techniques, which are known as learning-to-rank algorithms. During its training, the ranker chooses the best combination of algorithms from your training data.
-
-##### Primary uses
-The core users of the Retrieve and Rank service are customer-facing professionals, such as support staff, contact center agents, field technicians, and other professionals. These users must find relevant results quickly from large numbers of documents:
-- Customer support: Find quick answers for customers from your growing set of answer documents
-- Field technicians: Resolve technical issues onsite
-- Professional services: Find the right people with the right skills for key engagements
-
-##### Benefits
-The Retrieve and Rank service can improve information retrieval as compared to standard results.
-- The ranker models take advantage of rich data in your documents to provide more relevant answers to queries.
-- You benefit from new features developed both by the open source community and from advanced information retrieval techniques that are built by the Watson algorithm teams.
-- Each Solr cluster and ranker is highly available in the Bluemix environment. The scalable IBM infrastructure removes the need for you to staff your own highly available data center.
-
-##### About Apache Solr
-As previously mentioned, the Retrieve part of the Retrieve and Rank service is based on Apache Solr. When you use Retrieve and Rank, you need to be knowledgeable about Solr as well as about the specifics of the Retrieve and Rank service. For example, when Solr passes an error code to the service, the service passes it to your application without modification so that standard Solr clients can correctly parse and act upon it. You therefore need to know about Solr error codes when writing error-handling routines in your Retrieve and Rank application.
-
-More detailed documentation for [Retrieve and Rank](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/)
-
-### [Speech to Text](https://www.ibm.com/watson/developercloud/doc/speech-to-text/)
-
-Watson Speech to Text can be used anywhere there is a need to bridge the gap between the spoken word and its written form. This easy-to-use service uses machine intelligence to combine information about grammar and language structure with knowledge of the composition of an audio signal to generate an accurate transcription. It uses IBM's speech recognition capabilities to convert speech in multiple languages into text. The transcription of incoming audio is continuously sent back to the client with minimal delay, and it is corrected as more speech is heard. Additionally, the service now includes the ability to detect one or more keywords in the audio stream. The service is accessed via a WebSocket connection or REST API.
-
-##### Intended Use
-
-The Speech to Text service can be used anywhere voice-interactivity is needed. The service is great for mobile experiences, transcribing media files, call center transcriptions, voice control of embedded systems, or converting sound to text to then make data searchable. Supported languages include US English, UK English, Japanese, Spanish, Brazilian Portuguese, Modern Standard Arabic, and Mandarin. The Speech to Text service now provides the ability to detect the presence of specific keywords or key phrases in the input stream.
-
-##### You input
-
-Streamed audio with Intelligible Speech
-Recorded audio with Intelligible Speech
-
-##### Service output
-
-Text transcriptions of the audio with recognized words
-
-##### Continuous transmission
- 
-By default, the service stops transcription at the first end-of-speech (EOS) incident, which is denoted by a half-second of non-speech (typically silence) or when the stream terminates. Set the continuous parameter to true to instruct the service to transcribe the entire audio stream until the stream terminates. In this case, the results can include multiple transcript elements to indicate phrases separated by pauses. You can concatenate the transcript elements to assemble the complete transcription of the audio stream.
-
-More detailed documentation for [Speech to Text](https://www.ibm.com/watson/developercloud/doc/speech-to-text/)
-
 ### 2.3. Describe the Watson Conversational Agent.
 #### 2.3.1. Connie is the concierge at Hilton
 http://newsroom.hilton.com/index.cfm/news/hilton-and-ibm-pilot-connie-the-worlds-first-watsonenabled-hotel-concierge
@@ -1771,6 +1515,265 @@ http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html
 
 - Configure performance monitoring
 - [Monitor performance of applications](https://console.ng.bluemix.net/docs/monitor_log/monitoring/monitoring_bmx_ov.html#monitoring_bmx_ov)
+
+
+--------------------------------
+## Appendix: Watson Services Summary
+--------------------------------------------------------
+
+For section 2.2 and 2.3, we deep dive into the Watson services currently available and stated in the study guide. By understanding the services individually, it will help with knowing what services would work for different scenarios. 
+
+### [Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/index.html)
+
+The IBM Watson™ Natural Language Classifier service uses machine learning algorithms to return the top matching predefined classes for short text inputs. The service interprets the intent behind text and returns a corresponding classification with associated confidence levels. The return value can then be used to trigger a corresponding action, such as redirecting the request or answering a question.
+
+##### Intended Use
+
+The Natural Language Classifier is tuned and tailored to short text (1000 characters or less) and can be trained to function in any domain or application.
+
+- Tackle common questions from your users that are typically handled by a live agent.
+- Classify SMS texts as personal, work, or promotional
+- Classify tweets into a set of classes, such as events, news, or opinions.
+- Based on the response from the service, an application can control the outcome to the user. For example, you can start another application, respond with an answer, begin a dialog, or any number of other possible outcomes.
+
+Here are some other examples of how you might apply the Natural Language Classifier:
+- Twitter, SMS, and other text messages
+ - Classify tweets into a set of classes, such as events, news, or opinions.
+ -  Analyze text messages into categories, such as Personal, Work, or Promotions.
+- Sentiment analysis
+ - Analyze text from social media or other sources and identify whether it relates positively or negatively to an offering or service.
+
+##### You input
+Text to a pre-trained model
+
+##### Service output
+Classes ordered by confidence
+
+##### How to use the service
+The process of creating and using the classifier:
+![Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/images/classifier_process.png)
+
+##### CSV training data file format
+Make sure that your CSV training data adheres to the following format requirements:
+- The data must be UTF-8 encoded.
+- Separate text values and each class value by a comma delimiter. Each record (row) is terminated by an end-of-line character, which is a special character or sequence of characters that indicate the end of a line.
+- Each record must have one text value and at least one class value.
+- Class values cannot include tabs or end-of-line characters.
+- Text values cannot contain tabs or new lines without special handling. To preserve tabs or new lines, escape a tab with \t, and escape new lines with \r, \n or \r\n.
+- For example, Example text\twith a tab is valid, but Example text    with a tab is not valid.
+- Always enclose text or class values with double quotation marks in the training data when it includes the following characters:
+- Commas ("Example text, with comma").
+- Double quotation marks. In addition, quotation marks must be escaped with double quotation marks ("Example text with ""quotation""").
+
+##### Size limitations
+There are size limitations to the training data:
+- The training data must have at least five records (rows) and no more than 15,000 records.
+- The maximum total length of a text value is 1024 characters.
+
+##### Supported languages
+
+The classifier supports English (en), Arabic (ar), French (fr), German (de), Italian (it), Japanese (ja), Korean (ko), Portuguese (Brazilian) (pt), and Spanish (es). The language of the training data must match the language of the text that you intend to classify. Specify the language when you create the classifier.
+
+##### Guidelines for good training
+The following guidelines are not enforced by the API. However, the classifier tends to perform better when the training data adheres to them:
+- Limit the length of input text to fewer than 60 words.
+- Limit the number of classes to several hundred classes. Support for larger numbers of classes might be included in later versions of the service.
+- When each text record has only one class, make sure that each class is matched with at least 5 - 10 records to provide enough training on that class.
+- It can be difficult to decide whether to include multiple classes for a text. Two common reasons drive multiple classes:
+- When the text is vague, identifying a single class is not always clear.
+- When experts interpret the text in different ways, multiple classes support those interpretations.
+- However, if many texts in your training data include multiple classes, or if some texts have more than three classes, you might need to refine the classes. For example, review whether the classes are hierarchical. If they are hierarchical, include the leaf node as the class.
+
+[More detailed documentation for Natural Language Classifier](https://www.ibm.com/watson/developercloud/doc/natural-language-classifier/index.html)
+
+### [Tone Analyzer](https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html)
+
+The IBM Watson™ Tone Analyzer Service uses linguistic analysis to detect three types of tones from text: emotion, social tendencies, and language style. Emotions identified include things like anger, fear, joy, sadness, and disgust. Identified social tendencies include things from the Big Five personality traits used by some psychologists. These include openness, conscientiousness, extroversion, agreeableness, and emotional range. Identified language styles include confident, analytical, and tentative.
+
+##### Intended Use
+
+##### Common uses for the Tone Analyzer service include:
+
+- Personal and business communications - Anyone could use the Tone Analyzer service to get feedback about their communications, which could improve the effectiveness of the messages and how they are received.
+- Message resonance - optimize the tones in your communication to increase the impact on your audience
+- Digital Virtual Agent for customer care - If a human client is interacting with an automated digital agent, and the client is agitated or angry, it is likely reflected in the choice of words they use to explain their problem. An automated agent could use the Tone Analyzer Service to detect those tones, and be programmed to respond appropriately to them.
+- Self-branding - Bloggers and journalists could use the Tone Analyzer Service to get feedback on their tone and fine-tune their writing to reflect a specific personality or style.
+
+##### You input
+Any Text
+
+You submit JSON, plain text, or HTML input that contains your written content to the service. The service accepts up to 128 KB of text, which is about 1000 sentences. The service returns JSON results that report the tone of your input. You can use these results to improve the perception and effectiveness of your communications, ensuring that your writing conveys the tone and style that you want for your intended audience. The following diagram shows the basic flow of calls to the service.
+
+##### Service output
+JSON that provides a hierarchical representation of the analysis of the terms in the input message
+
+example https://tone-analyzer-demo.mybluemix.net/
+
+Mored detailed documentation for [Tone Analyzer](https://www.ibm.com/watson/developercloud/doc/tone-analyzer/index.html)
+
+
+### [Watson Conversation](https://www.ibm.com/watson/developercloud/doc/conversation/index.html)
+
+Watson Conversation combines a number of cognitive techniques to help you build and train a bot - defining intents and entities and crafting dialog to simulate conversation. The system can then be further refined with supplementary technologies to make the system more human-like or to give it a higher chance of returning the right answer. Watson Conversation allows you to deploy a range of bots via many channels, from simple, narrowly focused Bots to much more sophisticated, full-blown virtual agents across mobile devices, messaging platforms like Slack, or even through a physical robot.
+
+##### Suggested uses
+
+- Add a chatbot to your website that automatically responds to customers’ most frequently asked questions.
+- Build Twitter, Slack, Facebook Messenger, and other messaging platform chatbots that interact instantly with channel users.
+- Allow customers to control your mobile app using natural language virtual agents.
+
+##### You input
+
+Your domain expertise in the form of intents, entities and crafted conversation
+
+##### Service output
+
+A trained model that enables natural conversations with end users
+
+With the IBM Watson™ Conversation service, you can create an application that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
+
+##### How to use the service
+
+This diagram shows the overall architecture of a complete solution:
+
+![Watson Conversation](https://raw.githubusercontent.com/Bluemix-Watson-Labs/conversation-api-overview/master/conversation_arch_overview.png)
+
+- Users interact with your application through the user interface that you implement. For example, A simple chat window or a mobile app, or even a robot with a voice interface.
+- The application sends the user input to the Conversation service.
+ - The application connects to a workspace, which is a container for your dialog flow and training data.
+ - The service interprets the user input, directs the flow of the conversation and gathers information that it needs.
+ - You can connect additional Watson services to analyze user input, such as Tone Analyzer or Speech to Text.
+- The application can interact with your back-end systems based on the user’s intent and additional information. For example, answer question, open tickets, update account information, or place orders. There is no limit to what you can do.
+
+More detailed documentation for [Watson Conversation](https://www.ibm.com/watson/developercloud/doc/conversation/index.html)
+
+### [Language Translator](https://www.ibm.com/watson/developercloud/doc/language-translator/)
+
+The Watson Language Translator service provides domain-specific translation utilizing Statistical Machine Translation techniques that have been perfected in our research labs over the past few decades. The service offers multiple domain-specific translation models, plus three levels of self-service customization for text with very specific language. (Note: The Watson Language Translation service has been rebranded as the Language Translator service. The Language Translator service provides the same capabilities as the Language Translation service, but with simpler pricing.)
+
+##### Intended use
+
+What can be done with Watson Language Translator? As an example, an English-speaking help desk representative can assist a Spanish-speaking customer through chat (using the conversational translation model). As another example, a West African news website can curate English news from across the globe and present it in French to its constituents (using the news translation model). Similarly, a patent attorney in the US can effectively discover prior art (to invalidate a patent claims litigation from a competitor) based on invention disclosures made in Korean with the Korean Patent Office. Another example would be that a bank can translate all of their product descriptions from English to Arabic using a custom model tailored to that bank's product names and terminology. All of these examples (and more) can benefit from the real-time, domain-specific translation abilities of the Language Translator service.
+
+##### You input
+
+Plain text in one of the supported input languages and domains.
+
+##### Service output
+
+Plain text in the target language selected.
+
+More detailed documentation for [Language Translator](https://www.ibm.com/watson/developercloud/doc/language-translator/)
+
+### [Personality Insights](https://www.ibm.com/watson/developercloud/doc/personality-insights/)
+
+Personality Insights extracts and analyzes a spectrum of personality attributes to help discover actionable insights about people and entities, and in turn guides end users to highly personalized interactions. The service outputs personality characteristics that are divided into three dimensions: the Big 5, Values, and Needs. We recommend using Personality Insights with at least 1200 words of input text.
+
+##### Intended Use
+
+The Personality Insights service lends itself to an almost limitless number of potential applications. Businesses can use the detailed personality portraits of individual customers for finer-grained customer segmentation and better-quality lead generation. This data enables them to design marketing, provide product recommendations, and deliver customer care that is more personal and relevant. Personality Insights can also be used to help recruiters or university admissions match candidates to companies or universities. For more detailed information, see the "Use Cases" section of the Personality Insights documentation.
+
+##### You input
+
+JSON, or Text or HTML (such as social media, emails, blogs, or other communication) written by one individual
+
+##### Service output
+
+A tree of cognitive and social characteristics in JSON or CSV format
+
+##### Personality Insights basics
+The Personality Insights service offers a set of core analytics for discovering actionable insights about people and entities. The following sections provide basic information about using the service.
+
+##### The personality models
+The Personality Insights service is based on the psychology of language in combination with data analytics algorithms. The service analyzes the content that you send and returns a personality profile for the author of the input. The service infers personality characteristics based on three models:
+
+- **Big Five** personality characteristics represent the most widely used model for generally describing how a person engages with the world. The model includes five primary dimensions:
+ - Agreeableness is a person's tendency to be compassionate and cooperative toward others.
+ - Conscientiousness is a person's tendency to act in an organized or thoughtful way.
+ - Extraversion is a person's tendency to seek stimulation in the company of others.
+ - Emotional Range, also referred to as Neuroticism or Natural Reactions, is the extent to which a person's emotions are sensitive to the person's environment.
+ - Openness is the extent to which a person is open to experiencing a variety of activities.
+- Each of these top-level dimensions has six facets that further characterize an individual according to the dimension.
+- **Needs** describe which aspects of a product will resonate with a person. The model includes twelve characteristic needs: Excitement, Harmony, Curiosity, Ideal, Closeness, Self-expression, Liberty, Love, Practicality, Stability, Challenge, and Structure.
+- **Values** describe motivating factors that influence a person's decision making. The model includes five values:Self-transcendence / Helping others, Conservation / Tradition, Hedonism / Taking pleasure in life, Self-enhancement / Achieving success, and Open to change / Excitement.
+
+More detailed documentation for [Personality Insights](https://www.ibm.com/watson/developercloud/doc/personality-insights/)
+
+### [Retrieve and Rank](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/)
+
+This service helps users find the most relevant information for their query by using a combination of search and machine learning algorithms to detect "signals" in the data. Built on top of Apache Solr, developers load their data into the service, train a machine learning model based on known relevant results, then leverage this model to provide improved results to their end users based on their question or query.
+
+The Retrieve and Rank Service can be applied to a number of information retrieval scenarios. For example, an experienced technician who is going onsite and requires help troubleshooting a problem, or a contact center agent who needs assistance in dealing with an incoming customer issue, or a project manager finding domain experts from a professional services organization to build out a project team.
+
+##### You input
+
+Your documents
+Queries (questions) associated with your documents
+Service Runtime: User questions and queries
+
+##### Service output
+
+Indexed documents for retrieval
+Machine learning model (Rank)
+Service Runtime: A list of relevant documents and metadata
+
+##### Overview of the Retrieve and Rank service
+The IBM Watson™ Retrieve and Rank service combines two information retrieval components in a single service: the power of Apache Solr and a sophisticated machine learning capability. This combination provides users with more relevant results by automatically reranking them by using these machine learning algorithms.
+
+##### How to use the service
+The following image shows the process of creating and using the Retrieve and Rank service:
+
+![RR](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/images/retrieve_rank_process.png)
+
+For a step-by-step overview of using the Retrieve and Rank service, [see the Tutorial page.](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/tutorial.shtml)
+
+##### Technologies
+The purpose of the Retrieve and Rank service is to help you find documents that are more relevant than those that you might get with standard information retrieval techniques.
+
+- **Retrieve**: Retrieve is based on Apache Solr. It supports nearly all of the default Solr APIs and improves error handling and resiliency. You can start your solution by first using only the Retrieve features, and then add the ranking component.
+- **Rank**: The rank component (ranker) creates a machine-learning model trained on your data. You call the ranker in your runtime queries to use this model to boost the relevancy of your results with queries that the model has not previously seen.
+
+The service combines several proprietary machine learning techniques, which are known as learning-to-rank algorithms. During its training, the ranker chooses the best combination of algorithms from your training data.
+
+##### Primary uses
+The core users of the Retrieve and Rank service are customer-facing professionals, such as support staff, contact center agents, field technicians, and other professionals. These users must find relevant results quickly from large numbers of documents:
+- Customer support: Find quick answers for customers from your growing set of answer documents
+- Field technicians: Resolve technical issues onsite
+- Professional services: Find the right people with the right skills for key engagements
+
+##### Benefits
+The Retrieve and Rank service can improve information retrieval as compared to standard results.
+- The ranker models take advantage of rich data in your documents to provide more relevant answers to queries.
+- You benefit from new features developed both by the open source community and from advanced information retrieval techniques that are built by the Watson algorithm teams.
+- Each Solr cluster and ranker is highly available in the Bluemix environment. The scalable IBM infrastructure removes the need for you to staff your own highly available data center.
+
+##### About Apache Solr
+As previously mentioned, the Retrieve part of the Retrieve and Rank service is based on Apache Solr. When you use Retrieve and Rank, you need to be knowledgeable about Solr as well as about the specifics of the Retrieve and Rank service. For example, when Solr passes an error code to the service, the service passes it to your application without modification so that standard Solr clients can correctly parse and act upon it. You therefore need to know about Solr error codes when writing error-handling routines in your Retrieve and Rank application.
+
+More detailed documentation for [Retrieve and Rank](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/)
+
+### [Speech to Text](https://www.ibm.com/watson/developercloud/doc/speech-to-text/)
+
+Watson Speech to Text can be used anywhere there is a need to bridge the gap between the spoken word and its written form. This easy-to-use service uses machine intelligence to combine information about grammar and language structure with knowledge of the composition of an audio signal to generate an accurate transcription. It uses IBM's speech recognition capabilities to convert speech in multiple languages into text. The transcription of incoming audio is continuously sent back to the client with minimal delay, and it is corrected as more speech is heard. Additionally, the service now includes the ability to detect one or more keywords in the audio stream. The service is accessed via a WebSocket connection or REST API.
+
+##### Intended Use
+
+The Speech to Text service can be used anywhere voice-interactivity is needed. The service is great for mobile experiences, transcribing media files, call center transcriptions, voice control of embedded systems, or converting sound to text to then make data searchable. Supported languages include US English, UK English, Japanese, Spanish, Brazilian Portuguese, Modern Standard Arabic, and Mandarin. The Speech to Text service now provides the ability to detect the presence of specific keywords or key phrases in the input stream.
+
+##### You input
+
+Streamed audio with Intelligible Speech
+Recorded audio with Intelligible Speech
+
+##### Service output
+
+Text transcriptions of the audio with recognized words
+
+##### Continuous transmission
+ 
+By default, the service stops transcription at the first end-of-speech (EOS) incident, which is denoted by a half-second of non-speech (typically silence) or when the stream terminates. Set the continuous parameter to true to instruct the service to transcribe the entire audio stream until the stream terminates. In this case, the results can include multiple transcript elements to indicate phrases separated by pauses. You can concatenate the transcript elements to assemble the complete transcription of the audio stream.
+
+More detailed documentation for [Speech to Text](https://www.ibm.com/watson/developercloud/doc/speech-to-text/)
 
 
 

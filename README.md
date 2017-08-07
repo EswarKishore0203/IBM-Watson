@@ -1182,9 +1182,8 @@ curl -X POST -u "{username}":"{password}" -H "Content-Type: application/json" -d
 To make the configuration process more efficient, you can upload up to ten Microsoft Word, HTML, JSON, or PDF files that are representative of your document set. These are called sample documents. Sample documents are not added to your collection — they are only used to identify fields that are common to your documents and customize those fields to your requirements.
 
 ##### 3.10.1.2. Explain the difference between Default and switching to a new custom collection
-*I guess the question supposed to ask about default and custom configurations (since there is no such as thing as default collection). (Ivan)*
+*I guess the question supposed to ask about default and custom configurations (since there is no such as thing as default collection).*
 
-------
 
 The Discovery service includes a standard configuration file that will convert, enrich and normalize your data without requiring you to manually configure these options.
 
@@ -1222,6 +1221,7 @@ The data may be so different that it doesn't make sense for it all to be queried
 ##### 3.10.2.4. Normalize data
 
 #### 3.10.3. What are the four standard document formats and explain the conversion flow (MS Word, PDF, HTML and JSON)
+https://www.ibm.com/watson/developercloud/doc/discovery/building.html#converting-sample-documents
 
 #### 3.10.4. Adding Enrichments, explain the following enrichments:
 
@@ -1890,6 +1890,8 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
       </td>
       <td>
    The maximum file size for individual documents in your collection is 50MB.
+   
+   The maximum file size for a sample document is 5MB
       </td>
     </tr>
  <tr>

@@ -1295,11 +1295,11 @@ if you want to have a managed upload of a significant number of files, or you wa
 [Building aggregations](https://www.ibm.com/watson/developercloud/doc/discovery/using.html#building-aggregations)
 
 References:
-https://www.ibm.com/watson/developercloud/discovery/api/v1/
-https://www.ibm.com/watson/developercloud/doc/discovery/index.htmlhttps://ww
-w.ibm.com/blogs/watson/2016/12/watson-discovery-service-understand-datascale-less-effort/
-https://www.youtube.com/watch?v=fmIPeopG-ys&t=1s
-https://www.ibm.com/blogs/bluemix/2016/11/watson-discovery-service/
+- https://www.ibm.com/watson/developercloud/discovery/api/v1/
+- https://www.ibm.com/watson/developercloud/doc/discovery/index.html
+- https://www.ibm.com/blogs/watson/2016/12/watson-discovery-service-understand-datascale-less-effort/
+- https://www.youtube.com/watch?v=fmIPeopG-ys&t=1s
+- https://www.ibm.com/blogs/bluemix/2016/11/watson-discovery-service/
 
 ### 3.11.Explain and configure the IBM Watson Conversation service
 

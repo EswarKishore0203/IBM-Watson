@@ -1521,8 +1521,12 @@ or via [Continous Delivery](https://console.bluemix.net/docs/services/Continuous
 - via GUI
 - via CloudFoundry CLI: ``cf service-key my-service my-credentials-1``
 
+
+Note: new credentials could be also created via GUI or CF CLI `cf create-service-key MY-SERVICE MY-KEY`
+
 ##### 4.6.1.4. These credentials can be obtained programmatically if the application is also hosted on IBM Reference: 
-probably they meant ``cf bind-service``
+probably they meant ``cf bind-service`` + ``VCAP_SERVICES``
+
 ##### 4.6.1.5. The credentials can also be viewed and recorded using the IBM Bluemix CLI or GUI interface.
 ##### 4.6.1.6. The application can then invoke the IBM Watson Service using the published REST API for that service. Many developers use the Watson API Explorer to create and view API invocations of the desired service using REST protocol.
 https://watson-api-explorer.mybluemix.net/

@@ -1284,6 +1284,8 @@ if you want to have a managed upload of a significant number of files, or you wa
 - Filter: When used in tandem with queries, filters execute first to narrow down the document set and speed up the query. Adding these filters will return unranked documents, and after that the accompanying query will run and return the results of that query ranked by relevance.
 - Aggregation: Aggregation queries return a set of data values; for example, top keywords, overall sentiment of entities, and more
 
+[Discovery Query Structure](https://github.com/ivpdev/IBM-Watson-Developer-Certification-Study-Guide#query-structure)
+
 ##### 3.10.8.2. Explain the three structure query parameters (count, offset, return)
 - count: Sets the number of documents that you want returned in the response
 - offset: The number of query results to omit from the start of the output. For example, if the count parameter is set to 10 and the offset parameter is set to 8, the query returns only the last two results. Do not use this parameter for deep pagination, as it impedes performance.

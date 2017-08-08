@@ -1307,12 +1307,15 @@ References:
 #### 3.11.2. Define intents (user input)
 #### 3.11.3. Define entities (relevant term or object)
 #### 3.11.4. Build a dialog (branching conversation flow)
+https://console.bluemix.net/docs/services/conversation/dialog-build.html
+
 #### 3.11.5. Test the conversation agent / bind to application
 https://console.bluemix.net/docs/services/conversation/deploy.html#deployment-overview
 https://console.bluemix.net/docs/services/conversation/develop-app.html#building-a-client-application
 
 #### 3.11.6. Know how other Watson services can add value to Conversation service
-Discovery, RnR, Tone Analyzer
+Discovery, RnR - long tail search 
+Tone Analyzer/NLU - variying answer depending on user emotions
 
 #### 3.11.7. Describe the difference between short tail and long tail conversational exchanges.
 https://developer.ibm.com/dwblog/2017/chatbot-long-tail-questions-watson-conversation-discovery/

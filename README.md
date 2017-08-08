@@ -1463,17 +1463,53 @@ I would probably also use NLC to train system about categorizing intents
 ##### 4.5.2.4. Query and analyze your results
 
 #### 4.5.3. Language Translator – Use a default language domain or customize a domain
+Set **model_id** paramteter on your **translate** call to set custom model.
+
+Custom model can be created with:
+```
+curl -u "{username}":"{password}" \
+-X POST \
+-F base_model_id="en-es" \
+-F name="custom-english-to-spanish" \
+-F forced_glossary=@glossary.tmx \
+"https://gateway.watsonplatform.net/language-translator/api/v2/models"
+```
+
 ##### 4.5.3.1. Choose the language to translate or allow Watson to auto-detect the language of your input
+```
+curl -u "{username}":"{password}" \
+"https://gateway.watsonplatform.net/language-translator/api/v2/translate?source=en&target=es&text=hello"
+
+or the same without source=en
+```
 ##### 4.5.3.2. Select the language for the translator to output
+Set **target** paramteter on your **translate** call to set target language. 
+
 ##### 4.5.3.3. Enter or paste text into the input to be translated
 
 #### 4.5.4. Visual Recognition
 ##### 4.5.4.1. Gather and prepare the training data for classifiers or collections
 ##### 4.5.4.2. Train and create new classifier or collection by uploading the training data to the API
+```
+curl -X POST -F "beagle_positive_examples=@beagle.zip" -F "dalmation_positive_examples=@dalmation.zip" -F "husky_positive_example=@husky.zip" -F "negative_examples=@cats.zip" -F "name=dogs" "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classifiers?api_key={api-key}&version=2016-05-20"
+```
+
 ##### 4.5.4.3. Classify images or search your collection by uploading image files to search against your collection
+Classify:
+```
+https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key={api-key}&url=https://github.com/watson-developer-cloud/doc-tutorial-downloads/raw/master/visual-recognition/fruitbowl.jpg&version=2016-05-19
+```
+
+Search collection:
+```
+curl -X POST -F "image_file=@silver_dress2.jpg" "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/collections/{collection_id}/find_similar?limit=100&api_key={api-key}&version=2016-05-20"
+```
+
 ##### 4.5.4.4. View the search results of the identified objects, scenes, faces, and text that meet minimum threshold. For collections, view the search returns of similar images to the ones used to search.
  
 ###  4.6. Deploy a web application to IBM Bluemix.
+`cf push my-awesome-app` 
+or via [Continous Delivery](https://console.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started)
 
 #### 4.6.1. Specific steps:
 ##### 4.6.1.1. Setup an account on IBM Bluemix
@@ -1916,6 +1952,16 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
    The maximum file size for a sample document is 5MB
       </td>
     </tr>
+ <tr>
+   <td>
+     Language translator
+   </td>
+   <td>
+   <b>Limitation of TMX glossary file when creating custom model:</b>
+   
+    Depending on the size of the file, training can range from minutes for a glossary to several hours for a large parallel corpus. Glossary files must be less than 10 MB. The cumulative file size of all uploaded glossary and corpus files is limited to 250 MB. 
+   </td>
+ </tr>  
  <tr>
    <td>
      Visual Recognition

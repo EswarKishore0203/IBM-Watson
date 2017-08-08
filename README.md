@@ -1347,7 +1347,18 @@ curl -G -u "{username}":"{password}" -d "version=2017-02-27" -d "url=www.ibm.com
 ##### 4.1.1.7. Separate your user text into train/test datasets
 ##### 4.1.1.8. Create an instance of the Natural Language Classifier service in Bluemix
 ##### 4.1.1.9. Train an NLC classifier on your training dataset
+```
+curl -u "{username}":"{password}" -F training_data=@train.csv -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+```
+
 ##### 4.1.1.10. Pass your content to your NLC services’ endpoint through a RESTful API call
+```
+curl -X POST -u "{username}":"{password}" -H "Content-Type:application/json" -d "{\"text\":\"How hot will it be today?\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/10D41B-nlc-1/classify"
+
+or 
+
+curl -G -u "{username}":"{password}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/10D41B-nlc-1/classify?text=How%20hot%20will%20it%20be%20today%3F"
+```
 ##### 4.1.1.11. Determine the accuracy, precision, and recall of the NLC classifier using your test dataset
 
 ### 4.1.2. Personality Insights - Create an instance of the Personality Insights service in Bluemix
@@ -1871,6 +1882,12 @@ All other methods support English only.
      <td>Tone Analyzer</td>
      <td>
 JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentences).  
+     </td>
+    </tr>
+    <tr>
+     <td>Personality Insights</td>
+     <td>    
+  You can send the service up to 20 MB of input content, but accuracy levels off at around 3000 words of input; additional content does not contribute further to the accuracy of the profile. Therefore, the service extracts and uses only the first 250 KB of content, not counting any HTML or JSON markup, from large requests
      </td>
     </tr>
     <tr>

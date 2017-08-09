@@ -1593,31 +1593,25 @@ just to call the ´token´ method of the authorizazion API from your app
 https://console.bluemix.net/docs/services/CloudLogAnalysis/log_analysis_ov.html#log_analysis_ov
 #### 5.2.2. View logs from the Bluemix dashboard
 #### 5.2.3. View logs from the command line interface
+`cf logs APP_NAME`
+
 #### 5.2.4. Filter logs
 https://console.bluemix.net/docs/services/CloudLogAnalysis/kibana/analize_logs_interactively.html#analize_logs_interactively
 
 #### 5.2.5. Configure external logs hosts
+##### Push logs produced in Bluemix to external host:
+`cf create-user-provided-service <service_name> -l <logging_endpoint>`
+
 https://console.bluemix.net/docs/services/CloudLogAnalysis/external/logging_external_hosts.html#thirdparty_logging
 
+##### Push logs produced by external services into Bluemix Log Analysis service:
+https://console.bluemix.net/docs/services/CloudLogAnalysis/how-to/send-data/send_data_mt.html#send_data_mt
+
 #### 5.2.6. View logs from external logs hosts
+
 References:
-https://console.ng.bluemix.net/docs/monitor_log/monitoringandlogging.html#moni
-toring_logging_bluemix_apps
+https://console.ng.bluemix.net/docs/monitor_log/monitoringandlogging.html#monitoring_logging_bluemix_apps
 http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html
-
-
-----------------------
-
-### 5.2. Monitor resource utilization of applications using IBM Watson services.
-
-- [Monitor applications running on Cloud Foundry](https://console.ng.bluemix.net/docs/monitor_log/monitoringandlogging.html#monitoring_logging_bluemix_apps)
-- [Monitor applications by using IBM Monitoring and Analytics for Bluemix](https://console.ng.bluemix.net/docs/services/monana/index.html#gettingstartedtemplate)
-
-### 5.3. Monitoring application performance on IBM Bluemix.
-
-- Configure performance monitoring
-- [Monitor performance of applications](https://console.ng.bluemix.net/docs/monitor_log/monitoring/monitoring_bmx_ov.html#monitoring_bmx_ov)
-
 
 --------------------------------------------------------
 ## Appendix A: Watson Services Summary

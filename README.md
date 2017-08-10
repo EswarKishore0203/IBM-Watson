@@ -1095,7 +1095,7 @@ Document-level sentiment is a sentiment of the whole document, target sentiment 
 https://en.wikipedia.org/wiki/Knowledge_Graph
 https://www.youtube.com/watch?v=mmQl6VGvX-c
 
-Note: Knowledge Graph was used in Concepts Insights Service (retired on July 12, 2016). As of 10.08.2017 certification exam still contains some questions to it (wtf?). So it is recommended to go through the API docs of it https://web.archive.org/web/20160723103254/http://www.ibm.com:80/watson/developercloud/concept-insights/api/v2/
+Note: Knowledge Graph was used in **Concepts Insights Service** (retired on July 12, 2016). As of 10.08.2017 certification exam still contains some questions to it (wtf?). So it is recommended to go through the API docs:  https://web.archive.org/web/20160723103254/http://www.ibm.com:80/watson/developercloud/concept-insights/api/v2/#graphs
 
 #### 3.9.6. Explain disambiguation as it relates to entities
 Example of ambiguity: "Ford" can be a car or a person.

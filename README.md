@@ -1887,6 +1887,23 @@ The Classify an image method supports English (en), Spanish (es), Arabic (ar), a
 All other methods support English only.
 
 
+### [Tradeoff Analytics](https://www.ibm.com/watson/developercloud/doc/tradeoff-analytics/)
+
+Tradeoff Analytics is a Watson service that helps people make decisions when balancing multiple objectives. The service uses a mathematical filtering technique called “Pareto Optimization,” that enables users to explore tradeoffs when considering multiple criteria for a single decision. When your company makes decisions, how many factors need to be considered? What’s the process like? How do you know when you’ve found the best option? With Tradeoff Analytics, users can avoid lists of endless options and identify the right option by considering multiple objectives.
+
+##### Intended Use
+
+Tradeoff Analytics can help bank analysts or wealth managers select the best investment strategy based on performance attributes, risk, and cost. It can help consumers purchase the product that best matches their preferences based on attributes like features, price, or warranties. Additionally, Tradeoff Analytics can help physicians find the most suitable treatment based on multiple criteria such as success rate, effectiveness, or adverse effects.
+
+##### You input
+
+A decision problem with objectives and options (for example, what is the best car when my goals are type, price, and fuel economy?)
+
+##### Service output
+
+JSON objects that represent the optimal options and highlight the trade-offs between them. The service recommends using a provided client-side library to consume its JSON output.
+
+For more detailed documentation for [Tradeoff Analytics](https://www.ibm.com/watson/developercloud/doc/tradeoff-analytics/)
 
 ## Appendix B: Watson Services Input Limitations
 

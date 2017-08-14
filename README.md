@@ -1965,6 +1965,22 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
 <b>Audio transmission</b>: Lets the client pass as much as 100 MB of audio to the service as a continuous stream of data chunks or as a one-shot delivery, passing all of the data at one time. With streaming, the service enforces various timeouts to preserve resources.
       </td>
     </tr> 
+    
+    <tr>
+      <td>
+        Text to Speech
+      </td>
+      <td>
+      <ul>
+        <li>
+        The HTTP GET request method passes shorter text via a query parameter. The text size is limited by the maximum length of the HTTP request line and headers (about 6 KB) or by system limits, whichever is less.</li>
+
+        <li>The HTTP POST request method passes longer text in the body of the request. Text size is limited to 5 KB.</li>
+      </ul>
+      </td>
+    </tr> 
+    
+    
     <tr>
       <td>
         Discovery

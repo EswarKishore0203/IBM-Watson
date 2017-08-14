@@ -814,6 +814,7 @@ domains as they indicate the areas in which the service will perform best.
 ##### 3.1.2. Pre-trained Watson services:
 
 ##### 3.1.2.1. Watson Text-to-Speech
+However can be customized by training some mode extensions (https://www.ibm.com/watson/developercloud/doc/speech-to-text/custom.html)
 ##### 3.1.2.2. Watson Speech-to-text
 ##### 3.1.2.3. Language Translator (conversational, news, and patent domains)
 However one can also train custom models (https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html)

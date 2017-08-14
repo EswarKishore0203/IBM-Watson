@@ -1964,8 +1964,7 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
 
 <b>Audio transmission</b>: Lets the client pass as much as 100 MB of audio to the service as a continuous stream of data chunks or as a one-shot delivery, passing all of the data at one time. With streaming, the service enforces various timeouts to preserve resources.
       </td>
-    </tr> 
-    
+    </tr>
     <tr>
       <td>
         Text to Speech
@@ -1978,9 +1977,7 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
         <li>The HTTP POST request method passes longer text in the body of the request. Text size is limited to 5 KB.</li>
       </ul>
       </td>
-    </tr> 
-    
-    
+    </tr>
     <tr>
       <td>
         Discovery

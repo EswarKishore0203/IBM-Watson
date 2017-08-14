@@ -216,6 +216,7 @@ Many of these capabilities require specialized infrastructure that leverages hig
 - Association rule learning is a rule-based machine learning method for discovering interesting relations between variables in large databases. It is intended to identify strong rules discovered in databases using some measures of interestingness. 
 (see also lectures form AI@edX
 https://www.youtube.com/watch?v=MZtHAy3mpnk
+
 https://www.youtube.com/watch?v=wdaGeXRJpeQ)
 
 ##### 1.3.2.2.3.Hierarchical clustering
@@ -330,7 +331,7 @@ Hence the separation to 50/25/25.
 
 In case if you don't need to choose an appropriate model from several rivaling approaches, you can just re-partition your set that you basically have only training set and test set, without performing the validation of your trained model. I personally partition them 70/30 then.
 
-https://stats.stackexchange.com/questions/19048/what-is-the-difference-between-test-set-and-validation-set/60662#60662
+https://stats.stackexchange.com/questions/19048/what-is-the-difference-between-test-set-and-validation-set/60662
 
 #### 1.6.2 Another: Using Bootstrap method vs Cross Validation
 ##### 1.6.2.1. the bootstrap method allows us to simulate the process of obtaining new data sets, so that we can estimate the error/ variability of our estimate without generating additional samples

@@ -503,7 +503,8 @@ Qualifies the mention by certain parts of speech:
 - NOM: the mention is nominal (a common noun), such as company or president.
 - PRO: the mention is a pronoun, such as he, we, or it.
 - NONE: none of the other three mention types are applicable.
-Mention class
+
+###### Mention class
 
 Qualifies the mention by indicating whether the mention is specific, generic, or negated:
 

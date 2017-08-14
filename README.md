@@ -1970,13 +1970,11 @@ JSON, plain text, or HTML. The service accepts up to 128 KB (about 1000 sentence
         Text to Speech
       </td>
       <td>
-      <ul>
-        <li>
-        The HTTP GET request method passes shorter text via a query parameter. The text size is limited by the maximum length of the HTTP request line and headers (about 6 KB) or by system limits, whichever is less.</li>
-
-        <li>The HTTP POST request method passes longer text in the body of the request. Text size is limited to 5 KB.</li>
-      </ul>
-      </td>
+       <ul>
+         <li>The HTTP GET request method passes shorter text via a query parameter. The text size is limited by the maximum length of the HTTP request line and headers (about 6 KB) or by system limits, whichever is less.</li>
+         <li>The HTTP POST request method passes longer text in the body of the request. Text size is limited to 5 KB.</li>
+       </ul>
+    </td>
     </tr>
     <tr>
       <td>

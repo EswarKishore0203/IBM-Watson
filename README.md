@@ -640,7 +640,6 @@ Services Used: Retrieve and Rank
 [You can view the list of Watson Starter Kits here](https://www.ibm.com/watson/developercloud/starter-kits.html)
 
 ### 2.3. Describe the Watson Conversational Agent.
-For section 2.2 and 2.3, we deep dive into the [Watson services](#appendix-a-watson-services-summary) currently available and stated in the study guide. 
 
 #### 2.3.1. Connie is the concierge at Hilton
 http://newsroom.hilton.com/index.cfm/news/hilton-and-ibm-pilot-connie-the-worlds-first-watsonenabled-hotel-concierge

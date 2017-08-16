@@ -842,8 +842,8 @@ Note: Watson Virtual Agent is a chatbot service with some pre-trained models
 
 #### 3.3.2 Describe the advantage and disadvantages of using an SDK
 
- Advantages: easier to start; less coding; conventient interface
- Disadvantage: additional libraries in your project; limited to API methods which currently implemented in SDK; a bit less control over communication; SDK must be up-to-date
+ - Advantages: easier to start; less coding; conventient interface
+ - Disadvantages: additional libraries in your project; limited to API methods which currently implemented in SDK; a bit less control over communication; SDK must be up-to-date
  
 #### 3.3.3 Find the Watson SDKs and other resources on the WDC GitHub
   - [Watson Developer Cloud Github](https://github.com/watson-developer-cloud/)

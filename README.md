@@ -791,10 +791,7 @@ https://www.youtube.com/watch?v=fmIPeopG-ys&t=1s
 
 Some IBM Watson services work out-of-the-box as they were pre-trained in a specific domain (domain-adapted). Other Watson services require training. For pre-trained services, it’s critical to know the adapted domains as they indicate the areas in which the service will perform best.
 
-#### 3.1.1. Some IBM Watson services work out-of-the-box as they were pre-trained
-in a specific domain (domain-adapted). Other Watson services require
-training. For pre-trained services, it’s critical to know the adapted
-domains as they indicate the areas in which the service will perform best.
+#### 3.1.1. Some IBM Watson services work out-of-the-box as they were pre-trained in a specific domain (domain-adapted). Other Watson services require training. For pre-trained services, it’s critical to know the adapted domains as they indicate the areas in which the service will perform best.
 
 ##### 3.1.2. Pre-trained Watson services:
 

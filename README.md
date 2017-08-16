@@ -965,7 +965,7 @@ https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/
 ###  3.7. Explain how Personality Insights service works.
 #### 3.7.1. Describe the intended use of the Personality Insights service
 
-The IBM Watson™ Personality Insights service provides an Application Programming Interface (API) that enables applications to derive insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics, including Big Five, Needs, and Values, from digital communications such as email, text messages, tweets, and forum posts.
+The IBM Watson™ Personality Insights service provides an Application Programming Interface (API) that enables applications to derive insights from social media, enterprise data, or other digital communications. The service uses linguistic analytics to infer individuals' intrinsic personality characteristics, including **Big Five**, **Needs**, and **Values**, from digital communications such as email, text messages, tweets, and forum posts.
 
 The service can automatically infer, from potentially noisy social media, portraits of individuals that reflect their personality characteristics. It can also determine individuals' consumption preferences, which indicate their likelihood to prefer various products, services, and activities.
 
@@ -1745,7 +1745,7 @@ More detailed documentation for [Language Translator](https://www.ibm.com/watson
 
 ### [Personality Insights](https://www.ibm.com/watson/developercloud/doc/personality-insights/)
 
-Personality Insights extracts and analyzes a spectrum of personality attributes to help discover actionable insights about people and entities, and in turn guides end users to highly personalized interactions. The service outputs personality characteristics that are divided into three dimensions: the Big 5, Values, and Needs. We recommend using Personality Insights with at least 1200 words of input text.
+Personality Insights extracts and analyzes a spectrum of personality attributes to help discover actionable insights about people and entities, and in turn guides end users to highly personalized interactions. The service outputs personality characteristics that are divided into three dimensions: the **Big 5**, **Values**, and **Needs**. We recommend using Personality Insights with at least 1200 words of input text.
 
 ##### Intended Use
 
@@ -1776,7 +1776,7 @@ The Personality Insights service is based on the psychology of language in combi
 - **Needs** describe which aspects of a product will resonate with a person. The model includes twelve characteristic needs: Excitement, Harmony, Curiosity, Ideal, Closeness, Self-expression, Liberty, Love, Practicality, Stability, Challenge, and Structure.
 - **Values** describe motivating factors that influence a person's decision making. The model includes five values: Self-transcendence / Helping others, Conservation / Tradition, Hedonism / Taking pleasure in life, Self-enhancement / Achieving success, and Open to change / Excitement.
 
-More detailed documentation for [Personality Insights](https://www.ibm.com/watson/developercloud/doc/personality-insights/)
+More detailed documentation for [Personality Insights: Personality Models](https://www.ibm.com/watson/developercloud/doc/personality-insights/models.html)
 
 ### [Retrieve and Rank](https://www.ibm.com/watson/developercloud/doc/retrieve-rank/)
 

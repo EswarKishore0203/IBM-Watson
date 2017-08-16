@@ -581,7 +581,7 @@ Pipeline: map user question to intent (with NLC) => extract the search parameter
 ##### 2.1.2.1. Data: customer voice recordings
 ##### 2.1.2.2. Features needed: Q&A, Speech recognition, text-to-speech, text classification, entity extraction, keyword extraction
 ##### 2.1.2.3. Watson-specific Services addressing the requirements: Watson Conversation, Watson Discovery, Natural Language Understanding, Watson Text to Speech, Watson Speech to Text
-Pipeline: convert voice input to text(with Watson Speech to Text) => map user question to intent (with Conversation) =>  extract the search parameters (e.g. entities) from the question(with NLU) => searche for appropriate answer (with Discovery) => convert answer to voice(with Watson Text to Speech)
+Pipeline: convert voice input into text(with Watson Speech to Text) => map user question to intent (with Conversation) =>  extract the search parameters (e.g. entities) from the question(with NLU) => search for appropriate answer (with Discovery) => convert answer to voice(with Watson Text to Speech)
 
 #### 2.1.3. Expert advisor use case for physicians
 ##### 2.1.3.1. Data: natural language intents

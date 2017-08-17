@@ -1893,12 +1893,12 @@ For more detailed documentation for [Tradeoff Analytics](https://www.ibm.com/wat
 <table>
   <tbody>
     <tr>
-      <th>Service Name</th>
+      <th width="200px">Service Name</th>
       <th align="center" width="800px">Limitations</th>
     </tr>
     <tr>
-      <td>Natural Language Classifier</td>
-      <td>
+      <td width="200px">Natural Language Classifier</td>
+      <td width="800px">
       <b>CSV training data file format</b>
          <ul>
             <li>The data must be UTF-8 encoded.</li>

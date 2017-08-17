@@ -1021,7 +1021,7 @@ Language tones (ID language_tone) describe a person's perceived writing style. A
 - Tentative: tentative	A person's degree of inhibition	[Questionable, doubtful, or debatable]
     
 #### 3.8.4. Explain how Tone Analyzer service is different from the Natural Language Understanding - Sentiment Analysis and Emotion Insights service
-- NLU - Sentiment Analysis doesn't give you deep insight into authors personality. 
+- NLU - Sentiment Analysis gives less granular analysis. 
 - with NLU-Emotion Insights one can compute emotions for arbitrary phrases of the document(aka targets), whereas Tone Analyzer can compute emotions only on document level or on sentense level.
 
 References:

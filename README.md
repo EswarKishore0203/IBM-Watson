@@ -1891,13 +1891,10 @@ For more detailed documentation for [Tradeoff Analytics](https://www.ibm.com/wat
 ## Appendix B: Watson Services Input Limitations
 
 <table>
-<col width="200">
- <col width="800">
-
   <tbody>
     <tr>
       <th>Service Name</th>
-      <th align="center">Limitations</th>
+      <th align="center" width="800px">Limitations</th>
     </tr>
     <tr>
       <td>Natural Language Classifier</td>
